@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="altfork-title altfork-desc">
+  <title id="altfork-title">altfork.dev</title>
+  <desc id="altfork-desc">A commit graph used as a track switch: the active route forks off at forty-five degrees, while the old main line is left disconnected.</desc>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="20">
+    <path d="M80 96 V80" stroke="#7A8499"/>
+    <path d="M80 204 V148 L176 52" stroke="#ED653B"/>
+  </g>
+  <circle cx="80" cy="52" r="15" fill="none" stroke="#7A8499" stroke-width="10"/>
+  <circle cx="80" cy="204" r="22" fill="#ED653B"/>
+  <circle cx="176" cy="52" r="22" fill="#ED653B"/>
+</svg>

@@ -1,0 +1,63 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  color: string;
+  kicker?: string;
+  href?: string;
+  side?: 'left' | 'right';
+  open?: boolean;
+}
+const {
+  id,
+  title,
+  description,
+  color,
+  kicker = id,
+  href,
+  side = 'left',
+  open = false,
+} = Astro.props;
+---
+
+<details
+  class={`node-group canvas-${side}`}
+  id={id}
+  style={`--branch-color:${color}`}
+  open={open}
+  data-branch-directory={href}
+>
+  <summary aria-describedby={href ? `${id}-hint` : undefined}>
+    <span class="category-dot" aria-hidden="true"></span>
+    <span class="category-copy">
+      <span class="mono">{kicker}</span>
+      <span class="category-title" transition:name={`branch-title-${id}`}>
+        {title}
+        <span class="node-toggle" aria-hidden="true">
+          +
+        </span>
+      </span>
+      <span class="category-description">{description}</span>
+      {href && (
+        <span class="branch-hint" id={`${id}-hint`}>
+          <span class="hint-collapsed">点击展开</span>
+          <span class="hint-expanded">再次点击，进入板块 ↗</span>
+        </span>
+      )}
+    </span>
+  </summary>
+  <div class="node-children">
+    <slot />
+    <div class="branch-actions">
+      {href && (
+        <a href={href} data-branch-enter>
+          进入板块 <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      <button type="button" data-branch-collapse>
+        收起 <span aria-hidden="true">−</span>
+      </button>
+    </div>
+  </div>
+</details>

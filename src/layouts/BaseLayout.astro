@@ -1,0 +1,58 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { slide } from 'astro:transitions';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { chineseFont } from '../config/appearance';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: 'explore' | 'notes' | 'tools';
+  home?: boolean;
+  canonical?: string;
+  clientNavigation?: boolean;
+}
+const {
+  title,
+  description = '主线之外，自由生长。Arvin 的项目、技术笔记与跨领域探索。',
+  active,
+  home = false,
+  canonical,
+  clientNavigation = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN" data-chinese-font={chineseFont}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>{title} · altfork.dev</title>
+    {canonical && (
+      <link rel="canonical" href={new URL(canonical, Astro.site)} />
+    )}
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ED653B" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script is:inline src="/assets/theme-init.js"></script>
+    <link rel="stylesheet" href="/assets/theme.css" />
+    <link rel="stylesheet" href="/assets/typography.css" />
+    <script is:inline src="/assets/main.js" defer></script>
+    {clientNavigation && <ClientRouter fallback="animate" />}
+    <link rel="stylesheet" href="/assets/navigation.css" />
+    <slot name="head" />
+  </head>
+  <body transition:animate={slide({ duration: '0.32s' })}>
+    <a class="skip" href="#main">
+      跳到内容
+    </a>
+    <SiteHeader active={active} />
+    <slot />
+    <SiteFooter home={home} />
+  </body>
+</html>

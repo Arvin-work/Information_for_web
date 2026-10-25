@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentNode from '../components/ContentNode.astro';
+import BranchGroup from '../components/BranchGroup.astro';
+import { branches } from '../data/branches';
+import { getPublishedPosts, getTools, formatDate } from '../lib/content';
+const posts = await getPublishedPosts();
+const tools = getTools();
+---
+
+<BaseLayout
+  title="Arvin 的项目、记录与探索"
+  active="explore"
+  home
+  clientNavigation
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/assets/explorer.css" />
+    <script is:inline src="/assets/explorer.js" type="module"></script>
+  </Fragment>
+  <main id="main">
+    <div class="branch-journey" id="journey">
+      <svg
+        id="gitGraph"
+        class="journey-connections"
+        aria-hidden="true"
+        preserveAspectRatio="xMinYMin meet"
+      ></svg>
+      <div class="journey-origin">
+        <span class="origin-ring">
+          <img
+            src="/assets/altfork-mark.svg"
+            width="42"
+            height="42"
+            alt="altfork 分支起点"
+          />
+        </span>
+        <span class="mono">main / altfork.dev</span>
+      </div>
+      <section class="intro-hero wrap" id="top" aria-labelledby="hero-title">
+        <div class="intro-copy">
+          <span class="eyebrow">ARVIN / A PERSONAL SPACE</span>
+          <h1 id="hero-title">
+            记录探索，
+            <br />
+            也把想法<span>做出来。</span>
+          </h1>
+          <p>
+            这里是 Arvin 的个人网站。
+            <br />
+            技术手记、动手做的项目，以及不同领域的小工具，
+            <br class="desktop-break" />
+            都在这里慢慢积累。
+          </p>
+          <a class="hero-explore" href="#branches">
+            向下，沿着分支探索 <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <figure class="hero-media journey-artwork" id="heroMedia" hidden>
+          <img
+            src="/assets/altfork-mark.svg"
+            alt=""
+            id="heroImage"
+            width="600"
+            height="700"
+          />
+        </figure>
+        <div class="journey-cue mono" aria-hidden="true">
+          <span class="cue-line"></span>SCROLL TO GROW<span>↓</span>
+        </div>
+      </section>
+      <section class="node-section wrap" aria-labelledby="map-title">
+        <h2 class="sr-only" id="map-title">
+          探索内容分支
+        </h2>
+        <div class="node-canvas" id="branches">
+          <div class="branch-grid">
+            {branches.map((branch, index) => (
+              <BranchGroup
+                {...branch}
+                side={index % 2 === 0 ? 'left' : 'right'}
+                href={`/branches/${branch.id}/`}
+                kicker={
+                  branch.id === 'notes'
+                    ? `notes / ${String(posts.length).padStart(2, '0')}`
+                    : branch.id === 'tools'
+                      ? `tools / ${String(tools.length).padStart(2, '0')}`
+                      : branch.id
+                }
+              >
+                {branch.id === 'notes' &&
+                  posts.map((post) => (
+                    <ContentNode
+                      href={post.data.path!}
+                      title={post.data.title}
+                      summary={post.data.summary}
+                      kicker={`${post.data.category.toUpperCase()} / ${formatDate(post.data.date!)}`}
+                    />
+                  ))}
+                {branch.id === 'tools' &&
+                  tools.map((tool) => (
+                    <ContentNode
+                      href={tool.path}
+                      title={tool.title}
+                      summary={tool.summary}
+                      kicker={tool.kicker}
+                    />
+                  ))}
+                {branch.id.startsWith('block-') && (
+                  <div class="child-node reserved-node">
+                    <span class="leaf-dot" aria-hidden="true"></span>
+                    <div>
+                      <span class="mono">NEXT BRANCH</span>
+                      <h3>内容准备中</h3>
+                      <p>后续内容会沿着这条分支继续生长。</p>
+                    </div>
+                  </div>
+                )}
+              </BranchGroup>
+            ))}
+          </div>
+          <span class="main-tail mono" aria-hidden="true">
+            …
+          </span>
+        </div>
+      </section>
+    </div>
+    <section class="terminal-section wrap" id="terminal" aria-label="内容终端">
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <div class="terminal-dots" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <span class="mono">
+            altfork — <span id="terminalPath">~</span> — zsh
+          </span>
+          <button
+            type="button"
+            id="clearTerminal"
+            aria-label="清空终端"
+            title="清空终端 / Ctrl+L"
+          >
+            ⌃ L
+          </button>
+        </div>
+        <div class="terminal-screen" id="terminalScreen">
+          <div class="terminal-welcome">
+            <p id="lastLogin">Last login: — on web/guest</p>
+            <p>use help to list commands.</p>
+            <span class="sr-only">
+              此处为浏览器本地终端会话时间，不代表账号登录记录。
+            </span>
+          </div>
+          <div
+            id="terminalOutput"
+            role="log"
+            aria-live="polite"
+            aria-label="终端输出"
+          ></div>
+          <form data-astro-reload id="terminalForm" autocomplete="off">
+            <label for="terminalInput" class="prompt">
+              <span aria-hidden="true">
+                guest@altfork <span id="terminalPromptPath">~</span> %
+              </span>
+              <span class="sr-only">终端命令</span>
+            </label>
+            <input
+              id="terminalInput"
+              name="command"
+              spellcheck="false"
+              autocapitalize="off"
+              autocomplete="off"
+              aria-describedby="terminalHint"
+            />
+            <button type="submit" aria-label="执行命令">
+              ↵
+            </button>
+          </form>
+        </div>
+        <div class="terminal-foot mono" id="terminalHint">
+          <span>zsh · web/guest</span>
+          <button type="button" data-command="help">
+            help
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

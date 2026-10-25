@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BranchGroup from '../../components/BranchGroup.astro';
+import ContentNode from '../../components/ContentNode.astro';
+import { getBranchDirectories } from '../../lib/branch-directories';
+
+export async function getStaticPaths() {
+  return (await getBranchDirectories()).map((directory) => ({
+    params: { path: directory.slug },
+    props: { directory },
+  }));
+}
+interface Props {
+  directory: Awaited<ReturnType<typeof getBranchDirectories>>[number];
+}
+const { directory } = Astro.props;
+---
+
+<BaseLayout
+  title={directory.title}
+  description={directory.description}
+  active="explore"
+  clientNavigation
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/assets/explorer.css" />
+    <script is:inline src="/assets/explorer.js" type="module"></script>
+  </Fragment>
+  <main id="main">
+    <div class="branch-journey branch-directory" id="journey" data-directory>
+      <svg
+        id="gitGraph"
+        class="journey-connections"
+        aria-hidden="true"
+        preserveAspectRatio="xMinYMin meet"
+      ></svg>
+      <div class="journey-origin">
+        <span class="origin-ring">
+          <img
+            src="/assets/altfork-mark.svg"
+            width="42"
+            height="42"
+            alt="altfork 分支起点"
+          />
+        </span>
+        <span class="mono">main / {directory.slug}</span>
+      </div>
+      <section
+        class="intro-hero wrap"
+        id="top"
+        aria-labelledby="directory-title"
+      >
+        <div class="intro-copy">
+          <nav class="branch-breadcrumb" aria-label="当前位置">
+            <a href={directory.parent}>← {directory.parentLabel}</a>
+            <span aria-hidden="true">/</span>
+            <span>{directory.title}</span>
+          </nav>
+          <h1
+            id="directory-title"
+            transition:name={`branch-title-${directory.transitionId}`}
+          >
+            {directory.title}
+          </h1>
+          <p>{directory.description}</p>
+          <span class="directory-count mono">
+            {directory.groups.reduce(
+              (count, group) => count + group.items.length,
+              0,
+            )}{' '}
+            个已发布内容
+          </span>
+        </div>
+      </section>
+      <section
+        class="node-section wrap"
+        aria-label={`${directory.title}内容分支`}
+      >
+        <div class="node-canvas" id="branches">
+          <div
+            class="branch-grid"
+            data-single={directory.groups.length === 1 ? '' : undefined}
+          >
+            {directory.groups.map((group, index) => (
+              <BranchGroup
+                {...group}
+                side={index % 2 === 0 ? 'left' : 'right'}
+                open={!group.href}
+                kicker={`${group.id} / ${String(group.items.length).padStart(2, '0')}`}
+              >
+                {group.items.map((item) => (
+                  <ContentNode {...item} />
+                ))}
+                {group.items.length === 0 && (
+                  <div class="child-node reserved-node">
+                    <span class="leaf-dot" aria-hidden="true"></span>
+                    <div>
+                      <span class="mono">TO BE CONTINUED</span>
+                      <h3>这一枝，留给下一次探索。</h3>
+                      <p>新的内容整理完成后，会从这里继续生长。</p>
+                    </div>
+                  </div>
+                )}
+              </BranchGroup>
+            ))}
+          </div>
+          <span class="main-tail mono" aria-hidden="true">
+            …
+          </span>
+        </div>
+      </section>
+    </div>
+    <nav class="directory-return wrap" aria-label="返回导航">
+      <a href={directory.parent}>← 返回{directory.parentLabel}</a>
+      <a href="/">回到主线 ↗</a>
+    </nav>
+  </main>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+interface Props {
+  active?: 'explore' | 'notes' | 'tools';
+}
+const { active } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="altfork.dev 首页">
+    <img src="/assets/altfork-mark.svg" alt="" width="34" height="34" />
+    <span>altfork.dev</span>
+  </a>
+  <nav aria-label="主导航">
+    <a
+      href="/#branches"
+      aria-current={active === 'explore' ? 'page' : undefined}
+    >
+      探索
+    </a>
+    <a href="/posts/" aria-current={active === 'notes' ? 'page' : undefined}>
+      手记
+    </a>
+    <a href="/#tools" aria-current={active === 'tools' ? 'page' : undefined}>
+      工具箱
+    </a>
+  </nav>
+  <div class="header-actions">
+    <button
+      type="button"
+      class="theme-toggle"
+      data-theme-toggle
+      aria-label="切换暗色模式"
+      aria-pressed="false"
+    >
+      <span aria-hidden="true">☾</span>
+    </button>
+    <a class="login-link" href="/login/">
+      登录 <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</header>

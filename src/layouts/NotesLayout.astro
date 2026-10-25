@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { categories } from '../data/categories';
+import { getPublishedPosts, formatDate } from '../lib/content';
+interface Props {
+  category?: string;
+}
+const { category } = Astro.props;
+const current = categories.find((entry) => entry.slug === category);
+const posts = (await getPublishedPosts()).filter(
+  (post) => !category || post.data.category === category,
+);
+---
+
+<BaseLayout title={current?.title ?? '手记'} active="notes" clientNavigation>
+  <main id="main" class="wrap">
+    <section class="page-intro" id="top">
+      <span class="eyebrow">FIELD NOTES / KEEP EXPLORING</span>
+      <h1>{current?.title ?? '把过程，留在这里。'}</h1>
+      <p>{current?.description ?? '问题、实践与技术记录。'}</p>
+    </section>
+    <nav class="note-tabs" aria-label="手记分类">
+      <a href="/posts/" aria-current={!category ? 'page' : undefined}>
+        全部
+      </a>
+      {categories.map((entry) => (
+        <a
+          href={`/posts/${entry.slug}/`}
+          aria-current={category === entry.slug ? 'page' : undefined}
+        >
+          {entry.label}
+        </a>
+      ))}
+    </nav>
+    <section style="padding:30px 0 110px">
+      {posts.map((post) => (
+        <a class="note-row" href={post.data.path}>
+          <span class="mono">
+            {formatDate(post.data.date!)} /{' '}
+            {
+              categories.find((entry) => entry.slug === post.data.category)
+                ?.label
+            }
+          </span>
+          <h3>{post.data.title}</h3>
+          <span class="note-tag">{post.data.tags.join(' · ')}</span>
+          <span class="row-arrow">↗</span>
+        </a>
+      ))}
+      {posts.length === 0 && (
+        <p>这条分支暂时留白，内容准备好后会出现在这里。</p>
+      )}
+    </section>
+  </main>
+</BaseLayout>

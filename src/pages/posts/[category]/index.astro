@@ -1,0 +1,11 @@
+---
+import NotesLayout from '../../../layouts/NotesLayout.astro';
+import { categories } from '../../../data/categories';
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category: category.slug },
+  }));
+}
+---
+
+<NotesLayout category={Astro.params.category} />

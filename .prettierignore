@@ -1,0 +1,7 @@
+dist/
+node_modules/
+.astro/
+public/data/
+src/content/
+LICENSE
+package-lock.json

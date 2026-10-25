@@ -1,0 +1,20 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  summary: string;
+  kicker: string;
+}
+const { href, title, summary, kicker } = Astro.props;
+---
+
+<a class="child-node" href={href}>
+  <span class="leaf-dot" aria-hidden="true"></span>
+  <div>
+    <span class="mono">{kicker}</span>
+    <h3>{title}</h3>
+    <p>
+      {summary} <span aria-hidden="true">↗</span>
+    </p>
+  </div>
+</a>

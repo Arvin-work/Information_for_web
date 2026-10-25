@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="选课工具" active="tools">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/selection/style.css" />
+  </Fragment>
+  <main id="main" class="wrap course-shell">
+    <section class="tool-head" id="top">
+      <div class="tool-stamp">
+        <span class="eyebrow">BRANCH_001 / COURSE PLANNER</span>{' '}
+        <span class="eyebrow">2026 FALL · 仅保存在本机</span>
+      </div>
+      <div class="tool-head__row">
+        <div>
+          <p class="eyebrow">TOOL / 本地运行 · 正式选课以教务系统为准</p>
+          <h1>试选课系统</h1>
+          <p class="tool-head__desc">
+            搜索、比较，再放进你的课表。按周次检查时间冲突，生成每周课表并导出。当前方案只保存在这台浏览器里。
+          </p>
+        </div>
+        <nav class="tool-links" aria-label="选课导航">
+          <a href="#course-panel">课程列表</a>{' '}
+          <a href="#timetable-panel">每周课表</a>{' '}
+          <a href="#selected-panel">已选课程</a> <a href="/">◂ 返回首页</a>
+        </nav>
+      </div>
+    </section>
+    <div class="station-layout">
+      <aside class="selection-sidebar">
+        <section
+          class="station-panel"
+          id="selected-panel"
+          aria-label="已选课程"
+        >
+          <div class="panel-head">
+            <span class="t">
+              <span class="lamp"></span>已选课程
+            </span>{' '}
+            <span id="summary" class="label">
+              —
+            </span>
+          </div>
+          <div class="panel-body">
+            <div id="selectedList" class="list"></div>
+          </div>
+          <div class="panel-foot">
+            <span>ACTIONS</span>{' '}
+            <span class="actions-end">
+              {' '}
+              <button id="exportBtn" class="foot-btn" type="button">
+                导出 CSV
+              </button>{' '}
+              <button id="clearBtn" class="foot-btn danger" type="button">
+                清空
+              </button>{' '}
+            </span>
+          </div>
+        </section>
+        <section
+          class="station-panel occupancy-panel"
+          aria-label="课程占用概览"
+        >
+          <div class="panel-head">
+            <span class="t">每周占用</span>
+            <div class="mini-week-controls">
+              <button
+                id="miniPrevWeek"
+                type="button"
+                aria-label="占用概览上一周"
+              >
+                ‹
+              </button>{' '}
+              <span id="miniWeekLabel"></span>{' '}
+              <button
+                id="miniNextWeek"
+                type="button"
+                aria-label="占用概览下一周"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="weeklyOccupancy"></div>
+            <p id="occupancySummary" aria-live="polite"></p>
+            <div class="occupancy-key">
+              <i></i>有课 <span>空格为空闲 · 每行一节</span>
+            </div>
+            <div
+              class="semester-load"
+              id="semesterLoad"
+              aria-label="各周占用节次"
+            ></div>
+            <a class="occupancy-link" href="#timetable-panel">
+              查看完整课表 ↓
+            </a>
+          </div>
+        </section>
+      </aside>
+      <section class="station-panel" id="course-panel" aria-label="课程列表">
+        <div class="panel-head">
+          <span class="t">
+            <span class="lamp amber"></span>课程列表
+          </span>{' '}
+          <span class="label dim">
+            COUNT: <span id="courseCount">0</span>
+          </span>
+        </div>
+        <div class="panel-body">
+          <label class="field" for="searchInput">
+            {' '}
+            <span class="label">检索 / SEARCH</span>{' '}
+            <input
+              aria-label="搜索课程"
+              id="searchInput"
+              type="search"
+              autocomplete="off"
+              placeholder="课程名 / 课程代码 / 教师 / 院系"
+            />{' '}
+          </label>
+          <div class="filters">
+            <label class="field field-inline">
+              {' '}
+              <span class="label">考核方式</span>{' '}
+              <select aria-label="考核方式" id="filterGrading">
+                <option value="">全部</option>
+                <option value="考试">考试</option>
+                <option value="考查">考查</option>
+                <option value="未知">未知</option>
+              </select>{' '}
+            </label>{' '}
+            <label class="field field-inline">
+              {' '}
+              <span class="label">选课属性</span>{' '}
+              <select aria-label="选课属性" id="filterAttr">
+                <option value="">全部</option>
+                <option value="必修">必修</option>
+                <option value="限选">限选</option>
+                <option value="任选">任选</option>
+                <option value="重修重考">重修重考</option>
+              </select>{' '}
+            </label>{' '}
+            <label class="field field-inline">
+              {' '}
+              <span class="label">考试方式</span>{' '}
+              <select aria-label="考试方式" id="filterExam">
+                <option value="">全部</option>
+              </select>{' '}
+            </label>
+            <div class="field field-inline credit-range">
+              <span class="label">学分范围</span>{' '}
+              <span class="credit-range-inputs">
+                {' '}
+                <input
+                  type="number"
+                  aria-label="最低学分"
+                  id="creditMin"
+                  placeholder="≥"
+                  min="0"
+                  step="0.5"
+                />{' '}
+                <input
+                  type="number"
+                  aria-label="最高学分"
+                  id="creditMax"
+                  placeholder="≤"
+                  min="0"
+                  step="0.5"
+                />{' '}
+                <button id="clearFilterBtn" class="foot-btn" type="button">
+                  重置
+                </button>{' '}
+              </span>
+            </div>
+          </div>
+          <div id="courseList" class="list"></div>
+        </div>
+        <div class="panel-foot">
+          <span>SELECT LIST</span> <span class="cnt">SCROLL ▼</span>
+        </div>
+      </section>
+    </div>
+    <section
+      class="station-panel tt-panel"
+      id="timetable-panel"
+      aria-label="每周课表"
+    >
+      <div class="panel-head">
+        <span class="t">
+          <span class="lamp green"></span>每周课表
+        </span>
+        <div class="week-controls">
+          <button aria-label="上一周" id="prevWeekBtn" type="button">
+            ‹
+          </button>{' '}
+          <select aria-label="授课周次" id="weekSelect"></select>{' '}
+          <button aria-label="下一周" id="nextWeekBtn" type="button">
+            ›
+          </button>{' '}
+          <button id="todayWeekBtn" type="button">
+            本周
+          </button>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div id="timetable"></div>
+      </div>
+      <div class="panel-foot">
+        <span>GRID: 7 DAYS × 14 PERIODS</span>{' '}
+        <span class="cnt">WEEK-AWARE</span>
+      </div>
+    </section>
+  </main>
+  <div
+    id="modalOverlay"
+    class="overlay hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="课程详情"
+  >
+    <div class="modal">
+      <button id="modalCloseBtn" type="button" aria-label="关闭详情">
+        ×
+      </button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script is:inline src="/selection/storage.js" defer></script>
+  <script is:inline src="/selection/script.js" defer></script>
+</BaseLayout>

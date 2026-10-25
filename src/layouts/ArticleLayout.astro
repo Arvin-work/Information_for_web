@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../lib/content';
+import { categories } from '../data/categories';
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+const { post } = Astro.props;
+const { data } = post;
+const category = categories.find((entry) => entry.slug === data.category);
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.summary || data.description}
+  active="notes"
+  clientNavigation
+  canonical={data.path}
+>
+  <main id="main">
+    <header class="page-intro wrap" id="top">
+      <a class="eyebrow" href={`/posts/${data.category}/`}>
+        ← FIELD NOTES / {category?.label}
+      </a>
+      <h1 style="max-width:1000px">{data.title}</h1>
+      <p>
+        {formatDate(data.date!)} · {data.tags.join(' / ')}
+      </p>
+    </header>
+    <article class="article-content">
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  home?: boolean;
+}
+const { home = false } = Astro.props;
+---
+
+<footer class="site-footer">
+  <a class="brand" href="/">
+    <img src="/assets/altfork-mark.svg" width="28" height="28" alt="" />
+    altfork.dev
+  </a>
+  <p class:list={{ mono: home }}>
+    {home ? 'main → your next branch' : '主线之外，自由生长。'}
+  </p>
+  <span>© 2026 Arvin</span>
+  <a href="#top">回到顶部 ↑</a>
+</footer>

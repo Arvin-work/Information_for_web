@@ -1,0 +1,54 @@
+/* The reference PDF uses STSongti-SC-Regular/Bold. Use installed fonts only;
+   no PDF subsets or system font files are redistributed as web assets.
+   Restrict the faces to CJK so Latin letters keep their existing appearance. */
+@font-face {
+  font-family: 'AltFork Chinese Songti';
+  src:
+    local('STSongti-SC-Regular'), local('Songti SC Regular'),
+    local('Songti SC'), local('SimSun');
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: swap;
+  unicode-range:
+    U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF, U+20000-3FFFF;
+}
+@font-face {
+  font-family: 'AltFork Chinese Songti';
+  src: local('STSongti-SC-Bold'), local('Songti SC Bold'), local('SimSun');
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+  unicode-range:
+    U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF, U+20000-3FFFF;
+}
+html[data-chinese-font='songti-trial'] body {
+  font-family:
+    'AltFork Chinese Songti',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+}
+html[data-chinese-font='songti-trial']
+  :is(
+    .intro-copy h1,
+    .page-intro h1,
+    .category-title,
+    .login-story h1,
+    .login-panel h2
+  ) {
+  letter-spacing: 0.015em;
+  line-height: 1.35;
+  font-weight: 600;
+}
+html[data-chinese-font='songti-trial'] .child-node h3 {
+  letter-spacing: 0.015em;
+  line-height: 1.65;
+  font-weight: 600;
+}
+html[data-chinese-font='songti-trial'] .child-node p {
+  font-size: 12px;
+  line-height: 1.9;
+}

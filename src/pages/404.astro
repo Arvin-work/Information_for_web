@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="这条分支还不存在">
+  <Fragment slot="head" />
+  <main id="main" class="wrap page-intro" style="min-height:65vh">
+    <span class="eyebrow">404 / BRANCH NOT FOUND</span>
+    <h1>
+      这条分支，
+      <br />
+      还没有长出来。
+    </h1>
+    <p>链接可能已移动，回到首页继续探索吧。</p>
+    <a class="button" style="margin-top:30px" href="/">
+      回到首页 ↗
+    </a>
+  </main>
+</BaseLayout>

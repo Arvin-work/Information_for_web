@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="注册">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/assets/login.css" />
+    <script is:inline src="/assets/register.js" defer></script>
+  </Fragment>
+  <main id="main" class="login-layout">
+    <section class="login-story" id="top">
+      <span class="eyebrow">YOUR OWN LITTLE BRANCH</span>
+      <h1>
+        每一条旁枝，
+        <br />
+        都值得继续。
+      </h1>
+      <p>让零散的想法，有一个可以回来的地方。</p>
+      <img
+        src="/assets/altfork-mark.svg"
+        alt="向上延伸的 Git 旁枝"
+        class="login-symbol"
+      />
+      <span class="mono">KEEP YOUR CURIOSITY GROWING.</span>
+    </section>
+    <section class="login-panel">
+      <div class="login-form-wrap">
+        <a href="/" class="back-link">
+          ← 回到探索
+        </a>
+        <span class="eyebrow">CREATE YOUR ACCOUNT</span>
+        <h2>创建你的分支。</h2>
+        <p class="login-sub">使用邮箱和用户名创建账号</p>
+        <form id="registerForm" method="post" action="/api/v1/auth/register">
+          <label for="email">邮箱地址</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+            maxlength="254"
+          />
+          <div class="register-field">
+            <label for="username">用户名</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              placeholder="你的用户名"
+              required
+              minlength="3"
+              maxlength="24"
+              pattern="[A-Za-z0-9_]{3,24}"
+              aria-describedby="usernameHint"
+            />
+            <p class="field-hint" id="usernameHint">
+              3～24 位英文字母、数字或下划线，不区分大小写。
+            </p>
+          </div>
+          <div class="password-label">
+            <label for="password">密码</label>
+            <button
+              type="button"
+              id="togglePassword"
+              aria-pressed="false"
+              aria-controls="password"
+            >
+              显示密码
+            </button>
+          </div>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="new-password"
+            placeholder="创建你的密码"
+            required
+            aria-describedby="passwordHint"
+          />
+          <p class="field-hint" id="passwordHint">
+            12～128 个字符，首尾空格也属于密码。
+          </p>
+          <button class="button" id="submitRegister" type="submit">
+            创建账号 <span aria-hidden="true">↗</span>
+          </button>
+          <p
+            id="authStatus"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            邮箱暂不进行验证，请确认填写正确。
+          </p>
+        </form>
+        <a href="/selection/" class="guest-link">
+          先以访客身份使用选课工具 →
+        </a>
+        <p class="form-note">
+          已有账号？<a href="/login/">前往登录 →</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

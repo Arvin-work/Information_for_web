@@ -1,0 +1,9 @@
+[
+  {
+    "id": "course-planner",
+    "title": "选课工具",
+    "path": "/selection/",
+    "summary": "搜索课程、检查冲突、导出课表。",
+    "kicker": "UTILITY / 001"
+  }
+]

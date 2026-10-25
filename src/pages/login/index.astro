@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="登录">
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/assets/login.css" />
+    <script is:inline src="/assets/auth.js" defer></script>
+  </Fragment>
+  <main id="main" class="login-layout">
+    <section class="login-story" id="top">
+      <span class="eyebrow">YOUR OWN LITTLE BRANCH</span>
+      <h1>
+        每一条旁枝，
+        <br />
+        都值得继续。
+      </h1>
+      <p>让零散的想法，有一个可以回来的地方。</p>
+      <img
+        src="/assets/altfork-mark.svg"
+        alt="向上延伸的 Git 旁枝"
+        class="login-symbol"
+      />
+      <span class="mono">KEEP YOUR CURIOSITY GROWING.</span>
+    </section>
+    <section class="login-panel">
+      <div class="login-form-wrap">
+        <a href="/" class="back-link">
+          ← 回到探索
+        </a>
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>回到你的分支。</h2>
+        <p class="login-sub">使用邮箱登录 altfork.dev</p>
+        <form id="loginForm" method="post" action="/api/v1/auth/login">
+          <label for="email">邮箱地址</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="username"
+            placeholder="you@example.com"
+            required
+            maxlength="254"
+          />
+          <div class="password-label">
+            <label for="password">密码</label>
+            <button
+              type="button"
+              id="togglePassword"
+              aria-pressed="false"
+              aria-controls="password"
+            >
+              显示密码
+            </button>
+          </div>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+            placeholder="输入你的密码"
+          />
+          <button class="button" id="submitLogin" type="submit">
+            登录 <span>↗</span>
+          </button>
+        </form>
+        <section id="accountPanel" aria-label="当前账号" hidden>
+          <p>
+            当前登录用户：<strong id="accountName"></strong>
+          </p>
+          <p id="accountEmail" class="field-hint"></p>
+          <button class="button" id="logoutButton" type="button">
+            退出登录
+          </button>
+        </section>
+        <p id="authStatus" role="status" aria-live="polite" aria-atomic="true">
+          正在确认登录状态…
+        </p>
+        <button id="retrySession" class="session-retry" type="button" hidden>
+          重新检查登录状态
+        </button>
+        <a href="/selection/" class="guest-link">
+          继续使用选课工具 →
+        </a>
+        <p class="form-note" id="registerNote">
+          还没有账号？<a href="/login/register.html">创建账号 →</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
