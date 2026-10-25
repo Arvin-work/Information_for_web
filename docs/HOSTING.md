@@ -11,6 +11,11 @@
 - 部署命令：`npx wrangler deploy`（仅在你准备发布时执行）
 - 静态资源目录：`dist/`
 - Node.js：24 LTS
+- npm：由 `package.json` 的 `packageManager: "npm@11.11.0"` 固定，Cloudflare 在安装依赖前选用该版本。
+
+本地维护依赖也使用 npm 11.11.0。不要仅设置 `engines.npm`，Cloudflare 不通过该字段选择 npm 版本。当前锁文件包含 Miniflare 的 undici 安全版本覆盖；npm 10.9.2 会把这份锁文件误判为版本不匹配，固定 npm 版本后继续使用 `npm ci`，无需降低 undici 版本或删除锁文件。
+
+参考：[Cloudflare 构建环境版本配置](https://developers.cloudflare.com/workers/ci-cd/builds/build-image/#package-manager-versions)。
 
 配置不含 `main`，不绑定 D1，不配置 SSR，不添加转发所有网页请求的 Worker。`html_handling: none` 保留已有 `.html` 地址；`404-page` 让不存在的地址返回 404，而不是首页。构建时还会自动生成 `_redirects`，把 `/`、`/login/` 等目录地址内部映射到相应的 `index.html`；这个映射由 Cloudflare 静态资源层完成，不执行 Worker 脚本。
 

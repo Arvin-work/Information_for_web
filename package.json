@@ -2,6 +2,7 @@
   "name": "altfork-information-web",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "npm@11.11.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
