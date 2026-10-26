@@ -76,13 +76,17 @@ test('static pages include no account scripts and terminal index matches homepag
     assert.ok(!scripts.includes('/assets/register.js'));
   }
   const { document } = parseHTML(html('index.html'));
+  assert.ok(
+    document.querySelector('#block-1 a[href="/branches/block-1/ai-daily/"]'),
+  );
   for (const entry of Object.values(contentTree).filter(
     (entry) => entry.href,
   )) {
     assert.ok(
-      [...document.querySelectorAll('a[href]')].some(
-        (link) => link.getAttribute('href') === entry.href,
+      existsSync(
+        `dist${entry.href}${entry.href.endsWith('/') ? 'index.html' : ''}`,
       ),
+      `Terminal entry must resolve to a published page: ${entry.href}`,
     );
   }
 });

@@ -23,3 +23,15 @@ export function sideBranchPath(source, leaves, departureY = source.y) {
   const middleY = forkY + rise / 2;
   return `M${source.x} ${source.y}${trunk}C${source.x} ${middleY} ${first.x} ${middleY} ${first.x} ${forkY + rise}V${last.y}`;
 }
+
+/** Each sibling gets its own curved edge; later rows fork in the gap above them. */
+export function siblingBranchPath(source, leaf, departureY, via) {
+  const stem = via ?? source;
+  const prefix = via
+    ? siblingBranchPath(source, via, via.departureY)
+    : `M${source.x} ${source.y}`;
+  const forkY = Math.max(stem.y, Math.min(departureY, leaf.y));
+  const bendEnd = Math.max(forkY, leaf.y - 14);
+  const middleY = (forkY + bendEnd) / 2;
+  return `${prefix}V${forkY}C${stem.x} ${middleY} ${leaf.x} ${middleY} ${leaf.x} ${bendEnd}V${leaf.y}`;
+}

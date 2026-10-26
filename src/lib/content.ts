@@ -1,6 +1,8 @@
 import { getCollection } from 'astro:content';
 import tools from '../data/tools.json';
 import { categories } from '../data/categories';
+import { getPublishedBriefings } from './briefings';
+import { groupBriefings } from './briefing-archive.mjs';
 
 const safeId = /^[a-z0-9][a-z0-9_-]*$/;
 
@@ -68,13 +70,18 @@ export function formatDate(date: Date) {
 
 export async function getContentTree() {
   const posts = await getPublishedPosts();
+  const archive = groupBriefings(await getPublishedBriefings());
   const tools = getTools();
   const tree: Record<
     string,
     { label: string; children?: string[]; anchor?: string; href?: string }
   > = {
     '/': { label: 'main', children: ['block-1', 'block-2', 'notes', 'tools'] },
-    '/block-1': { label: '板块一', anchor: 'block-1', children: [] },
+    '/block-1': { label: '信息', anchor: 'block-1', children: ['ai-daily'] },
+    '/block-1/ai-daily': {
+      label: 'AI 每日早报',
+      children: archive.map((year) => year.year),
+    },
     '/block-2': { label: '板块二', anchor: 'block-2', children: [] },
     '/notes': {
       label: '手记',
@@ -87,6 +94,26 @@ export async function getContentTree() {
       children: tools.map((tool) => tool.id),
     },
   };
+  for (const year of archive) {
+    const yearPath = `/block-1/ai-daily/${year.year}`;
+    tree[yearPath] = {
+      label: `${year.year} 年`,
+      children: year.months.map((month) => month.month),
+    };
+    for (const month of year.months) {
+      const monthPath = `${yearPath}/${month.month}`;
+      tree[monthPath] = {
+        label: `${Number(month.month)} 月`,
+        children: month.issues.map((issue) => issue.date.slice(8)),
+      };
+      for (const issue of month.issues) {
+        tree[`${monthPath}/${issue.date.slice(8)}`] = {
+          label: `${issue.date} · AI 每日早报`,
+          href: issue.href,
+        };
+      }
+    }
+  }
   for (const post of posts)
     tree[`/notes/${post.data.terminalId}`] = {
       label: post.data.title,

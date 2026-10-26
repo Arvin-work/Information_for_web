@@ -41,7 +41,7 @@ test('open returns only catalogued local files; invalid input has no execution',
 });
 test('empty placeholders, clear, help and completion behave predictably', async () => {
   const { runCommand, completions } = await core();
-  assert.equal(runCommand('ls', '/block-1').items.length, 0);
+  assert.equal(runCommand('ls', '/block-2').items.length, 0);
   assert.equal(runCommand('clear').clear, true);
   assert.ok(runCommand('help').lines.length > 3);
   assert.deepEqual(completions('cd no', '/'), ['cd notes']);

@@ -10,6 +10,9 @@ export function resolvePath(cwd, value = '/') {
     else {
       const aliases = {
         板块一: 'block-1',
+        信息: 'block-1',
+        信息板块: 'block-1',
+        AI每日早报: 'ai-daily',
         板块二: 'block-2',
         手记: 'notes',
         工具箱: 'tools',

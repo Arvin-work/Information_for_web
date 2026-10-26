@@ -1,0 +1,534 @@
+{
+  "date": "2026-10-26",
+  "weekday": "周一",
+  "title": "今日 AI",
+  "pageTitle": "AI 模型早报",
+  "description": "模型追踪，以及 AI 基建与硬件动态。",
+  "subtitle": "五条模型线索，四条基建补录。",
+  "introLabel": "AI 模型与基建",
+  "dispatchLabel": "AI MORNING BRIEFING",
+  "categoryLabel": "模型 / 基建",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "accent": "#ed653b",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "muted": "#676e65",
+  "fps": 30,
+  "introSeconds": 12,
+  "itemSeconds": 15,
+  "outroSeconds": 6,
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "outroTitle": [
+    "本期动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "模型区分发布与线索，基建区分计划与部署。",
+  "sections": [
+    {
+      "id": "models",
+      "title": "AI 模型追踪",
+      "count": 5
+    },
+    {
+      "id": "infrastructure",
+      "title": "AI 基建与硬件动态",
+      "count": 4
+    }
+  ],
+  "monitoring": [
+    {
+      "title": "过去约 24 小时 · 模型监测口径",
+      "lines": [
+        "本期包含各小时扫描已经推送的条目；提供的扫描汇总称，大厂在本窗口无新一代旗舰正式 GA。",
+        "窗口阴性确认不重复计新条目：aireleasetracker 今日仍无新条目，最新仍约为 10-23 的 Kimi K3.1 Pro 与 Nemotron 3.5 Bolt；HF Qwen org 无 Qwen4；x.ai/news 无 Grok 4.8。",
+        "据所提供的扫描资料，OpenAI / Anthropic / DeepMind / Qwen / DeepSeek / Moonshot 官方 X 本窗口无模型发版帖；Gemini Carbon / Block Dessa 等无新的官方交叉，不重复计入。",
+        "约 02:12–08:12 多轮小时扫描，相对无新正式发版或建仓。上述为提供资料的扫描结论，本次制作未另行在线核验。"
+      ]
+    },
+    {
+      "title": "基建与硬件 · 补录说明",
+      "lines": [
+        "相对 10-25 首期已报的 Firebird / Kazakhtelecom Grace Blackwell 出口许可、HPE GTC Berlin 液冷 Vera 机柜，过去约 24 小时无新的重大官方发版。",
+        "本期四条基建内容为此前未入栏、仍具参考价值的补录；DSX POD 明确标为补报。交付计划、GA 计划及 GPU 规划数量均不等于已经部署。",
+        "监测范围含 NVIDIA / AMD / Intel 新闻稿、云与数据中心、液冷 / 整机柜、光模块 / CPO。OCP 展会二次报道（如 Helion / MGX 1.2 / Intel D-Series）不重复抄规格表；不提供投资建议。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "nanbeige43",
+      "section": "models",
+      "vendor": "南北阁 Nanbeige / 模型追踪",
+      "name": "Nanbeige4.3：教师模型与基座开源上架",
+      "shortName": "Nanbeige4.3",
+      "summary": "Nanbeige4.3 开源上架",
+      "summaryNote": "模型 / 33B · Apache-2.0 · 512K",
+      "head": [
+        "教师模型，",
+        "开源上架。"
+      ],
+      "blurb": "BOSS 直聘旗下南北阁开放 33B 稠密教师模型与 Base，面向编程智能体和专业协作。",
+      "kind": "bench",
+      "note": "厂商自测 · 10-25 约 20:11 宣布，约 22:12 已推",
+      "tags": [
+        "Apache-2.0",
+        "33B",
+        "512K 上下文"
+      ],
+      "details": [
+        [
+          "开放内容",
+          "Nanbeige4.3-33B 与 33B-Base 已上架 HF；上下文上限 524,288（512K）。"
+        ],
+        [
+          "厂商自测对比",
+          "Terminal-Bench 2.1：80.9 对照 73.0；DeepSWE：65.5 对照 42.5。对照为 Qwen3.8-27B。"
+        ],
+        [
+          "并非所有项目领先",
+          "SWE-Bench Pro 自测 60.3，略低于对照 61.7；以上均为模型卡厂商自测。"
+        ]
+      ],
+      "sources": [
+        [
+          "HF 33B",
+          "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+        ],
+        [
+          "HF Base",
+          "https://huggingface.co/Nanbeige/Nanbeige4.3-33B-Base"
+        ],
+        [
+          "模型合集",
+          "https://huggingface.co/collections/Nanbeige/nanbeige43"
+        ],
+        [
+          "宣布帖",
+          "https://x.com/nanbeige/status/2114328933181333798"
+        ]
+      ],
+      "visual": {
+        "value": "80.9",
+        "caption": "模型卡自测 / 非独立复现",
+        "status": "厂商自测：SWE-Bench Pro 略低于对照",
+        "rowLabels": [
+          "Qwen3.8-27B",
+          "Nanbeige4.3-33B"
+        ],
+        "rows": [
+          [
+            "Terminal-Bench 2.1",
+            "73.0",
+            "80.9"
+          ],
+          [
+            "DeepSWE",
+            "42.5",
+            "65.5"
+          ],
+          [
+            "SWE-Bench Pro",
+            "61.7",
+            "60.3"
+          ]
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "kalmia",
+      "section": "models",
+      "vendor": "Arena / 社区线索",
+      "name": "Kalmia：社区指认为 Qwen4，尚未证实",
+      "shortName": "Kalmia 盲测传闻",
+      "summary": "Kalmia 身份仍未确认",
+      "summaryNote": "模型 / 社区指认，不作官方发版",
+      "head": [
+        "匿名盲测，",
+        "身份待确认。"
+      ],
+      "blurb": "社区依据 tokenizer 指纹等线索，将 Arena 匿名模型 Kalmia 指认为 Qwen4 多 checkpoint 盲测。",
+      "kind": "rumor",
+      "note": "未证实 · 10-26 约 00:12 已推；无官方交叉",
+      "tags": [
+        "社区线索",
+        "无权重交叉",
+        "未证实"
+      ],
+      "details": [
+        [
+          "社区依据",
+          "多方依据 tokenizer 指纹等线索作出指认，尚不能据此确认模型身份。"
+        ],
+        [
+          "缺失的确认",
+          "本期资料称无官方公告、无 HF Qwen 组织新仓，也无权重交叉；个人空仓不计入。"
+        ],
+        [
+          "记录口径",
+          "仅作为匿名盲测跟踪，不将 Kalmia 等同于已发布的 Qwen4。"
+        ]
+      ],
+      "sources": [
+        [
+          "跟踪一例",
+          "https://live.aitracker.bot/kalmia-arena"
+        ],
+        [
+          "HF Qwen org",
+          "https://huggingface.co/Qwen/models"
+        ]
+      ],
+      "visual": {
+        "value": "?",
+        "caption": "Kalmia ≠ 已确认的 Qwen4 发布"
+      },
+      "dark": false
+    },
+    {
+      "id": "terra",
+      "section": "models",
+      "vendor": "代码与配置线索 / 非官宣",
+      "name": "GPT-6.1 Terra：标识符出现，不等于产品可用",
+      "shortName": "Terra 配置线索",
+      "summary": "Terra 标识现身后回退",
+      "summaryNote": "模型 / 未证实 · 非 GA",
+      "head": [
+        "代码现身，",
+        "不等于可用。"
+      ],
+      "blurb": "EF Core 评测配置曾出现 gpt-6.1-terra，随后为规避基础设施问题改回旧 judge。",
+      "kind": "fable",
+      "note": "未证实 · 非 GA · 10-26 01:11 首报，04:14 补强",
+      "tags": [
+        "配置线索",
+        "随后回退",
+        "非 GA"
+      ],
+      "details": [
+        [
+          "先改为新标识",
+          "Microsoft EF Core PR #39217 将评测默认 judge 改为 gpt-6.1-terra。"
+        ],
+        [
+          "随后回退",
+          "PR #39289 为规避基础设施问题，将默认 judge 改回 gpt-5.6-terra。"
+        ],
+        [
+          "线索的边界",
+          "另有 LuminaBench / Copilot 配置二手线索；非 OpenAI 官宣，标识符出现不等于可调用产品。"
+        ]
+      ],
+      "sources": [
+        [
+          "EF Core PR #39217",
+          "https://github.com/dotnet/efcore/pull/39217"
+        ],
+        [
+          "EF Core PR #39289",
+          "https://github.com/dotnet/efcore/pull/39289"
+        ],
+        [
+          "LuminaBench",
+          "https://luminabench.com/journal/gpt-6-1-terra-microsoft-pr/"
+        ]
+      ],
+      "visual": {
+        "value": "非 GA",
+        "caption": "配置标识 ≠ 已开放的产品"
+      },
+      "dark": false
+    },
+    {
+      "id": "fable55",
+      "section": "models",
+      "vendor": "Anthropic / 单源传闻",
+      "name": "Fable 5.5：企业侧上线传闻未获官方确认",
+      "shortName": "Fable 5.5 传闻",
+      "summary": "Fable 5.5 企业侧传闻",
+      "summaryNote": "模型 / 单源说法，无 5.5 官宣",
+      "head": [
+        "企业侧传闻，",
+        "仍待官宣。"
+      ],
+      "blurb": "@ChrisGPT 称部分顶级企业客户已可用；当前材料没有 Anthropic 的 Fable 5.5 官方确认。",
+      "kind": "fable",
+      "note": "未证实 · 单源 · 10-26 约 04:14 已推",
+      "tags": [
+        "Fable 5.5",
+        "单源传闻",
+        "未证实"
+      ],
+      "details": [
+        [
+          "传闻内容",
+          "@ChrisGPT 称 Fable 5.5 已向部分顶级客户在企业侧放出。"
+        ],
+        [
+          "官方页面口径",
+          "提供的资料称官网 Fable 页仍为既有产品线（如 5.1），没有 5.5 官宣。"
+        ],
+        [
+          "记录方式",
+          "保留单源与未证实标记，不将传闻写成正式上线或开放使用。"
+        ]
+      ],
+      "sources": [
+        [
+          "相关帖",
+          "https://x.com/ChrisGPT/status/2114450507616129300"
+        ],
+        [
+          "Anthropic Fable 页",
+          "https://www.anthropic.com/claude/fable"
+        ]
+      ],
+      "visual": {
+        "value": "单源",
+        "caption": "企业侧上线说法 / 官方未确认"
+      },
+      "dark": false
+    },
+    {
+      "id": "intel-qwen",
+      "section": "models",
+      "vendor": "Intel XPU / 推理栈预集成",
+      "name": "Qwen4 内核预集成：无权重，不是模型发版",
+      "shortName": "Intel XPU 预集成",
+      "summary": "Intel XPU 内核预集成",
+      "summaryNote": "模型 / 无 Qwen4 权重，非发版",
+      "head": [
+        "内核先行，",
+        "权重仍缺席。"
+      ],
+      "blurb": "vllm-xpu-kernels 为 Qwen4-27B 等预集成 Intel XPU SYCL 内核，尚未完成真实权重端到端验证。",
+      "kind": "fable",
+      "note": "预集成 · 非发版 · 10-25 约 19:24 补跑",
+      "tags": [
+        "Intel XPU",
+        "SYCL",
+        "无权重"
+      ],
+      "details": [
+        [
+          "涉及模型",
+          "analytics-zoo/vllm-xpu-kernels PR #22 涉及 Qwen4-27B / Qwen3.8-Flash-Next。"
+        ],
+        [
+          "PR 明确限制",
+          "Qwen4 权重未提供，未完成真实 checkpoint 的端到端（E2E）验证。"
+        ],
+        [
+          "不能据此推断",
+          "属于推理栈预埋，不等于 Qwen4 已经开源、可下载或正式发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "vllm-xpu-kernels PR #22",
+          "https://github.com/analytics-zoo/vllm-xpu-kernels/pull/22"
+        ]
+      ],
+      "visual": {
+        "value": "预集成",
+        "caption": "推理内核准备 ≠ 模型权重发布"
+      },
+      "dark": false
+    },
+    {
+      "id": "dsx-pod",
+      "section": "infrastructure",
+      "vendor": "NVIDIA / 基建补报",
+      "name": "DSX POD：模块化 AI 工厂参考设计",
+      "shortName": "DSX POD 补报",
+      "summary": "DSX POD 模块化工厂",
+      "summaryNote": "基建 / 补报 · early 2027 交付计划",
+      "head": [
+        "模块化工厂，",
+        "部署时间压缩。"
+      ],
+      "blurb": "集装箱式 Vera Rubin AI 工厂参考设计，在场站备妥的前提下强调更短部署周期。",
+      "kind": "train",
+      "note": "补报 · 部署时长为官方叙事，交付仍是计划",
+      "tags": [
+        "Vera Rubin",
+        "参考设计",
+        "补报"
+      ],
+      "details": [
+        [
+          "参考设计",
+          "NVIDIA DSX POD 采用模块化、集装箱式 AI 工厂设计，面向 Vera Rubin。"
+        ],
+        [
+          "部署口径",
+          "在备妥场站的前提下，以约 6 个月到最快约 14 天量级描述部署提速，并非无条件承诺。"
+        ],
+        [
+          "交付计划",
+          "合作伙伴计划 early 2027 交付；作为此前未入本栏的参考补报，不算本窗口新发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "NVIDIA IR",
+          "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Introduces-DSX-POD-AI-Factories-to-Accelerate-Europes-Infrastructure-Deployment/default.aspx"
+        ]
+      ],
+      "visual": {
+        "value": "14",
+        "unit": "天量级",
+        "caption": "最快部署叙事 / 前提：场站备妥"
+      },
+      "dark": false
+    },
+    {
+      "id": "google-a5x",
+      "section": "infrastructure",
+      "vendor": "Google Cloud / 基建补录",
+      "name": "A5X：计划下月 GA，扩容尚在规划",
+      "shortName": "Google A5X",
+      "summary": "A5X 与 Rubin 扩容规划",
+      "summaryNote": "基建 / 下月 GA 计划，非已部署",
+      "head": [
+        "下月 GA，",
+        "扩容在规划。"
+      ],
+      "blurb": "Google Cloud A5X 采用 Vera Rubin NVL72；材料称下月 GA，并规划向欧洲扩展。",
+      "kind": "train",
+      "note": "基建补录 · 96 万颗为跨站点规划上限，非已部署",
+      "tags": [
+        "A5X",
+        "Vera Rubin NVL72",
+        "规划数字"
+      ],
+      "details": [
+        [
+          "实例平台",
+          "Google Cloud A5X 基于 Vera Rubin NVL72；相关材料官宣「下月」GA，拟扩欧洲。"
+        ],
+        [
+          "规模口径",
+          "多站点合计规划至多约 96 万颗 Rubin GPU，是上限规划，不是当前部署数量。"
+        ],
+        [
+          "本期定位",
+          "作为仍具参考价值的基建补录；不将路线图写成已完成部署或本窗口新发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "NVIDIA Blog",
+          "https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/"
+        ]
+      ],
+      "visual": {
+        "value": "96",
+        "unit": "万颗",
+        "caption": "Rubin GPU / 多站点规划上限"
+      },
+      "dark": false
+    },
+    {
+      "id": "meta-prometheus",
+      "section": "infrastructure",
+      "vendor": "Meta / 基建补录",
+      "name": "Prometheus：吉瓦级超集群建设路径",
+      "shortName": "Meta Prometheus",
+      "summary": "Prometheus 吉瓦级集群",
+      "summaryNote": "基建 / 10-19 资料 · 目标非现状",
+      "head": [
+        "吉瓦级集群，",
+        "持续建设中。"
+      ],
+      "blurb": "俄亥俄 New Albany 的 Prometheus 一期，采用闭环液冷，并给出百万 GPU 量级扩展路径。",
+      "kind": "train",
+      "note": "约 10-19 资料补录 · 百万 GPU 是目标路径，不是现有数量",
+      "tags": [
+        "New Albany",
+        "闭环液冷",
+        "目标路径"
+      ],
+      "details": [
+        [
+          "地点与规模",
+          "Prometheus 位于俄亥俄 New Albany，一期为吉瓦级超集群。"
+        ],
+        [
+          "硬件路径",
+          "材料涉及 GB200 / GB300，未来将引入 Vera Rubin；约 100 万 GPU 为目标量级路径。"
+        ],
+        [
+          "散热与口径",
+          "采用闭环液冷。该条为既有建设信息补录，不作为过去 24 小时新重大官方发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "Meta Engineering",
+          "https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/"
+        ]
+      ],
+      "visual": {
+        "value": "GW",
+        "unit": "级",
+        "caption": "一期规模 / 百万 GPU 为目标路径"
+      },
+      "dark": false
+    },
+    {
+      "id": "kddi-cpo",
+      "section": "infrastructure",
+      "vendor": "KDDI × Broadcom / 基建补录",
+      "name": "KDDI × Broadcom：GPU 互联启动 CPO 联验",
+      "shortName": "KDDI × Broadcom",
+      "summary": "KDDI × Broadcom CPO 联验",
+      "summaryNote": "基建 / 10-22 资料 · 目标降功耗",
+      "head": [
+        "GPU 互联，",
+        "启动 CPO 联验。"
+      ],
+      "blurb": "AI 数据中心互联启动 Tomahawk 6 与 Davisson CPO 联合验证，目标是降低功耗。",
+      "kind": "cloud",
+      "note": "约 10-22 资料补录 · 联合验证，不代表已规模部署",
+      "tags": [
+        "Tomahawk 6",
+        "Davisson CPO",
+        "联合验证"
+      ],
+      "details": [
+        [
+          "验证内容",
+          "KDDI 与 Broadcom 在 AI 数据中心 GPU 互联场景中，启动 Tomahawk 6 + Davisson CPO 联验。"
+        ],
+        [
+          "目标与阶段",
+          "目标是降低互联功耗；当前记录为联合验证，不将其表述为已完成规模部署。"
+        ],
+        [
+          "本期定位",
+          "此前未入本栏的参考补录；不重复抄录 OCP 展会二次报道的规格表。"
+        ]
+      ],
+      "sources": [
+        [
+          "KDDI Newsroom",
+          "https://newsroom.kddi.com/english/news/detail/kddi_nr-1208_4775.html"
+        ]
+      ],
+      "visual": {
+        "nodes": [
+          "GPU 互联",
+          "Tomahawk 6",
+          "Davisson CPO"
+        ],
+        "center": "联验",
+        "caption": "目标降功耗 / 联合验证阶段"
+      },
+      "dark": false
+    }
+  ],
+  "detailSeconds": 6,
+  "draft": false
+}

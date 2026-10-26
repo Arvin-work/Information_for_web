@@ -4,8 +4,11 @@ import ContentNode from '../components/ContentNode.astro';
 import BranchGroup from '../components/BranchGroup.astro';
 import { branches } from '../data/branches';
 import { getPublishedPosts, getTools, formatDate } from '../lib/content';
+import { getPublishedBriefings } from '../lib/briefings';
+import { briefingArchivePath } from '../lib/briefing-archive.mjs';
 const posts = await getPublishedPosts();
 const tools = getTools();
+const briefings = await getPublishedBriefings();
 ---
 
 <BaseLayout
@@ -106,7 +109,19 @@ const tools = getTools();
                       kicker={tool.kicker}
                     />
                   ))}
-                {branch.id.startsWith('block-') && (
+                {branch.id === 'block-1' && (
+                  <ContentNode
+                    href={briefingArchivePath()}
+                    title="AI 每日早报"
+                    summary={
+                      briefings.length
+                        ? `${briefings.length} 期早报，按年、月、日展开。`
+                        : '模型发布、能力更新与开放进展。'
+                    }
+                    kicker="AI / DAILY BRIEFING"
+                  />
+                )}
+                {branch.id === 'block-2' && (
                   <div class="child-node reserved-node">
                     <span class="leaf-dot" aria-hidden="true"></span>
                     <div>

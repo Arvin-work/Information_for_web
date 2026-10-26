@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BranchGroup from '../../components/BranchGroup.astro';
 import ContentNode from '../../components/ContentNode.astro';
+import BriefingArchive from '../../components/BriefingArchive.astro';
 import { getBranchDirectories } from '../../lib/branch-directories';
 
 export async function getStaticPaths() {
@@ -27,7 +28,15 @@ const { directory } = Astro.props;
     <script is:inline src="/assets/explorer.js" type="module"></script>
   </Fragment>
   <main id="main">
-    <div class="branch-journey branch-directory" id="journey" data-directory>
+    <div
+      class:list={[
+        'branch-journey',
+        'branch-directory',
+        { 'has-briefing-archive': directory.archiveYears !== undefined },
+      ]}
+      id="journey"
+      data-directory
+    >
       <svg
         id="gitGraph"
         class="journey-connections"
@@ -64,11 +73,12 @@ const { directory } = Astro.props;
           </h1>
           <p>{directory.description}</p>
           <span class="directory-count mono">
-            {directory.groups.reduce(
-              (count, group) => count + group.items.length,
-              0,
-            )}{' '}
-            个已发布内容
+            {directory.count ??
+              directory.groups.reduce(
+                (count, group) => count + group.items.length,
+                0,
+              )}{' '}
+            {directory.countLabel ?? '个已发布内容'}
           </span>
         </div>
       </section>
@@ -77,36 +87,42 @@ const { directory } = Astro.props;
         aria-label={`${directory.title}内容分支`}
       >
         <div class="node-canvas" id="branches">
-          <div
-            class="branch-grid"
-            data-single={directory.groups.length === 1 ? '' : undefined}
-          >
-            {directory.groups.map((group, index) => (
-              <BranchGroup
-                {...group}
-                side={index % 2 === 0 ? 'left' : 'right'}
-                open={!group.href}
-                kicker={`${group.id} / ${String(group.items.length).padStart(2, '0')}`}
+          {directory.archiveYears !== undefined ? (
+            <BriefingArchive years={directory.archiveYears} />
+          ) : (
+            <>
+              <div
+                class="branch-grid"
+                data-single={directory.groups.length === 1 ? '' : undefined}
               >
-                {group.items.map((item) => (
-                  <ContentNode {...item} />
+                {directory.groups.map((group, index) => (
+                  <BranchGroup
+                    {...group}
+                    side={index % 2 === 0 ? 'left' : 'right'}
+                    open={!group.href}
+                    kicker={`${group.id} / ${String(group.items.length).padStart(2, '0')}`}
+                  >
+                    {group.items.map((item) => (
+                      <ContentNode {...item} />
+                    ))}
+                    {group.items.length === 0 && (
+                      <div class="child-node reserved-node">
+                        <span class="leaf-dot" aria-hidden="true"></span>
+                        <div>
+                          <span class="mono">TO BE CONTINUED</span>
+                          <h3>这一枝，留给下一次探索。</h3>
+                          <p>新的内容整理完成后，会从这里继续生长。</p>
+                        </div>
+                      </div>
+                    )}
+                  </BranchGroup>
                 ))}
-                {group.items.length === 0 && (
-                  <div class="child-node reserved-node">
-                    <span class="leaf-dot" aria-hidden="true"></span>
-                    <div>
-                      <span class="mono">TO BE CONTINUED</span>
-                      <h3>这一枝，留给下一次探索。</h3>
-                      <p>新的内容整理完成后，会从这里继续生长。</p>
-                    </div>
-                  </div>
-                )}
-              </BranchGroup>
-            ))}
-          </div>
-          <span class="main-tail mono" aria-hidden="true">
-            …
-          </span>
+              </div>
+              <span class="main-tail mono" aria-hidden="true">
+                …
+              </span>
+            </>
+          )}
         </div>
       </section>
     </div>

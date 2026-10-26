@@ -1,8 +1,8 @@
 export const branches = [
   {
     id: 'block-1',
-    title: '板块一',
-    description: '留给下一个探索的领域。',
+    title: '信息',
+    description: '整理值得关注的动态，沿着时间持续积累。',
     color: 'var(--branch-a)',
   },
   {

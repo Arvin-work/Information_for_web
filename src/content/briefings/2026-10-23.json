@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-23",
+  "title": "今日 AI",
+  "subtitle": "四条更新，从决策到 DNA。",
+  "accent": "#ed653b",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "muted": "#676e65",
+  "itemSeconds": 18,
+  "items": [
+    {
+      "vendor": "OpenAI / Decisions API",
+      "name": "Decisions API：近实时决策，正式 GA。",
+      "head": [
+        "近实时决策，",
+        "正式 GA。"
+      ],
+      "blurb": "基于 GPT-6 Luna，为分类、路由、打分等有界答案任务提供近实时决策。",
+      "kind": "decision",
+      "metric": "10×",
+      "metricLabel": "官方称较 Responses API 上的 Luna 快约 10 倍",
+      "note": "官方速度口径 · 约北京时间 10 月 23 日凌晨公告",
+      "tags": [
+        "正式 GA",
+        "GPT-6 Luna",
+        "JSON"
+      ],
+      "details": [
+        [
+          "一次最多 400 问",
+          "原生 GPT-Live、JSON / input_json，支持 prompt caching 与美欧推理驻留。"
+        ],
+        [
+          "按输入计费",
+          "输入 $0.10 / 百万 tokens；缓存输入 $0.01 / 百万 tokens；无输出 token 费用。"
+        ],
+        [
+          "速度比较口径",
+          "官方称比 Responses API 上的 Luna 快约 10×，面向有界答案决策任务。"
+        ]
+      ],
+      "sources": [
+        [
+          "OpenAI 公告",
+          "https://openai.com/index/decisions-api"
+        ],
+        [
+          "开发者 Changelog",
+          "https://developers.openai.com/api/docs/changelog"
+        ]
+      ],
+      "visual": {
+        "value": "10×",
+        "caption": "速度对比 · 官方口径",
+        "unit": "更快",
+        "heading": "BOUNDED ANSWERS",
+        "nodes": [
+          "分类",
+          "路由",
+          "打分"
+        ]
+      },
+      "summary": "Decisions API 正式 GA",
+      "summaryNote": "近实时决策 · 速度与定价"
+    },
+    {
+      "vendor": "Canva / Canva Craft",
+      "name": "Canva Craft：先规划，再成图。",
+      "head": [
+        "先规划，",
+        "再成图。"
+      ],
+      "blurb": "Canva 首个自研图像模型，以「构图规划 → 渲染」两阶段完成图像生成。",
+      "kind": "craft",
+      "metric": "2K",
+      "metricLabel": "最高约 2K，30+ 种画幅",
+      "note": "10 月 22 日新闻室 · 排名为厂商引用众包榜单",
+      "tags": [
+        "Dream Lab",
+        "公有 API",
+        "图像生成"
+      ],
+      "details": [
+        [
+          "全量用户可用",
+          "Dream Lab 全量用户可用；公有 API 模型名 craft_v1_2k。"
+        ],
+        [
+          "画幅与输出",
+          "最高约 2K，支持 30+ 种画幅；先进行构图规划，再渲染图像。"
+        ],
+        [
+          "榜单口径",
+          "DesignArena 整体约第 4；人物肖像、风景自然均第 1。厂商引用众包榜，非独立论文。"
+        ]
+      ],
+      "sources": [
+        [
+          "Canva Newsroom",
+          "https://www.canva.com/newsroom/news/canva-craft/"
+        ],
+        [
+          "TechCrunch",
+          "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/"
+        ]
+      ],
+      "visual": {
+        "value": "2K",
+        "caption": "最高约 2K / 30+ 种画幅"
+      },
+      "summary": "Canva Craft 图像模型",
+      "summaryNote": "构图规划 → 渲染"
+    },
+    {
+      "vendor": "Hugging Face / Carbon-X",
+      "name": "Carbon-X：读懂 DNA 的语言。",
+      "head": [
+        "读懂 DNA",
+        "的语言。"
+      ],
+      "blurb": "14.8B 开放权重模型，将 DNA 与自然语言放进同一套混合分词体系。",
+      "kind": "dna",
+      "metric": "66.7%",
+      "metricLabel": "厂商自测五类 DNA 基准均分",
+      "note": "厂商自测，未经独立复现 · 未临床验证，不可用于医疗决策",
+      "tags": [
+        "Apache-2.0",
+        "14.8B",
+        "DNA"
+      ],
+      "details": [
+        [
+          "模型与训练",
+          "基于 Qwen3-14B；上下文 40,960；中期训练约 302B tokens；DNA 使用 6-mer 分词。"
+        ],
+        [
+          "基准口径",
+          "厂商自测五类 DNA 基准均分 66.7%，对照 GPT-6.1 Sol 为 67.5%。"
+        ],
+        [
+          "使用边界",
+          "权重 HuggingFaceBio/Carbon-X，Apache-2.0；未临床验证，不可用于医疗决策。"
+        ]
+      ],
+      "sources": [
+        [
+          "Hugging Face 模型卡",
+          "https://huggingface.co/HuggingFaceBio/Carbon-X"
+        ]
+      ],
+      "visual": {
+        "value": "66.7%",
+        "caption": "五类 DNA 基准均分 / 厂商自测"
+      },
+      "summary": "Carbon-X 开放权重",
+      "summaryNote": "DNA 语言模型 · 使用边界"
+    },
+    {
+      "vendor": "蚂蚁 / Ling-3.1-flash-1019",
+      "name": "Ling 更新：成绩提升，开放待定。",
+      "head": [
+        "成绩提升，",
+        "开放待定。"
+      ],
+      "blurb": "Ling-3.1-flash-1019 披露多项指标提升；API 与开放权重被报道为即将推出。",
+      "kind": "bench",
+      "metric": "41→44",
+      "metricLabel": "Artificial Analysis Intelligence Index",
+      "note": "X / 二次报道 · 自报与 AA 口径，细节以官方为准",
+      "tags": [
+        "Ling-3.1",
+        "即将推出",
+        "待官方确认"
+      ],
+      "details": [
+        [
+          "相对上一版",
+          "相对 Ling-3.1-flash，Intelligence Index 41→44；AA-Briefcase Elo 约 1400→1524。"
+        ],
+        [
+          "自动化任务",
+          "AutomationBench-AA 62%→68%；上述成绩为厂商披露 / AA 口径。"
+        ],
+        [
+          "开放状态",
+          "报道称 API 与开放权重「即将推出」，截至本期不应视为已可下载。"
+        ]
+      ],
+      "sources": [
+        [
+          "forck 二次摘录",
+          "https://forck.live/items/26575-introducing-ling-3-1-flash-1019"
+        ]
+      ],
+      "visual": {
+        "value": "41→44",
+        "caption": "Intelligence Index / 自报与 AA 口径",
+        "rows": [
+          [
+            "Intelligence Index",
+            "41",
+            "44"
+          ],
+          [
+            "Briefcase Elo",
+            "1400",
+            "1524"
+          ],
+          [
+            "AutomationBench",
+            "62%",
+            "68%"
+          ]
+        ]
+      },
+      "summary": "Ling 新版成绩披露",
+      "summaryNote": "指标提升 · 开放仍待确认"
+    }
+  ],
+  "fps": 30,
+  "introSeconds": 4,
+  "outroSeconds": 6,
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "outroTitle": [
+    "本期模型动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "完整资料与来源链接见 altfork.dev。",
+  "draft": false
+}

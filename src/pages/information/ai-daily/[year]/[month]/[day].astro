@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import { getPublishedBriefings } from '../../../../../lib/briefings';
+import { briefingArchivePath } from '../../../../../lib/briefing-archive.mjs';
+
+export async function getStaticPaths() {
+  const issues = await getPublishedBriefings();
+  return issues.map((issue, index) => {
+    const [year, month, day] = issue.date.split('-');
+    return {
+      params: { year, month, day },
+      props: { issue, newer: issues[index - 1], older: issues[index + 1] },
+    };
+  });
+}
+interface Props {
+  issue: Awaited<ReturnType<typeof getPublishedBriefings>>[number];
+  newer?: Awaited<ReturnType<typeof getPublishedBriefings>>[number];
+  older?: Awaited<ReturnType<typeof getPublishedBriefings>>[number];
+}
+const { issue, newer, older } = Astro.props;
+const StoryHeading = issue.payload.sections?.length ? 'h4' : 'h3';
+const [year, month, day] = issue.date.split('-');
+const payload = JSON.stringify(issue.payload).replaceAll('<', '\\u003c');
+const duration =
+  issue.payload.introSeconds +
+  issue.payload.items.length * issue.payload.itemSeconds +
+  issue.payload.outroSeconds;
+const minutes = `${String(Math.floor(duration / 60)).padStart(2, '0')}:${String(duration % 60).padStart(2, '0')}`;
+---
+
+<BaseLayout
+  title={`AI 每日早报 · ${issue.date}`}
+  description={issue.summary}
+  active="explore"
+  canonical={issue.href}
+  clientNavigation
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/assets/briefing/player.css" />
+    <script is:inline src="/assets/briefing/player.mjs" type="module"></script>
+  </Fragment>
+  <main id="main" class="wrap briefing-page" data-briefing-player>
+    <nav class="briefing-breadcrumb" aria-label="早报归档位置">
+      <a href="/branches/block-1/">信息</a>
+      <span aria-hidden="true">/</span>
+      <a href={briefingArchivePath()}>AI 每日早报</a>
+      <span aria-hidden="true">/</span>
+      <a href={briefingArchivePath(year)}>{year} 年</a>
+      <span aria-hidden="true">/</span>
+      <a href={briefingArchivePath(year, month)}>{Number(month)} 月</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{Number(day)} 日</span>
+    </nav>
+    <section
+      class="page-intro briefing-intro"
+      id="top"
+      aria-labelledby="briefing-title"
+    >
+      <div>
+        <span class="eyebrow">AI / DAILY BRIEFING</span>
+        <h1 id="briefing-title">AI 每日早报</h1>
+        <p>{issue.summary}</p>
+      </div>
+      <div class="issue-meta mono">
+        <time datetime={issue.date}>{issue.date.replaceAll('-', '.')}</time>
+        <span>
+          {String(issue.payload.items.length).padStart(2, '0')} 条 / {minutes}
+        </span>
+      </div>
+    </section>
+    <section class="briefing-player" aria-label="本期早报动画">
+      <div class="briefing-stage">
+        <canvas
+          width="1920"
+          height="1080"
+          data-canvas
+          role="img"
+          aria-label={`${issue.date} AI 每日早报动画，文字内容见下方。`}
+        ></canvas>
+      </div>
+      <div class="briefing-controls">
+        <button type="button" data-play>
+          播放 ▶
+        </button>
+        <button type="button" data-replay>
+          重播 ↺
+        </button>
+        <input
+          type="range"
+          data-seek
+          min="0"
+          max={duration}
+          step="0.01"
+          value="0"
+          aria-label="播放进度"
+        />
+        <time data-time>00:00 / {minutes}</time>
+        <button type="button" data-full>
+          全屏 ⤢
+        </button>
+      </div>
+      <nav class="briefing-chapters" data-chapters aria-label="新闻章节"></nav>
+      <div class="briefing-sources" data-sources></div>
+      <div class="briefing-player-notes">
+        <span>
+          16:9 横屏 · 无配音
+          <br />
+          空格播放 / 暂停，← → 前后移动 5 秒
+        </span>
+        <a href="#briefing-transcript">阅读本期文字 ↓</a>
+      </div>
+      <p data-player-error role="status" hidden></p>
+    </section>
+    {issue.payload.monitoring?.length && (
+      <aside class="briefing-monitoring" aria-labelledby="monitoring-title">
+        <h2 id="monitoring-title">监测范围与补报说明</h2>
+        {issue.payload.monitoring.map((group) => (
+          <section>
+            <h3>{group.title}</h3>
+            {group.lines.map((line) => (
+              <p>{line}</p>
+            ))}
+          </section>
+        ))}
+      </aside>
+    )}
+    <section
+      class="briefing-transcript"
+      id="briefing-transcript"
+      aria-labelledby="transcript-title"
+    >
+      <span class="eyebrow">IN THIS BRIEF</span>
+      <h2 id="transcript-title">本期内容与来源</h2>
+      {issue.payload.items.map((item, index) => (
+        <>
+          {item.section &&
+            item.section !== issue.payload.items[index - 1]?.section && (
+              <h3 class="briefing-section-title">
+                {
+                  issue.payload.sections?.find(
+                    (section) => section.id === item.section,
+                  )?.title
+                }
+              </h3>
+            )}
+          <article class="briefing-story" id={`story-${index + 1}`}>
+            <span class="mono briefing-story-kicker">
+              {String(index + 1).padStart(2, '0')} / {item.vendor}
+            </span>
+            <StoryHeading>{item.name}</StoryHeading>
+            <p>{item.blurb}</p>
+            <dl>
+              {item.details.map(([label, body]) => (
+                <div>
+                  <dt>{label}</dt>
+                  <dd>{body}</dd>
+                </div>
+              ))}
+            </dl>
+            <p class="briefing-story-note">{item.note}</p>
+            <nav class="briefing-story-sources" aria-label={`${item.name}来源`}>
+              {item.sources.map(([label, href]) => (
+                <a href={href} target="_blank" rel="noopener noreferrer">
+                  {label} ↗
+                </a>
+              ))}
+            </nav>
+          </article>
+        </>
+      ))}
+    </section>
+    <nav class="briefing-issue-nav" aria-label="早报翻阅">
+      {newer && <a href={newer.href}>← 较新一期 · {newer.date}</a>}
+      <a href={briefingArchivePath(year, month)}>
+        返回 {year} 年 {Number(month)} 月
+      </a>
+      {older && <a href={older.href}>较早一期 · {older.date} →</a>}
+    </nav>
+    <script
+      is:inline
+      type="application/json"
+      data-briefing-data
+      set:html={payload}
+    ></script>
+  </main>
+</BaseLayout>

@@ -32,7 +32,7 @@ test('branch directories contain static published content and preserve parent na
   );
   const tools = readFileSync('dist/branches/tools/index.html', 'utf8');
   assert.ok(tools.includes('href="/selection/"'));
-  const empty = readFileSync('dist/branches/block-1/index.html', 'utf8');
+  const empty = readFileSync('dist/branches/block-2/index.html', 'utf8');
   assert.equal(
     parseHTML(empty)
       .document.querySelector('.directory-count')

@@ -1,0 +1,88 @@
+---
+import type { groupBriefings } from '../lib/briefing-archive.mjs';
+
+interface Props {
+  years: ReturnType<typeof groupBriefings>;
+}
+const { years } = Astro.props;
+const latestYear = years.at(-1)?.year;
+---
+
+<div class="briefing-archive" data-archive-tree>
+  {years.map((year) => (
+    <details
+      class="archive-year"
+      data-year={year.year}
+      open={year.year === latestYear}
+    >
+      <summary class="archive-year-summary">
+        <span class="archive-year-dot" data-year-dot aria-hidden="true"></span>
+        <span class="archive-copy">
+          <span class="mono archive-kicker">YEAR / {year.year}</span>
+          <span class="archive-heading">
+            {year.year} 年{' '}
+            <span class="archive-toggle" aria-hidden="true">
+              +
+            </span>
+          </span>
+          <span class="archive-description">{year.count} 期早报</span>
+        </span>
+      </summary>
+      <div class="archive-months">
+        {year.months.map((month) => (
+          <details
+            class="archive-month"
+            data-month={month.month}
+            open={month.month === year.months.at(-1)?.month}
+          >
+            <summary class="archive-month-summary">
+              <span
+                class="archive-month-dot"
+                data-month-dot
+                aria-hidden="true"
+              ></span>
+              <span class="archive-copy">
+                <span class="mono archive-kicker">
+                  {year.year} / {month.month}
+                </span>
+                <span class="archive-heading">
+                  {Number(month.month)} 月{' '}
+                  <span class="archive-toggle" aria-hidden="true">
+                    +
+                  </span>
+                </span>
+                <span class="archive-description">
+                  {month.issues.length} 期早报 · 点击展开或收起
+                </span>
+              </span>
+            </summary>
+            <div class="archive-days">
+              {month.issues.map((issue) => (
+                <a class="archive-day" href={issue.href}>
+                  <span
+                    class="archive-day-dot"
+                    data-day-dot
+                    aria-hidden="true"
+                  ></span>
+                  <span class="archive-copy">
+                    <time class="mono archive-kicker" datetime={issue.date}>
+                      {issue.date.replaceAll('-', '.')}
+                    </time>
+                    <span class="archive-day-title">
+                      {Number(issue.date.slice(8))} 日 · AI 每日早报{' '}
+                      <span aria-hidden="true">↗</span>
+                    </span>
+                    <span class="archive-description">{issue.summary}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </details>
+  ))}
+  {years.length === 0 && (
+    <p class="archive-empty">首期早报发布后，年、月、日分支会从这里展开。</p>
+  )}
+</div>

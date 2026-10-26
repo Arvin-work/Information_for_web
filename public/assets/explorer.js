@@ -5,6 +5,7 @@ import {
   growthProgress,
   nodePresence,
   sideBranchPath,
+  siblingBranchPath,
 } from './journey-motion.mjs';
 
 let activeJourney = null;
@@ -39,12 +40,14 @@ function initializeExplorer() {
   const explorer = document.querySelector('.node-canvas');
   const hero = document.getElementById('top');
   const directory = journey.hasAttribute('data-directory');
+  const archiveTree = journey.querySelector('[data-archive-tree]');
   const branches = [...document.querySelectorAll('.node-group')];
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const svgNS = 'http://www.w3.org/2000/svg';
   let geometry = [],
     mainPath,
     mainLength = 0,
+    mainEndY = 0,
     rootPoint,
     nodePositions = [];
   let graphFrame = 0,
@@ -77,12 +80,24 @@ function initializeExplorer() {
     };
     rootPoint = point(journey.querySelector('.origin-ring'));
     const mobile = matchMedia('(max-width: 540px)').matches;
-    const mainX =
-      canvasBounds.left - bounds.left + (mobile ? 12 : canvasBounds.width / 2);
+    const yearPoints = archiveTree
+      ? [...archiveTree.querySelectorAll('[data-year-dot]')].map(point)
+      : [];
+    const mainX = archiveTree
+      ? (yearPoints.at(-1)?.x ?? rootPoint.x)
+      : canvasBounds.left -
+        bounds.left +
+        (mobile ? 12 : canvasBounds.width / 2);
     const heroEnd = hero.getBoundingClientRect().bottom - bounds.top;
-    const endY = bounds.height - 25;
+    // The year trunk ends at the last real year. Month/day rails grow separately.
+    const endY = archiveTree
+      ? (yearPoints.at(-1)?.y ?? heroEnd)
+      : bounds.height - 25;
+    mainEndY = endY;
     const curveStart = Math.max(rootPoint.y, heroEnd - 200);
-    const mainD = `M${rootPoint.x} ${rootPoint.y}V${curveStart}C${rootPoint.x} ${heroEnd - 90} ${mainX} ${heroEnd - 90} ${mainX} ${heroEnd + 36}V${endY}`;
+    const mainD = archiveTree
+      ? `M${rootPoint.x} ${rootPoint.y}V${endY}`
+      : `M${rootPoint.x} ${rootPoint.y}V${curveStart}C${rootPoint.x} ${heroEnd - 90} ${mainX} ${heroEnd - 90} ${mainX} ${heroEnd + 36}V${endY}`;
     const mainNodes = [];
     const branchNodes = [];
     geometry = [];
@@ -121,6 +136,65 @@ function initializeExplorer() {
         else high = middle;
       }
       return mainPath.getPointAtLength((low + high) / 2);
+    }
+    if (archiveTree) {
+      for (const year of archiveTree.querySelectorAll('.archive-year')) {
+        if (!year.open) continue;
+        const yearPoint = point(year.querySelector('[data-year-dot]'));
+        const months = [...year.querySelectorAll('.archive-month')];
+        const monthPoints = months.map((month) =>
+          point(month.querySelector('[data-month-dot]')),
+        );
+        const departureY =
+          year.querySelector('summary').getBoundingClientRect().bottom -
+          bounds.top +
+          12;
+        if (monthPoints.length) {
+          line(
+            branchNodes,
+            sideBranchPath(yearPoint, monthPoints, departureY),
+            'var(--branch-a)',
+            yearPoint.y,
+            monthPoints.at(-1).y,
+            2.2,
+          );
+        }
+        for (const month of months) {
+          if (!month.open) continue;
+          const source = point(month.querySelector('[data-month-dot]'));
+          const days = [...month.querySelectorAll('[data-day-dot]')].map(point);
+          const startY =
+            month.querySelector('summary').getBoundingClientRect().bottom -
+            bounds.top +
+            12;
+          const firstRow = days.filter(
+            (day) => Math.abs(day.y - days[0].y) < 1,
+          );
+          const rowStem =
+            firstRow.length > 1
+              ? {
+                  x: (firstRow[0].x + firstRow.at(-1).x) / 2,
+                  y: firstRow[0].y - 14,
+                  departureY: Math.max(startY, firstRow[0].y - 68),
+                }
+              : undefined;
+          for (const day of days) {
+            line(
+              branchNodes,
+              siblingBranchPath(
+                source,
+                day,
+                Math.max(startY, day.y - 68),
+                day.y > days[0].y + 1 ? rowStem : undefined,
+              ),
+              'var(--branch-a)',
+              source.y,
+              day.y,
+              1.7,
+            );
+          }
+        }
+      }
     }
     for (const [index, branch] of branches.entries()) {
       const node = point(branch.querySelector('.category-dot'));
@@ -206,11 +280,7 @@ function initializeExplorer() {
     hero.style.setProperty('--intro-fade', String(1 - heroProgress * 0.9));
     hero.style.setProperty('--intro-drift', `${-heroProgress * 38}px`);
     const head = document.getElementById('growthHead');
-    const mainProgress = growthProgress(
-      frontY,
-      rootPoint.y,
-      journey.offsetHeight - 25,
-    );
+    const mainProgress = growthProgress(frontY, rootPoint.y, mainEndY);
     const current = mainPath.getPointAtLength(mainLength * mainProgress);
     head.setAttribute('cx', String(current.x));
     head.setAttribute('cy', String(current.y));
@@ -242,6 +312,9 @@ function initializeExplorer() {
       });
     branch.addEventListener('toggle', drawGraph);
     branch.addEventListener('focusin', scheduleMotion);
+  });
+  archiveTree?.querySelectorAll('details').forEach((branch) => {
+    branch.addEventListener('toggle', drawGraph, { signal });
   });
   if ('ResizeObserver' in window) {
     const observer = new ResizeObserver(drawGraph);

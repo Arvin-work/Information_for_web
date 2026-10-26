@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-22",
+  "title": "今日 AI",
+  "subtitle": "模型动态，七件事。",
+  "accent": "#ff6335",
+  "background": "#f3f1e8",
+  "ink": "#20231f",
+  "muted": "#74796d",
+  "itemSeconds": 18,
+  "items": [
+    {
+      "vendor": "OpenAI × Google Cloud",
+      "name": "模型，上了谷歌云。",
+      "head": [
+        "模型，上了",
+        "谷歌云。"
+      ],
+      "blurb": "OpenAI 模型进入 Model Garden，更多云端推理选择正在打开。",
+      "kind": "cloud",
+      "metric": "3",
+      "metricLabel": "美国三大云厂商均可用 OpenAI 模型",
+      "note": "官方消息 · 邀请制私有预览",
+      "tags": [
+        "云端推理",
+        "私有预览"
+      ],
+      "details": [
+        [
+          "这次上架",
+          "GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna。"
+        ],
+        [
+          "工具接入",
+          "Codex 命令行与桌面版可使用谷歌云推理；之后接入 Antigravity。"
+        ],
+        [
+          "还在等待",
+          "官方未公布价格与正式上线时间。消息为北京时间 21 日晚。"
+        ]
+      ],
+      "sources": [
+        [
+          "Google Cloud 博客",
+          "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+        ],
+        [
+          "OpenAI 公告",
+          "https://openai.com/index/openai-models-google-cloud/"
+        ]
+      ],
+      "visual": {
+        "nodes": [
+          "Google Cloud",
+          "AWS",
+          "Azure"
+        ],
+        "center": "OpenAI",
+        "caption": "美国三大云厂商均可用 OpenAI 模型"
+      },
+      "dark": false
+    },
+    {
+      "vendor": "Recursive",
+      "name": "Flint：编程模型，本地跑。",
+      "head": [
+        "编程模型，",
+        "本地跑。"
+      ],
+      "blurb": "开放权重 MoE 模型 Flint，在 M4 Pro 笔记本上运行。",
+      "kind": "flint",
+      "metric": "125+",
+      "metricLabel": "tok/s · M4 Pro 本地速度，厂商披露",
+      "note": "跑分为厂商自报，未经本次独立核验",
+      "tags": [
+        "Apache-2.0",
+        "开放权重",
+        "MoE"
+      ],
+      "details": [
+        [
+          "小激活，大模型",
+          "总参数 39.8B；每个 token 约激活 2.5B。"
+        ],
+        [
+          "编程基准",
+          "SWE-bench Pro v2：89.7；SWE-bench Verified：74.2。"
+        ],
+        [
+          "终端任务",
+          "Terminal-Bench 2.1：54.9。以上成绩均为厂商自报。"
+        ]
+      ],
+      "sources": [],
+      "visual": {
+        "heading": "FLINT / LOCAL INFERENCE",
+        "value": "125+",
+        "unit": "tok/s",
+        "caption": "M4 Pro · 厂商披露的本地速度"
+      },
+      "dark": true
+    },
+    {
+      "vendor": "Anthropic",
+      "name": "Claude Duet：从等待，到主动。",
+      "head": [
+        "从等待，",
+        "到主动。"
+      ],
+      "blurb": "基于 Opus 5.5 的主动式智能体应用 Claude Duet，进入研究预览。",
+      "kind": "duet",
+      "metric": "Opus 5.5",
+      "metricLabel": "Duet 使用的模型",
+      "note": "美国 Pro / Max 用户排队申请 · 不额外收费",
+      "tags": [
+        "研究预览",
+        "主动式智能体"
+      ],
+      "details": [
+        [
+          "应用形态",
+          "Claude Duet 是主动式智能体应用，当前为研究预览。"
+        ],
+        [
+          "谁能体验",
+          "仅美国 Pro 与 Max 用户可排队申请，不额外收费。"
+        ],
+        [
+          "同日动态",
+          "Anthropic 发布年度公益公司报告（Public Benefit Report）。"
+        ]
+      ],
+      "sources": [
+        [
+          "公益公司报告帖",
+          "https://x.com/AnthropicAI/status/2112966949273801086"
+        ]
+      ],
+      "visual": {
+        "messages": [
+          "Duet：我来推进下一步。",
+          "你：先让我看看计划。"
+        ],
+        "caption": "Opus 5.5 / 美国 Pro 与 Max"
+      },
+      "dark": false
+    },
+    {
+      "vendor": "Mirendil",
+      "name": "Mirendil-Base：一个人，预训练。",
+      "head": [
+        "一个人，",
+        "预训练。"
+      ],
+      "blurb": "一位研究员借助智能体，从零预训练一个大型代码基座模型。",
+      "kind": "train",
+      "metric": "3.5",
+      "metricLabel": "个月 · 从零预训练所用时间",
+      "note": "官方博客披露 · 权重与 API 尚未开放",
+      "tags": [
+        "代码基座",
+        "智能体协作"
+      ],
+      "details": [
+        [
+          "算力投入",
+          "不到 1,000 万美元的算力。"
+        ],
+        [
+          "模型规模",
+          "参数量在 100B 到 500B 之间。"
+        ],
+        [
+          "当前状态",
+          "未开放权重、没有 API，基准测试成绩之后公布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Mirendil 官方博客",
+          "https://mirendil.com/news/pretraining-at-scale-without-a-pretraining-team/"
+        ]
+      ],
+      "visual": {
+        "value": "3.5",
+        "unit": "个月",
+        "caption": "一位研究员 × 智能体"
+      },
+      "dark": true
+    },
+    {
+      "vendor": "Base Labs",
+      "name": "Mammoth / Elephant：面向决策。",
+      "head": [
+        "两种体量，",
+        "面向决策。"
+      ],
+      "blurb": "Mammoth-1 与 Elephant-1，是在 Qwen3.5 基础上微调的决策类模型。",
+      "kind": "labs",
+      "metric": "71.24",
+      "metricLabel": "Mammoth-1 · Jev Decision Index",
+      "note": "来自 X 新闻摘要 · 尚未核对官方页面",
+      "tags": [
+        "MIT 开源",
+        "待核实"
+      ],
+      "details": [
+        [
+          "两种规模",
+          "Mammoth-1：27B；Elephant-1：9B。"
+        ],
+        [
+          "开放方式",
+          "摘要称采用 MIT 协议，免费 API 开放到 10 月 27 日。"
+        ],
+        [
+          "核实状态",
+          "以上信息来自 X 新闻摘要，尚未核对官方页面。"
+        ]
+      ],
+      "sources": [],
+      "visual": {
+        "cards": [
+          [
+            "MAMMOTH-1",
+            "27B"
+          ],
+          [
+            "ELEPHANT-1",
+            "9B"
+          ]
+        ],
+        "caption": "71.24 / Jev Decision Index · 待核实"
+      },
+      "dark": false
+    },
+    {
+      "vendor": "智谱 · 传闻",
+      "name": "GLM-5.5：期待，先打问号。",
+      "head": [
+        "期待，",
+        "先打问号。"
+      ],
+      "blurb": "有传闻称 GLM-5.5 将在 10 月底至 11 月初发布，官方尚未证实。",
+      "kind": "rumor",
+      "metric": "?",
+      "metricLabel": "发布日期与参数规模，均待确认",
+      "note": "未经证实 · 不应视为已发布或官方参数",
+      "tags": [
+        "GLM-5.5",
+        "未经证实"
+      ],
+      "details": [
+        [
+          "传闻窗口",
+          "10 月底到 11 月初，尚无确认信息。"
+        ],
+        [
+          "参数传闻",
+          "说法从 2 万多亿到 3.5 万亿不等。"
+        ],
+        [
+          "阅读提醒",
+          "这些数字和时间均为传闻，不能当作官方规格。"
+        ]
+      ],
+      "sources": [
+        [
+          "快科技 / 新浪转载",
+          "https://finance.sina.com.cn/tech/roll/2026-10-21/doc-inivyxhi6121343.shtml"
+        ]
+      ],
+      "visual": {
+        "value": "?",
+        "caption": "发布日期与参数规模，均待确认"
+      },
+      "dark": false
+    },
+    {
+      "vendor": "Anthropic · 社区讨论",
+      "name": "Fable 5.5：热议，不等于官宣。",
+      "head": [
+        "热议，",
+        "不等于官宣。"
+      ],
+      "blurb": "社区正在讨论 Claude Fable 5.5 的发布时间，官方没有确认。",
+      "kind": "fable",
+      "metric": "未确认",
+      "metricLabel": "模型发布与 IPO 关联说法",
+      "note": "社区猜测 · 官方没有确认",
+      "tags": [
+        "Claude Fable 5.5",
+        "社区讨论"
+      ],
+      "details": [
+        [
+          "大家在讨论什么",
+          "Claude Fable 5.5 何时发布。"
+        ],
+        [
+          "延伸猜测",
+          "有人把它与 Anthropic 11 月中旬 IPO 的说法联系起来。"
+        ],
+        [
+          "确定的信息",
+          "官方没有确认；不把社区猜测写成发布日程。"
+        ]
+      ],
+      "sources": [],
+      "visual": {
+        "value": "未确认",
+        "caption": "热度 ≠ 官方日程"
+      },
+      "dark": false
+    }
+  ],
+  "fps": 30,
+  "introSeconds": 4,
+  "outroSeconds": 6,
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "draft": false
+}
