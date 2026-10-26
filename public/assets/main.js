@@ -91,8 +91,17 @@
     }
   }
   document.addEventListener('astro:page-load', initializeSite);
-  document.addEventListener('astro:before-swap', () =>
-    window.AltforkSiteCleanup?.(),
-  );
+  document.addEventListener('astro:before-swap', (event) => {
+    const theme = document.documentElement.dataset.theme;
+    if (event.newDocument && (theme === 'dark' || theme === 'light')) {
+      // ClientRouter replaces the root attributes. Carry the active theme into
+      // the incoming document before it is painted, including when storage fails.
+      event.newDocument.documentElement.dataset.theme = theme;
+      event.newDocument
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute('content', theme === 'dark' ? '#1e1e1e' : '#f7f5ef');
+    }
+    window.AltforkSiteCleanup?.();
+  });
   initializeSite();
 })();
