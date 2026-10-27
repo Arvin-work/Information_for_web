@@ -95,16 +95,25 @@ test('information, AI channel, year and month lead to the real dated static brie
   assert.ok(!tree.querySelector('[data-branch-enter]'));
   assert.ok(!tree.querySelector('.main-tail'));
   assert.ok(!tree.querySelector('[data-archive-tree] a[href^="/branches/"]'));
-  assert.deepEqual(contentTree['/block-1/ai-daily/2026/10'].children, [
-    '22',
-    '23',
-    '26',
-  ]);
+  const publishedDates = readdirSync('src/content/briefings')
+    .filter((file) => file.endsWith('.json'))
+    .map((file) =>
+      JSON.parse(readFileSync(`src/content/briefings/${file}`, 'utf8')),
+    )
+    .filter((issue) => issue.draft === false)
+    .map((issue) => issue.date)
+    .sort();
+  assert.deepEqual(
+    contentTree['/block-1/ai-daily/2026/10'].children,
+    publishedDates
+      .filter((date) => date.startsWith('2026-10-'))
+      .map((date) => date.slice(8)),
+  );
   assert.deepEqual(
     [...tree.querySelectorAll('.archive-days time')].map((time) =>
       time.getAttribute('datetime'),
     ),
-    ['2026-10-22', '2026-10-23', '2026-10-26'],
+    publishedDates,
   );
   assert.equal(
     contentTree['/block-1/ai-daily/2026/10/22'].href,
