@@ -1,5 +1,7 @@
+import { editorialLayouts } from './editorial-diagrams.mjs';
 // 浏览器、Remotion 和 Node 导出共用的 JSON 校验；这里不依赖浏览器 API。
 const kinds = new Set([
+  'editorial',
   'cloud',
   'flint',
   'duet',
@@ -84,8 +86,8 @@ export function normalizeProps(input) {
       d.fontFile.startsWith('/'))
   )
     throw Error('fontFile 必须是 public 下的相对字体路径');
-  if (!Array.isArray(d.items) || d.items.length < 1 || d.items.length > 20)
-    throw Error('items 需要 1–20 条新闻');
+  if (!Array.isArray(d.items) || d.items.length < 1 || d.items.length > 40)
+    throw Error('items 需要 1–40 条新闻');
   for (const [key, max] of [
     ['pageTitle', 30],
     ['description', 100],
@@ -181,7 +183,19 @@ export function normalizeProps(input) {
         row.forEach((s) => text(s, `${label} 指标文字`, 30));
       });
     }
-    if (item.kind === 'cloud') {
+    if(item.kind==='editorial'){
+      if(!editorialLayouts.includes(v.layout))throw Error(label+' 图解布局无效');
+      text(v.heading,label+' 图解标题',60);
+      if(!Array.isArray(v.labels)||v.labels.length<3||v.labels.length>6)throw Error(label+' 图解需要 3–6 个标签');
+      v.labels.forEach(s=>text(s,label+' 图解标签',55));
+      for(const key of ['value','footer'])if(v[key]!==undefined)text(v[key],label+' '+key,70);
+      if(v.values){if(!Array.isArray(v.values))throw Error('values 需要数组');v.values.forEach(s=>text(s,'图解数值',30));}
+      if(v.entries){if(!Array.isArray(v.entries)||v.entries.length>6)throw Error('榜单最多六项');for(const e of v.entries){text(e.label,'榜单标签',45);if(!Number.isFinite(e.value)||e.value<0||e.value>60)throw Error('榜单数值无效');}}
+      if(v.layout==='pricing'&&(!Array.isArray(v.numbers)||v.numbers.length!==3||v.numbers.some(n=>!Number.isFinite(n)||n<0)||v.values?.length!==3))throw Error('定价图需要三个有效数值');
+      if(['capacity','equity'].includes(v.layout)&&(!Array.isArray(v.numbers)||v.numbers.length!==2||v.numbers.some(n=>!Number.isFinite(n)||n<=0)))throw Error('对比图需要两项正数');
+      if(v.layout==='pricing'&&!v.numbers.some(n=>n>0))throw Error('定价数据不能全部为零');
+      if(v.layout==='capacity'&&v.values?.length!==2)throw Error('容量图需要两项数值');
+    } else if (item.kind === 'cloud') {
       if (!Array.isArray(v.nodes) || v.nodes.length !== 3)
         throw Error(`${label} visual.nodes 需要 3 项`);
       v.nodes.forEach((s) => text(s, `${label} 云厂商`, 24));

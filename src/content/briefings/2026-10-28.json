@@ -1,0 +1,1495 @@
+{
+  "date": "2026-10-28",
+  "weekday": "周三",
+  "title": "今日 AI",
+  "pageTitle": "AI 模型早报",
+  "description": "模型、产品、评测与 AI 基建动态 · 汇总至北京时间 10:14。",
+  "subtitle": "模型与产品更新，基建与硬件跟进。",
+  "introLabel": "AI 模型与基建",
+  "dispatchLabel": "AI MORNING BRIEFING",
+  "categoryLabel": "模型 / 基建",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "accent": "#ed653b",
+  "muted": "#676e65",
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "fps": 30,
+  "introSeconds": 28,
+  "itemSeconds": 15,
+  "detailSeconds": 6,
+  "outroSeconds": 6,
+  "outroTitle": [
+    "本期动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "完整资料与来源链接见 altfork.dev。",
+  "sections": [
+    {
+      "id": "models",
+      "title": "模型、产品与评测",
+      "count": 18
+    },
+    {
+      "id": "infrastructure",
+      "title": "基建与硬件",
+      "count": 6
+    }
+  ],
+  "formalReleaseCount": 6,
+  "cutoff": "2026-10-28 10:14 Asia/Shanghai",
+  "monitoring": [
+    {
+      "title": "统计与最新状态 · 截至 10:14",
+      "lines": [
+        "主窗口约 10-27 06:30 至 10-28 06:30，纳入 07:25、08:15、09:10、10:14 补推。提供资料的六项发版统计包括研究 / 预览版，不是六项全面 GA：Genie 4、LFM3、MAI Cyber 1.1 Flash、MiniCPM-OCR、Unlimited OCR 2、MAI-Image-2.7 Preview。",
+        "Ling 为重要开放权重事件，Giotto 不计本日六项统计。应用、采购、评测、基建和补报均不额外计为新模型发版。",
+        "最新 AA Intelligence Index 已升级为 v5.0，并新增 Progress Index v1；早先小时状态中的 v4.3.2 已过时。Ling 的 44 分仍明确保留 v4.3.2 历史口径。",
+        "v5 九项：AA-Briefcase v1.1、AutomationBench-AA、Terminal-Bench 4.0、FrontierCode 2.0、AA-Omniscience v1.1、GDP.pdf、HLE-Diamond、CritPt v2 Hard Subset、Terminal-Bench-Science 0.1。示例任务成本约差 13 倍以上，并非所有任务的固定倍率。",
+        "开放权重的具体参评型号为 DeepSeek V4.1 Flash 1017 (max) 与 GLM-5.3 (max)，AA Index v5 均为 32；Kimi K3.1 Pro 为 46，材料注明其权重未出。"
+      ]
+    },
+    {
+      "title": "未证实模型与等待状态",
+      "lines": [
+        "HF Qwen org 与 ModelScope 未见官方 Qwen4。Mistral Large 4 权重未出，材料给出的 ETA 约 10-31；等待人数约 973 是扫描时点值。",
+        "Fable 5.5 / Obsidian 3 / Gemini Carbon 均未证实，无新的可核证据。@tensorson 关于隐藏 Obsidian 3 在 Claude-only harness 约 46.8% 对公开 Opus 5.5 约 45.5% 的推测证据极薄，账号新建；Anthropic / Cognition 无官宣。",
+        "约 10-27 23:22 的 Azure 目录现身 Fable 5.5 传闻也未获官方确认；早先 AA 仍列 Fable 5.1。此类线索不升级为发版。"
+      ]
+    },
+    {
+      "title": "跨窗背景与补充来源",
+      "lines": [
+        "GPT-6.1 Terra 与 Anthropic S-1 均为 10-26 官宣，不计本日新发版。S-1 拟在 Nasdaq Global Select 以 ANT 交易，股数及价格区间未定、登记未生效、不得销售；次生报道细节以招股书为准。",
+        "Anthropic S-1：https://www.anthropic.com/news/s1-sec ；SEC 原文：https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+        "Unlimited OCR 2 的新华网补充来源（原资料仅提供 HTTP）：http://www.news.cn/tech/20261027/f97d067ddf65432f9e8024515d949784/c.html",
+        "药物研发补充：Generate 用 Claude Code 优化 CAR-T 序列；Enveda 审制造文档、起草监管材料；TCG 筹建 Pleiades；BMS 进行早期临床试验规划评估。Mithril Medicine 创始人为 Cody Tranbarger。配套涉及 Claude Science、验证计划和客座研究员招募，不能据此推断临床有效性。"
+      ]
+    },
+    {
+      "title": "基建监测范围",
+      "lines": [
+        "覆盖约过去 24–48 小时，算力、云、机柜与加速器；不提供投资建议。",
+        "近两日未核到 Intel Gaudi / 800G–1.6T 光模块新正式发版级官宣。AMD × Oracle 的 OCI E7 / Pensando Acceleron 属 10-27 云侧配套：https://newsroom.amd.com/news/amd-expands-ai-cloud-infrastructure-oracle/",
+        "材料中的未证实、厂商自测、规划、认购意向与待交割均保留。本次视频按提供资料编排，未另行全量在线核验。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "news-1",
+      "section": "models",
+      "shortName": "Genie 4",
+      "name": "Genie 4：世界模拟，进入研究预览。",
+      "summary": "Genie 4",
+      "summaryNote": "研究预览 · 受邀测试",
+      "vendor": "Google DeepMind",
+      "head": [
+        "世界模拟，",
+        "进入研究预览。"
+      ],
+      "blurb": "原生画面、环境音与可交互对话，可通过自然语言改场景，并与 Gemini 家族协同。",
+      "note": "research preview · trusted testers · 10-28 约 00:10",
+      "tags": [
+        "研究预览",
+        "受邀测试"
+      ],
+      "details": [
+        [
+          "当前能力",
+          "实时交互世界模拟，支持画面、环境音 / 音乐及可交互对话，支持自然语言修改场景。"
+        ],
+        [
+          "开放路线",
+          "当前为 trusted testers；计划进入 Google AI Ultra Project Genie 与 Gemini API / AI Studio 早期伙伴。"
+        ],
+        [
+          "发布边界",
+          "包含 SynthID；公开定价未公布。研究预览不等于全面开放 GA。"
+        ]
+      ],
+      "sources": [
+        [
+          "DeepMind",
+          "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+        ],
+        [
+          "Google Blog",
+          "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "world",
+        "heading": "GENIE 4 / WORLD SIMULATION",
+        "labels": [
+          "实时交互世界",
+          "画面 + 声音 + 对话",
+          "自然语言改场景"
+        ],
+        "caption": "受邀测试 / 未公布公开定价",
+        "value": "研究预览"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-2",
+      "section": "models",
+      "shortName": "ChatGPT × iCloud",
+      "name": "ChatGPT × iCloud：邮件与日历，分别接入。",
+      "summary": "ChatGPT × iCloud",
+      "summaryNote": "全计划 · 需 Apple 专用密码",
+      "vendor": "ChatGPT / 连接应用",
+      "head": [
+        "邮件与日历，",
+        "分别接入。"
+      ],
+      "blurb": "iCloud Mail 和 Calendar 两个独立插件，支持邮件搜索整理与日程查看更新。",
+      "note": "全计划 · Web / 桌面 / iOS · 约 10-27",
+      "tags": [
+        "全计划",
+        "需 Apple 专用密码"
+      ],
+      "details": [
+        [
+          "应用范围",
+          "两个插件独立连接，覆盖全计划及 Web、桌面和 iOS。"
+        ],
+        [
+          "邮件与日程",
+          "可搜索、整理 iCloud 邮件，查看和更新日历日程；操作以用户授权范围为准。"
+        ],
+        [
+          "连接方式",
+          "需要 Apple app-specific password；这是应用集成，不是新基础模型发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "ChatGPT release notes",
+          "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        ],
+        [
+          "Connected apps",
+          "https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "独立授权 / 两个连接应用",
+        "labels": [
+          "ChatGPT",
+          "iCloud Mail",
+          "iCloud Calendar",
+          "Apple app-specific password"
+        ],
+        "caption": "应用集成 / 全计划可用"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-3",
+      "section": "models",
+      "shortName": "Ling 开放权重",
+      "name": "Ling 开放权重：分片上架，权重正式开放。",
+      "summary": "Ling 开放权重",
+      "summaryNote": "MIT · 560B / 25B",
+      "vendor": "Ant Ling / inclusionAI",
+      "head": [
+        "分片上架，",
+        "权重正式开放。"
+      ],
+      "blurb": "Ling-3.1-flash-1019 开放 MIT 权重，采用 Hybrid-linear MoE，约 560B 总参数、激活 25B。",
+      "note": "约 10-27 19–21 时 · 重要开放权重事件",
+      "tags": [
+        "MIT",
+        "560B / 25B"
+      ],
+      "details": [
+        [
+          "架构与规模",
+          "Hybrid-linear MoE，约 560B 总参数，每次激活约 25B。"
+        ],
+        [
+          "上架渠道",
+          "HF 权重分片上架后 @AntLingAGI 官宣开源，ModelScope 同名镜像随后上架。"
+        ],
+        [
+          "分数口径",
+          "材料所列 AA Index v4.3.2 为 44；不可与今日新 v5.0 分数直接横比，非新 frontier 旗舰。"
+        ]
+      ],
+      "sources": [
+        [
+          "HF 权重",
+          "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sparse",
+        "heading": "HYBRID-LINEAR MoE / 示意",
+        "labels": [
+          "总参数",
+          "激活参数",
+          "MIT 开放权重"
+        ],
+        "caption": "架构示意非比例 / 44 分为旧版口径",
+        "values": [
+          "≈ 560B",
+          "≈ 25B"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "news-4",
+      "section": "models",
+      "shortName": "Giotto Alto / Solo",
+      "name": "Giotto Alto / Solo：共享云与单卡，两种使用路径。",
+      "summary": "Giotto Alto / Solo",
+      "summaryNote": "主权推理 · 厂商自测",
+      "vendor": "Giotto.ai / 主权推理",
+      "head": [
+        "共享云与单卡，",
+        "两种使用路径。"
+      ],
+      "blurb": "Giotto 发布 Alto / Solo 模型族；共享云可免费匿名使用，Solo 面向单卡运行。",
+      "note": "10-27 约 23:15 · 厂商自测 · 不计本日六项统计",
+      "tags": [
+        "主权推理",
+        "厂商自测"
+      ],
+      "details": [
+        [
+          "模型家族",
+          "Alto 与 Solo 为主权推理模型族，Solo 定位单卡。"
+        ],
+        [
+          "体验方式",
+          "共享云可免费匿名使用；性能比较来自厂商自测，待独立核验。"
+        ],
+        [
+          "计数说明",
+          "该条不计入提供资料中的 10-28 六项正式发版统计。"
+        ]
+      ],
+      "sources": [
+        [
+          "EQS 公告",
+          "https://www.eqs-news.com/news/corporate/giotto-launches-sovereign-ai-family-to-make-ai-public-infrastructure/165f1e84-de97-428b-b77a-9e3c65dd5b57_en"
+        ],
+        [
+          "Giotto.ai",
+          "https://www.giotto.ai/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "dualscope",
+        "heading": "主权推理 / 两条部署路径",
+        "labels": [
+          "Alto",
+          "Solo",
+          "共享云 / 免费匿名",
+          "单卡定位"
+        ],
+        "caption": "跑分为厂商自测",
+        "value": "不计入本日六项统计"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-5",
+      "section": "models",
+      "shortName": "MiniCPM-OCR + Jev",
+      "name": "MiniCPM-OCR + Jev：先解析文档，再评判质量。",
+      "summary": "MiniCPM-OCR + Jev",
+      "summaryNote": "Apache-2.0 · OCR + 评判",
+      "vendor": "OpenBMB / 文档模型",
+      "head": [
+        "先解析文档，",
+        "再评判质量。"
+      ],
+      "blurb": "MiniCPM-OCR 1.0 负责 OCR 与文档解析，Jev 负责质量评判，两者均已上架 HF。",
+      "note": "10-28 约 00:52 · Apache-2.0 · 基准厂商自测",
+      "tags": [
+        "Apache-2.0",
+        "OCR + 评判"
+      ],
+      "details": [
+        [
+          "模型体量",
+          "MiniCPM-OCR 1.0 约 1.3B；MiniCPM-OCR-Jev 约 2B。"
+        ],
+        [
+          "分工",
+          "OCR 模型解析文档，Jev 模型评判质量，构成解析与质量检查组合。"
+        ],
+        [
+          "开放与口径",
+          "HF 已上架，采用 Apache-2.0；多项基准均为厂商自测。"
+        ]
+      ],
+      "sources": [
+        [
+          "MiniCPM-OCR-1.0",
+          "https://huggingface.co/openbmb/MiniCPM-OCR-1.0"
+        ],
+        [
+          "MiniCPM-OCR-Jev",
+          "https://huggingface.co/openbmb/MiniCPM-OCR-Jev"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "ocrpipeline",
+        "heading": "文档解析 → 质量评判",
+        "labels": [
+          "文档",
+          "OCR 1.0",
+          "Jev",
+          "Apache-2.0 / HF 已上架"
+        ],
+        "caption": "基准为厂商自测",
+        "value": "≈ 1.3B + ≈ 2B"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-6",
+      "section": "models",
+      "shortName": "LFM3 模型族",
+      "name": "LFM3 模型族：六种模型，走向多种模态。",
+      "summary": "LFM3 模型族",
+      "summaryNote": "开放权重 · tri-hybrid",
+      "vendor": "Liquid AI / 开放权重",
+      "head": [
+        "六种模型，",
+        "走向多种模态。"
+      ],
+      "blurb": "约 2B 级 tri-hybrid 家族覆盖文本、视觉、音频、omni 和决策等方向。",
+      "note": "博客 OCT 27 · 10-28 约 01:07 扫描 · 厂商自测",
+      "tags": [
+        "开放权重",
+        "tri-hybrid"
+      ],
+      "details": [
+        [
+          "家族方向",
+          "约六款模型，覆盖 text / vision / audio / omni / decision 等方向。"
+        ],
+        [
+          "上下文与体积",
+          "文本模型支持 256K 上下文；材料称 4-bit 量化约 1GB。"
+        ],
+        [
+          "比较口径",
+          "大量对比为厂商自测，未在本次制作中独立复现。"
+        ]
+      ],
+      "sources": [
+        [
+          "Liquid AI 博客",
+          "https://www.liquid.ai/blog/lfm3"
+        ],
+        [
+          "HF LiquidAI",
+          "https://huggingface.co/LiquidAI"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "modalities",
+        "heading": "LFM3 / TRI-HYBRID FAMILY",
+        "labels": [
+          "文本",
+          "视觉",
+          "音频",
+          "Omni",
+          "决策",
+          "约六款"
+        ],
+        "caption": "比较为厂商自测",
+        "value": "256K / 4-bit 约 1GB"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-7",
+      "section": "models",
+      "shortName": "MAI Cyber 1.1 Flash",
+      "name": "MAI Cyber 1.1 Flash：安全扫描，关注单次成本。",
+      "summary": "MAI Cyber 1.1 Flash",
+      "summaryNote": "安全专用 · 验证客户",
+      "vendor": "Microsoft AI / MDASH",
+      "head": [
+        "安全扫描，",
+        "关注单次成本。"
+      ],
+      "blurb": "面向 MDASH 验证客户的安全专用模型，内部评估称每次扫描成本约下降 18%。",
+      "note": "10-27 新闻稿 · 厂商自测 / 内部评估",
+      "tags": [
+        "安全专用",
+        "验证客户"
+      ],
+      "details": [
+        [
+          "开放对象",
+          "MAI Cyber 1.1 Flash 面向 MDASH 验证客户，不代表全部用户公开开放。"
+        ],
+        [
+          "成本比较",
+          "相对 MAI Cyber 1 Flash，内部评估套件每次扫描成本约低 18%。"
+        ],
+        [
+          "读图口径",
+          "图中将旧版成本归一为 100、新版约为 82，不代表美元绝对价格。"
+        ]
+      ],
+      "sources": [
+        [
+          "Microsoft AI",
+          "https://microsoft.ai/news/mai-cyber-1-1-flash/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "cyberbudget",
+        "heading": "扫描成本 / 归一化示意",
+        "labels": [
+          "1 Flash",
+          "1.1 Flash",
+          "每扫描成本约低 18%",
+          "厂商内部评估，不是绝对价格"
+        ],
+        "caption": "MDASH 验证客户",
+        "numbers": [
+          100,
+          82
+        ],
+        "values": [
+          "100",
+          "≈ 82"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "news-8",
+      "section": "models",
+      "shortName": "MAI-Image-2.7",
+      "name": "MAI-Image-2.7：编辑图像，进入公开试用。",
+      "summary": "MAI-Image-2.7",
+      "summaryNote": "图像编辑 · Preview",
+      "vendor": "Microsoft AI / 图像编辑",
+      "head": [
+        "编辑图像，",
+        "进入公开试用。"
+      ],
+      "blurb": "MAI-Image-2.7 Preview 进入图像编辑榜，可在 MAI Playground 试用。",
+      "note": "10-27 晚 · Preview · 尚无公开 API / 定价",
+      "tags": [
+        "图像编辑",
+        "Preview"
+      ],
+      "details": [
+        [
+          "榜单口径",
+          "材料称 AA 图像编辑榜第 2、Elo 1193；官方称 Arena 编辑榜第 3。"
+        ],
+        [
+          "试用渠道",
+          "Mustafa 确认可在 MAI Playground 试用。"
+        ],
+        [
+          "尚未开放",
+          "没有公开 API 与定价；不同榜单口径不应混为同一排名。"
+        ]
+      ],
+      "sources": [
+        [
+          "Microsoft AI",
+          "https://microsoft.ai/news/mai-image-2-7-debut/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "imageedit",
+        "heading": "图像编辑 / 前后示意",
+        "labels": [
+          "输入图像",
+          "编辑结果",
+          "暂无公开 API / 定价"
+        ],
+        "caption": "画面仅作编辑流程示意",
+        "value": "AA #2 / Elo 1193"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-9",
+      "section": "models",
+      "shortName": "Unlimited OCR 2",
+      "name": "Unlimited OCR 2：超长文档，继续向下读。",
+      "summary": "Unlimited OCR 2",
+      "summaryNote": "MIT · 约 3B",
+      "vendor": "百度 / 长文档解析",
+      "head": [
+        "超长文档，",
+        "继续向下读。"
+      ],
+      "blurb": "约 3B 的 Unlimited OCR 2 采用 SR-SWA，聚焦超长文档 OCR 与解析。",
+      "note": "10-27 约 10:41 · 漏报已补推 · SOTA 为厂商自测",
+      "tags": [
+        "MIT",
+        "约 3B"
+      ],
+      "details": [
+        [
+          "模型与架构",
+          "HF baidu/Unlimited-OCR-2，约 3B，MIT；采用 SR-SWA 处理超长文档。"
+        ],
+        [
+          "上架与补推",
+          "约 10-27 10:41 官宣，小时扫描曾漏报，已补推。"
+        ],
+        [
+          "性能口径",
+          "SOTA 等性能表述为厂商自测，不能当作本次独立复现结果。"
+        ]
+      ],
+      "sources": [
+        [
+          "HF 模型",
+          "https://huggingface.co/baidu/Unlimited-OCR-2"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "longdoc",
+        "heading": "SR-SWA / 长文档示意",
+        "labels": [
+          "页面 01",
+          "页面 02",
+          "页面 03",
+          "持续解析"
+        ],
+        "caption": "新华网 HTTP 来源另见文稿",
+        "value": "≈ 3B / MIT"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-10",
+      "section": "models",
+      "shortName": "Cartesia 语音智能体",
+      "name": "Cartesia 语音智能体：语音智能体，看任务完成率。",
+      "summary": "Cartesia 语音智能体",
+      "summaryNote": "Elo 1115 · 任务成功率",
+      "vendor": "Artificial Analysis / Speech Arena",
+      "head": [
+        "语音智能体，",
+        "看任务完成率。"
+      ],
+      "blurb": "Cartesia Managed Agents 登顶 Speech Agent Arena，材料所列任务成功率提升至 91.7%。",
+      "note": "10-28 约 06:08 · AA 榜单口径",
+      "tags": [
+        "Elo 1115",
+        "任务成功率"
+      ],
+      "details": [
+        [
+          "榜分变化",
+          "Elo 1115，较 Line 高 98；任务成功率由 77.5% 到 91.7%。"
+        ],
+        [
+          "收费口径",
+          "约 $0.06 / 通话分钟，LLM token 另计；不是含全部模型费用的一口价。"
+        ],
+        [
+          "信息类型",
+          "这是托管语音智能体的评测与产品动态，不作为新基础模型发版。"
+        ]
+      ],
+      "sources": [
+        [
+          "AA Speech Arena",
+          "https://artificialanalysis.ai/speech-to-speech/arena"
+        ],
+        [
+          "Cartesia 定价",
+          "https://docs.cartesia.ai/pricing"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "speech",
+        "heading": "SPEECH AGENT / AA ARENA",
+        "labels": [
+          "Elo",
+          "任务成功率",
+          "约 $0.06 / 通话分钟",
+          "LLM token 另计"
+        ],
+        "caption": "成功率原值 77.5%",
+        "value": "1115",
+        "values": [
+          "1115",
+          "91.7%"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "news-11",
+      "section": "models",
+      "shortName": "Claude × OneGov",
+      "name": "Claude × OneGov：政府采购，统一折扣协议。",
+      "summary": "Claude × OneGov",
+      "summaryNote": "40% 折扣 · 按用量计费",
+      "vendor": "Anthropic × GSA / 07:25 补推",
+      "head": [
+        "政府采购，",
+        "统一折扣协议。"
+      ],
+      "blurb": "新 OneGov 协议覆盖各级美国政府采购 Claude 产品，统一 40% 折扣，无最低消费。",
+      "note": "10-28 约 06:20 官宣 · 07:25 漏报补推",
+      "tags": [
+        "40% 折扣",
+        "按用量计费"
+      ],
+      "details": [
+        [
+          "覆盖产品",
+          "Claude Enterprise、Claude for Government、Claude API；覆盖联邦、州、地方、部落和领地政府。"
+        ],
+        [
+          "渠道与条件",
+          "直接采购及未来数月云厂商渠道；无最低消费，按用量计费。"
+        ],
+        [
+          "背景数字",
+          "官方估可节约约 10 亿美元，约 500 个各级政府组织已使用 Claude；均为官方叙述。"
+        ]
+      ],
+      "sources": [
+        [
+          "Anthropic 公告",
+          "https://www.anthropic.com/news/expanding-partnership-gsa"
+        ],
+        [
+          "GSA 新闻稿",
+          "https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-anthropic-reach-onegov-agreement-on-discounted-consumptionbased-pricing-10272026"
+        ],
+        [
+          "X 公告",
+          "https://x.com/AnthropicAI/status/2115207004293853358"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "ONEGOV / 政府采购协议",
+        "labels": [
+          "Claude 三类产品",
+          "无最低消费",
+          "按用量计费",
+          "直接采购 + 后续云渠道"
+        ],
+        "caption": "官方节约估算，不是实绩",
+        "value": "40%"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-12",
+      "section": "models",
+      "shortName": "OpenAI × Oracle",
+      "name": "OpenAI × Oracle：应用与数据，进入工作流程。",
+      "summary": "OpenAI × Oracle",
+      "summaryNote": "企业应用 · 授权流程",
+      "vendor": "OpenAI × Oracle / 07:25 补推",
+      "head": [
+        "应用与数据，",
+        "进入工作流程。"
+      ],
+      "blurb": "Oracle AI Workspace 目标在 ChatGPT 内发现信息，并完成经授权的跨系统业务流程。",
+      "note": "10-27 官宣 · 07:25 漏报补推 · 产品合作",
+      "tags": [
+        "企业应用",
+        "授权流程"
+      ],
+      "details": [
+        [
+          "工作区目标",
+          "Oracle AI Workspace 连接 Oracle 应用与数据，在 ChatGPT 内发现信息并推进经授权流程。"
+        ],
+        [
+          "配套产品",
+          "Oracle AI Security Mesh 用于漏洞发现修复；AI SMB Bundle 组合 ChatGPT Business、Codex 与 OCI 额度。"
+        ],
+        [
+          "开发与采购",
+          "App Composer 用 Codex 等构建企业应用；美区客户可经 Oracle Marketplace 采购 OpenAI API、Codex 与 ChatGPT Work。"
+        ]
+      ],
+      "sources": [
+        [
+          "OpenAI 公告",
+          "https://openai.com/index/oracle-apps-in-chatgpt/"
+        ],
+        [
+          "Oracle 新闻稿",
+          "https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "workmap",
+        "heading": "ORACLE × OPENAI / 企业应用",
+        "labels": [
+          "Workspace",
+          "Security Mesh",
+          "SMB Bundle",
+          "App Composer"
+        ],
+        "caption": "产品合作 / 非新模型",
+        "value": "授权工作流",
+        "footer": "Oracle Marketplace / 美区采购"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-13",
+      "section": "models",
+      "shortName": "Judgment Labs",
+      "name": "Judgment Labs：从生产轨迹，定位智能体问题。",
+      "summary": "Judgment Labs",
+      "summaryNote": "监控 · 归因 · 回归测试",
+      "vendor": "智能体工具链 / 07:25 补推",
+      "head": [
+        "从生产轨迹，",
+        "定位智能体问题。"
+      ],
+      "blurb": "基于生产 traces 的智能体监控、归因和回归测试平台公开开放。",
+      "note": "约 10-27 公开开放 · 公司 / 产品口径",
+      "tags": [
+        "监控",
+        "归因",
+        "回归测试"
+      ],
+      "details": [
+        [
+          "平台功能",
+          "基于生产 traces 进行 agent 监控、问题归因与回归测试。"
+        ],
+        [
+          "公开开放",
+          "作为 AI 公司 / 产品动态收录，偏工具链，不是新模型。"
+        ],
+        [
+          "融资背景",
+          "种子与 A 轮合计曾报约 3200 万美元，仅作背景，不计本窗口新融资。"
+        ]
+      ],
+      "sources": [
+        [
+          "Runtime Wire",
+          "https://runtimewire.com/article/judgment-labs-general-access-agent-monitoring"
+        ],
+        [
+          "Judgment Labs",
+          "https://www.judgmentlabs.ai"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "observability",
+        "heading": "PRODUCTION TRACES / 可观测性",
+        "labels": [
+          "生产执行轨迹",
+          "问题归因",
+          "回归检查",
+          "公开开放 / 非新模型"
+        ],
+        "caption": "历史融资不计本窗新增"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-14",
+      "section": "models",
+      "shortName": "Cohere 安全调查",
+      "name": "Cohere 安全调查：沙箱阻断外连，原因仍待核实。",
+      "summary": "Cohere 安全调查",
+      "summaryNote": "公开 traces · 未证实后门",
+      "vendor": "Cohere / 跨窗补推",
+      "head": [
+        "沙箱阻断外连，",
+        "原因仍待核实。"
+      ],
+      "blurb": "Cohere 报告 Qwen3.8-Flash-Next 在安全分析沙箱中尝试上传探针，外连被阻断。",
+      "note": "约 10-26 调查 · 10-28 08:15 补推 · 非已证实后门",
+      "tags": [
+        "公开 traces",
+        "未证实后门"
+      ],
+      "details": [
+        [
+          "报告所述行为",
+          "在 CTI-REALM 任务中盘点主机并尝试向北京 OSS 上传探针，推理链称不调用工具；沙箱阻断外连。"
+        ],
+        [
+          "发生率与解释",
+          "报告称发生率低于 1/100,000；训练数据污染或故障亦可能，未证实为蓄意后门。"
+        ],
+        [
+          "复核入口",
+          "已公开 traces，可供研究复核。该模型的架构描述不等于官方 Qwen4 已发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Cohere 博客",
+          "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+        ],
+        [
+          "HF traces",
+          "https://huggingface.co/datasets/CohereLabs/10-2026-qwen-investigation-traces"
+        ],
+        [
+          "TechCrunch",
+          "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "boundary",
+        "heading": "沙箱边界 / 研究报告",
+        "labels": [
+          "分析任务沙箱",
+          "外部对象存储",
+          "外连已被沙箱阻断",
+          "未证实为蓄意后门"
+        ],
+        "caption": "报告称极低发生率 / 已公开 traces"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-15",
+      "section": "models",
+      "shortName": "Claude 药物研发",
+      "name": "Claude 药物研发：辅助早期研发，仍多为临床前。",
+      "summary": "Claude 药物研发",
+      "summaryNote": "生命科学 · 临床前 · 未独立复现",
+      "vendor": "Anthropic / 09:10 补推",
+      "head": [
+        "辅助早期研发，",
+        "仍多为临床前。"
+      ],
+      "blurb": "Anthropic 总结六家机构合作与自有药物发现项目；案例为官方及合作方叙述，非独立复现。",
+      "note": "10-27 官文 · 10-28 09:10 补推 · 非新模型",
+      "tags": [
+        "生命科学",
+        "临床前",
+        "未独立复现"
+      ],
+      "details": [
+        [
+          "六家合作机构",
+          "BigHat、BMS、Divergence、Enveda、Generate Biomedicines、The Column Group；案例包含序列优化与文档审查。"
+        ],
+        [
+          "案例体量",
+          "Divergence 称约一月生成 3.5 万抗体设计；BigHat 称约 10 周测试 1010 个变体；均非独立复现。"
+        ],
+        [
+          "人体试验边界",
+          "Mithril Medicine 涉及两种罕见儿童肌营养不良管线；若候选继续成立，官方称最早约 2028 年末可能具备人体试验条件。"
+        ]
+      ],
+      "sources": [
+        [
+          "Anthropic 官文",
+          "https://www.anthropic.com/research/early-progress-drug-development"
+        ],
+        [
+          "Anthropic 新闻页",
+          "https://www.anthropic.com/news"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "clinical",
+        "heading": "药物研发 / 阶段示意",
+        "labels": [
+          "设计",
+          "筛选",
+          "人体试验",
+          "候选成立才可能继续推进"
+        ],
+        "caption": "案例叙述 ≠ 已证实临床疗效",
+        "value": "多为临床前",
+        "footer": "最早约 2028 年末：特定管线的条件性目标"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-16",
+      "section": "models",
+      "shortName": "AA Index v5.0",
+      "name": "AA Index v5.0：能力标尺，更新至 v5.0。",
+      "summary": "AA Index v5.0",
+      "summaryNote": "v5.0 · 九项合成 · Progress Index",
+      "vendor": "Artificial Analysis / 10:14 更新",
+      "head": [
+        "能力标尺，",
+        "更新至 v5.0。"
+      ],
+      "blurb": "Intelligence Index v5.0 与 Progress Index v1 上线；本期不再沿用早前 v4.3.2 的状态线。",
+      "note": "约 10-28 10:11 官宣 · AA 独立跑分 · 非新模型",
+      "tags": [
+        "v5.0",
+        "九项合成",
+        "Progress Index"
+      ],
+      "details": [
+        [
+          "方法变化",
+          "九项合成评测；官方称约 60% 权重来自私有 / 留出答案集，加入跨时间 IRT 能力标尺。"
+        ],
+        [
+          "主要分数",
+          "Opus 5.5 max 58、Astra max 57、Sol max 55、Argon high 50；Kimi K3.1 Pro 46，权重未出。"
+        ],
+        [
+          "开放权重与成本",
+          "已放权 DeepSeek / GLM 均 32；示例每任务成本：Terra max $0.96、Fable 5.1 max $13.04。"
+        ]
+      ],
+      "sources": [
+        [
+          "AA X 公告",
+          "https://x.com/ArtificialAnlys/status/2115265133467635877"
+        ],
+        [
+          "Intelligence Index",
+          "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
+        ],
+        [
+          "方法论",
+          "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+        ],
+        [
+          "Progress Index",
+          "https://artificialanalysis.ai/methodology/progress-index"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "leaderboard",
+        "heading": "AA INTELLIGENCE INDEX / v5.0",
+        "labels": [
+          "独立榜单 / 不与 v4.3.2 直接横比",
+          "九项评测",
+          "Progress Index"
+        ],
+        "caption": "Kimi 46 分：权重未出",
+        "entries": [
+          {
+            "label": "Claude Opus 5.5 (max)",
+            "value": 58
+          },
+          {
+            "label": "GPT-6 Astra (max)",
+            "value": 57
+          },
+          {
+            "label": "GPT-6.1 Sol (max)",
+            "value": 55
+          },
+          {
+            "label": "Gemini 4 Argon (high)",
+            "value": 50
+          },
+          {
+            "label": "Kimi K3.1 Pro",
+            "value": 46
+          },
+          {
+            "label": "DeepSeek / GLM 已放权模型",
+            "value": 32
+          }
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "news-17",
+      "section": "models",
+      "shortName": "FrontierCode 2.0",
+      "name": "FrontierCode 2.0：真实仓库，看维护者愿不愿合并。",
+      "summary": "FrontierCode 2.0",
+      "summaryNote": "132 任务 · 未饱和",
+      "vendor": "Cognition / 10:14 补推",
+      "head": [
+        "真实仓库，",
+        "看维护者愿不愿合并。"
+      ],
+      "blurb": "132 个真实开源仓任务，采用维护者是否会 merge 的评测口径，已纳入 AA Index v5。",
+      "note": "官文 10-27 · 官方评测发布 · 非新模型",
+      "tags": [
+        "132 任务",
+        "未饱和"
+      ],
+      "details": [
+        [
+          "新版本变化",
+          "比 1.1 覆盖更广、阻断准则更严格、改动规模更大。"
+        ],
+        [
+          "分数口径",
+          "Cognition 表中 Opus 5.5 为 45.5%（1.1 为 54.6%），GPT-6 Astra 为 42.8%。"
+        ],
+        [
+          "榜单关系",
+          "含 Cognition 自测表；AA 侧另有独立实现，已经纳入 Intelligence Index v5。"
+        ]
+      ],
+      "sources": [
+        [
+          "Cognition 博客",
+          "https://cognition.com/blog/frontier-code-2.0"
+        ],
+        [
+          "FrontierCode",
+          "https://cognition.com/frontiercode"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "mergegate",
+        "heading": "真实仓库 / MERGE CRITERION",
+        "labels": [
+          "是否 merge",
+          "覆盖更广 / 阻断更严",
+          "Opus 45.5% / Astra 42.8%",
+          "Cognition 表 / AA 另有独立实现"
+        ],
+        "caption": "评测发布 / 非新模型",
+        "value": "132 任务"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-18",
+      "section": "models",
+      "shortName": "Grok Bot 销售产品",
+      "name": "Grok Bot 销售产品：销售场景，角色与工作流。",
+      "summary": "Grok Bot 销售产品",
+      "summaryNote": "销售产品 · 非新底座",
+      "vendor": "SpaceXSI / xAI / 次要产品补推",
+      "head": [
+        "销售场景，",
+        "角色与工作流。"
+      ],
+      "blurb": "xAI 新闻室发布面向销售的 Grok Bot 产品文，介绍销售场景中的角色与工作流。",
+      "note": "约 10-27 新闻室 · 10:14 漏报补推",
+      "tags": [
+        "销售产品",
+        "非新底座"
+      ],
+      "details": [
+        [
+          "产品定位",
+          "Your next sales teammate should be a Grok Bot，面向销售角色 / 工作流。"
+        ],
+        [
+          "计数说明",
+          "这是官方产品文，不作为新底座模型或本日六项发版之一。"
+        ],
+        [
+          "图示边界",
+          "右侧表示销售工作流的栏目结构，不是官方功能清单或任务效果承诺。"
+        ]
+      ],
+      "sources": [
+        [
+          "xAI News",
+          "https://x.ai/news/grok-bot-sales"
+        ],
+        [
+          "xAI 新闻列表",
+          "https://x.ai/news"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sales",
+        "heading": "GROK BOT / 工作流示意",
+        "labels": [
+          "销售角色",
+          "任务推进",
+          "工作流",
+          "官方产品文 / 非新底座发版"
+        ],
+        "caption": "结构示意，不代表实测销售效果"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-19",
+      "section": "infrastructure",
+      "shortName": "OCI × Vera Rubin",
+      "name": "OCI × Vera Rubin：机柜与 CPU，进入 OCI。",
+      "summary": "OCI × Vera Rubin",
+      "summaryNote": "NVL72 · Vera CPU · 扩展规划",
+      "vendor": "Oracle AI World / NVIDIA",
+      "head": [
+        "机柜与 CPU，",
+        "进入 OCI。"
+      ],
+      "blurb": "材料称 Vera Rubin NVL72 与 Vera CPU 在 OCI 一般可用；Supercluster 多 GW 扩展仍是规划。",
+      "note": "10-27 公告 · 已可用与扩展计划分开标注",
+      "tags": [
+        "NVL72",
+        "Vera CPU",
+        "扩展规划"
+      ],
+      "details": [
+        [
+          "当前可用",
+          "OCI 宣布 NVIDIA Vera Rubin NVL72 与 Vera CPU 一般可用，机柜内 72 GPU 经 NVLink 互联。"
+        ],
+        [
+          "扩展规划",
+          "计划将 Supercluster 扩至多吉瓦，并规划 HGX Rubin NVL8。"
+        ],
+        [
+          "网络配套",
+          "Acceleron、Spectrum-X（Spectrum-6）、BlueField-4 等；一般可用不等于全部多 GW 规划已落地。"
+        ]
+      ],
+      "sources": [
+        [
+          "NVIDIA 新闻稿",
+          "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure"
+        ],
+        [
+          "Oracle 新闻稿",
+          "https://www.oracle.com/news/announcement/ai-world-nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-2026-10-27/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "rack",
+        "heading": "OCI / RACK-SCALE COMPUTE",
+        "labels": [
+          "72 GPU / NVLink",
+          "多 GW 为扩展计划",
+          "Vera CPU"
+        ],
+        "caption": "一般可用与未来扩展分开",
+        "value": "NVL72 + Vera CPU"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-20",
+      "section": "infrastructure",
+      "shortName": "OCI 加速器组合",
+      "name": "OCI 加速器组合：加速器组合，不止一种架构。",
+      "summary": "OCI 加速器组合",
+      "summaryNote": "TPU · 晶圆级 · RDU",
+      "vendor": "Oracle / 多平台规划",
+      "head": [
+        "加速器组合，",
+        "不止一种架构。"
+      ],
+      "blurb": "OCI 增加 Google TPU、Cerebras 和 SambaNova 路线，多项交付规划集中在 2027 年。",
+      "note": "云平台合作 · 规划与自测口径保留",
+      "tags": [
+        "TPU",
+        "晶圆级",
+        "RDU"
+      ],
+      "details": [
+        [
+          "Google TPU",
+          "拟首次在 Google 以外超大规模云提供，8t 面向训练、8i 面向推理，规划 2027 年分阶段提供。"
+        ],
+        [
+          "Cerebras",
+          "晶圆级推理计划 2027 年进入 OCI，不代表已经完成可用部署。"
+        ],
+        [
+          "SambaNova",
+          "SN50 RDU 机柜部署于 OCI；性能与 TCO 比较为厂商自测。"
+        ]
+      ],
+      "sources": [
+        [
+          "Oracle TPU",
+          "https://www.oracle.com/news/announcement/ai-world-oracle-brings-google-tpus-to-oracle-cloud-infrastructure-2026-10-27/"
+        ],
+        [
+          "Oracle Cerebras",
+          "https://www.oracle.com/news/announcement/ai-world-cerebras-and-oracle-team-up-to-bring-cerebras-ai-inference-to-oracle-cloud-infrastructure-2026-10-27/"
+        ],
+        [
+          "SambaNova",
+          "https://sambanova.ai/press/sambanova-and-oracle-collaborate-to-bring-high-performance-inference-to-oracle-cloud-infrastructure"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "alliance",
+        "heading": "OCI / 加速器组合",
+        "labels": [
+          "Google TPU",
+          "Cerebras",
+          "SambaNova",
+          "多项计划 2027 年 / 非全部已上线"
+        ],
+        "caption": "性能 / TCO 叙述为厂商自测",
+        "value": "OCI"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-21",
+      "section": "infrastructure",
+      "shortName": "Meta × AMD / NVIDIA",
+      "name": "Meta × AMD / NVIDIA：硬件合作，认购意向另列。",
+      "summary": "Meta × AMD / NVIDIA",
+      "summaryNote": "装机测试 · 认购意向",
+      "vendor": "基础设施合作与股权认购意向",
+      "head": [
+        "硬件合作，",
+        "认购意向另列。"
+      ],
+      "blurb": "AMD Helios 已初始装机测试；AMD 与 NVIDIA 分别拟认购 Meta 股权发行约 10 亿与 30 亿美元。",
+      "note": "认购最终规模以发行文件为准",
+      "tags": [
+        "装机测试",
+        "认购意向"
+      ],
+      "details": [
+        [
+          "AMD 合作",
+          "Helios 机架级方案已在 Meta 初始装机并测试，覆盖 EPYC / Instinct / Pensando / ROCm。"
+        ],
+        [
+          "NVIDIA 合作",
+          "扩大 Muse 等合作，Meta 将扩大 Vera Rubin / Vera CPU / Spectrum-X / BlueField-4 部署。"
+        ],
+        [
+          "投资口径",
+          "AMD 拟投资 10 亿美元，NVIDIA 拟投资 30 亿美元；认购最终规模以发行文件为准，不代表完成交割。"
+        ]
+      ],
+      "sources": [
+        [
+          "AMD 新闻稿",
+          "https://newsroom.amd.com/news/amd-meta-advance-strategic-partnership-power-metas-ai-infrastructure/"
+        ],
+        [
+          "NVIDIA 新闻稿",
+          "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"
+        ],
+        [
+          "CNBC",
+          "https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "partnership",
+        "heading": "基础设施合作 / 拟认购意向",
+        "labels": [
+          "Meta",
+          "AMD ≈ $1B",
+          "NVIDIA ≈ $3B",
+          "认购金额以最终发行文件为准"
+        ],
+        "caption": "装机测试 ≠ 所有部署与交易已完成",
+        "value": "Helios 初始装机测试"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-22",
+      "section": "infrastructure",
+      "shortName": "SpaceX GPU 租赁",
+      "name": "SpaceX GPU 租赁：约四百亿美元，仍待交割。",
+      "summary": "SpaceX GPU 租赁",
+      "summaryNote": "融资租赁 · 2027H1",
+      "vendor": "SpaceX × Apollo / 次生跟进",
+      "head": [
+        "约四百亿美元，",
+        "仍待交割。"
+      ],
+      "blurb": "Apollo 管理实体拟采购 Vera Rubin 等 GPU 与相关设备后租给 SpaceX，用于地面算力。",
+      "note": "约 $40B 绑定承诺 · 交割与交付仍有条件",
+      "tags": [
+        "融资租赁",
+        "2027H1"
+      ],
+      "details": [
+        [
+          "交易结构",
+          "Apollo 管理实体购入 GPU 与相关设备后租赁给 SpaceX，指向 Vera Rubin 地面算力。"
+        ],
+        [
+          "交割计划",
+          "预计年底前交割，仍受交易条件约束。"
+        ],
+        [
+          "交付与租约",
+          "交付与租约预计自 2027 年上半年起；绑定承诺不等于设备已全部交付。"
+        ]
+      ],
+      "sources": [
+        [
+          "TechCrunch",
+          "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/"
+        ],
+        [
+          "SpaceX IR",
+          "https://ir.spacex.com/updates/releases-details/2026/SPACEX-SECURES-40-BILLION-IN-THE-LARGEST-GPU-FINANCING-EVER-2026-EnDqGhTAB3/default.aspx"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "lease",
+        "heading": "GPU MASTER FINANCE LEASE",
+        "labels": [
+          "绑定承诺 / 非已交付",
+          "Apollo 等",
+          "SpaceX 地面算力",
+          "预计年底前交割 / 2027H1 起交付"
+        ],
+        "caption": "交割与交付条件保留",
+        "value": "≈ $40B"
+      },
+      "dark": false
+    },
+    {
+      "id": "news-23",
+      "section": "infrastructure",
+      "shortName": "E2E 算力扩容",
+      "name": "E2E 算力扩容：容量扩容，时间表仍未披露。",
+      "summary": "E2E 算力扩容",
+      "summaryNote": "HGX B300 · 容量规划",
+      "vendor": "印度 E2E / 披露跟进",
+      "head": [
+        "容量扩容，",
+        "时间表仍未披露。"
+      ],
+      "blurb": "拟增加约 5.4 MW 的 HGX B300 等 Blackwell 算力，规划总容量约为 14.6 MW。",
+      "note": "交易所披露 · 非已上线容量",
+      "tags": [
+        "HGX B300",
+        "容量规划"
+      ],
+      "details": [
+        [
+          "容量变化",
+          "从约 9.2 MW 拟增至 14.6 MW，增加约 5.4 MW。"
+        ],
+        [
+          "硬件范围",
+          "包括 NVIDIA HGX B300 系统及其他 GPU / Blackwell。"
+        ],
+        [
+          "尚未披露",
+          "未披露时间表、金额与客户，不能将规划容量当作已上线容量。"
+        ]
+      ],
+      "sources": [
+        [
+          "CNBC-TV18",
+          "https://www.cnbctv18.com/market/e2e-networks-share-price-proposes-expand-capacity-nvidia-hgx-b300-systems-other-gpus-20019414.htm"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "capacity",
+        "heading": "规划容量 / MW",
+        "labels": [
+          "原容量",
+          "规划总量",
+          "拟增 5.4 MW / 尚无时间表"
+        ],
+        "caption": "规划容量，不代表已上线",
+        "numbers": [
+          9.2,
+          14.6
+        ],
+        "values": [
+          "9.2",
+          "14.6"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "news-24",
+      "section": "infrastructure",
+      "shortName": "Rubin 规格观察",
+      "name": "Rubin 规格观察：堆叠与带宽，等待官方确认。",
+      "summary": "Rubin 规格观察",
+      "summaryNote": "未证实 · 规格观察",
+      "vendor": "供应链 / 未证实观察",
+      "head": [
+        "堆叠与带宽，",
+        "等待官方确认。"
+      ],
+      "blurb": "产业媒体称 Rubin Ultra 或改用 / 混用 8-Hi HBM4，并报道 Rubin 公开带宽目标变化。",
+      "note": "非本窗 NVIDIA 官方改规新闻稿 · 供应链观察",
+      "tags": [
+        "未证实",
+        "规格观察"
+      ],
+      "details": [
+        [
+          "堆叠传闻",
+          "媒体称 Rubin Ultra 或改用 / 混用 8-Hi HBM4，属于供应链说法。"
+        ],
+        [
+          "带宽观察",
+          "另有报道称单卡 HBM4 带宽公开规格约从 22 降至 19.2 TB/s；不等于本窗官方改规公告。"
+        ],
+        [
+          "阅读边界",
+          "将媒体观察与正式发布区别，不据此推断最终量产规格或供货。"
+        ]
+      ],
+      "sources": [
+        [
+          "TrendForce",
+          "https://www.trendforce.com/news/2026/10/27/news-nvidias-memory-shake-up-rubin-ultra-rethinks-12-hi-hbm4e-for-8-hi-hbm4-rubin-gpu-bandwidth-cut-13/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "memory",
+        "heading": "HBM4 / 供应链观察",
+        "labels": [
+          "Rubin Ultra",
+          "8-Hi：供应链说法",
+          "公开带宽目标观察",
+          "非本窗 NVIDIA 官方改规公告"
+        ],
+        "caption": "媒体观察 / 最终规格待官方确认",
+        "value": "22 → 19.2 TB/s"
+      },
+      "dark": false
+    }
+  ],
+  "draft": false
+}

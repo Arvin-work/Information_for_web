@@ -1,3 +1,4 @@
+import {drawEditorial} from './editorial-diagrams.mjs';
 // 纯 Canvas 渲染内核：不读取 DOM，不启动计时器；同一数据与时间始终得到同一画面。
 import {
   getScene,
@@ -286,6 +287,8 @@ export function renderFrame(c, time, data, options = {}) {
             wrap(body, 1080, y + 94, 650, 26, fg, 500, 1.45);
           }),
         );
+      } else if(item.kind==='editorial'){
+        drawEditorial(c,item.visual,beat,palette,fontFamily);
       } else if (item.kind === 'decision') {
         // 流动的输入进入决策核心，分流至三类有界答案。
         const p = ease(beat / 0.9);
