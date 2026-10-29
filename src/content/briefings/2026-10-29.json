@@ -1,0 +1,1988 @@
+{
+  "date": "2026-10-29",
+  "weekday": "周四",
+  "title": "今日 AI",
+  "pageTitle": "AI 模型早报",
+  "description": "模型、产品、评测与基建动态 · 汇总至北京时间 09:13。",
+  "subtitle": "Carbon 有限开放，语音与智能体工具链更新。",
+  "introLabel": "AI 模型与基建",
+  "dispatchLabel": "AI MORNING BRIEFING",
+  "categoryLabel": "模型 / 基建",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "accent": "#ed653b",
+  "muted": "#676e65",
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "fps": 30,
+  "introSeconds": 36,
+  "itemSeconds": 15,
+  "detailSeconds": 6,
+  "outroSeconds": 6,
+  "outroTitle": [
+    "本期动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "完整资料与来源链接见 altfork.dev。",
+  "sections": [
+    {
+      "id": "models",
+      "title": "模型、产品与评测",
+      "count": 24
+    },
+    {
+      "id": "infrastructure",
+      "title": "基建与硬件",
+      "count": 8
+    }
+  ],
+  "cutoff": "2026-10-29 09:13 Asia/Shanghai",
+  "monitoring": [
+    {
+      "title": "本期窗口与口径",
+      "lines": [
+        "主窗口约 10-28 06:30 至 10-29 06:30，纳入约 08:15 补跑及 09:13 跨窗补报；旧条目明确作为跨窗回顾，不将栏目条数当作新模型发布数量。",
+        "新闻按用户提供资料制作，本轮未独立联网核验。官方发布、有限开放、研究预览、公测、模型卡自测、独立评测与供应链传闻分别标注。",
+        "硬件材料末句把 NVIDIA / AMD 的 30 亿 / 10 亿美元误写为 $30B / $10B，本期依据前文明细校正为 $3B / $1B，合计 $4B。",
+        "未给来源直链的硬件条目保留来源名称，不虚构链接。详细输入模型稿保存在 source/model-original.txt。"
+      ]
+    },
+    {
+      "title": "模型监测 · 截至 09:13",
+      "lines": [
+        "Carbon 已由此前传闻升级为官方发布、有限 rollout；AA Intelligence Index 仍为 v5.0，Carbon High 59 暂列第一。此前“Carbon 未证实”状态不再沿用。",
+        "HF / ModelScope 未见官方 Qwen4 或 DeepSeek V5；DeepSeek 最新仍 V4.1-Flash-1017。harness / unit-test 里的 deepseek-v5、v5-open、v5-next 为测试占位，不代表可调用产品。",
+        "Mistral Large 4 权重仍未出；占位 ETA 约 2026-10-29，是 approximate，不是承诺。09:13 材料称倒计时约 16h46m、994 人等待；此前约 991 人为较早快照。不能只凭 config 401 推断状态。",
+        "Fable 5.5 / Obsidian 3 无官方新增；gemini-omni-1.2-flash 只有社区部署传闻，公开 API / 官博仍 Omni 1.1 Flash。",
+        "09:13 相对 08:14 无新增重要模型本体、权重或定价变更；Nemotron、Copilot harness、Connected Apps、MiniCPM-OCR、Meta 五校合作为跨窗补报，已合并而非重复播放。"
+      ]
+    },
+    {
+      "title": "补充细节与敏感主张",
+      "lines": [
+        "Carbon：资料另列 WebDev Arena 约 #4、1768/1769、+89 Elo；AA 任务成本约 $7.76，Coding Agent Index 59（#2），AA-Omniscience 54，AA-Briefcase Elo 1609。不同榜单 / 设置不能混为同一个分数。",
+        "Nemotron：AA 称 AA-WER 2.8% 与 Voxtral Small 并列开放权重第一；DeepInfra 约 75× 为服务测速口径，不是所有设备的通用实时倍率。",
+        "药研稿将 Mithril Medicine 的主体关系写为“子公司”，与先前资料的独立一人公司描述不一致，本期不确认其股权关系；保留早期药研、合作方叙述与未临床验证的边界。",
+        "OpenAI / Anthropic 的 ETH 与物理研究主张均待社区核验；Lean 能检查形式表达，但不自动证明其忠实对应原始自然语言命题。",
+        "Cohere 的 Qwen 外联调查不证明蓄意后门，厂商称发生率极低；以 traces 与可复现调查为准。"
+      ]
+    },
+    {
+      "title": "硬件附记与未见更新",
+      "lines": [
+        "硬件回顾约 10-27 至 10-29，不构成投资建议。官方可用、规划容量、认购意向、交易交割、设备交付与已安装测试分开呈现。",
+        "AWS CEO 关于 2026 售罄、2027 largely sold out 的口述为需求背景，不是新产品发版；Nebius 新泽西与 Bloom 燃料电池首块就绪约 10-25，为并网时滞背景。",
+        "补跑约 08:15 未见 TSMC / 三星 / SK hynix 全新 HBM 产品线官宣，未见 Intel / AMD 新 GPU 发布会级公告升格；Rubin Ultra 层数未官方锁定。",
+        "Meta 最高 $95B、Broadcom $63B、E2E 容量及 Rubin 供应链条目在提供材料中未附确切直链，已保留媒体 / 公司 / 交易所来源描述，未从旧期替补链接冒充本期核验。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "oct29-1",
+      "section": "models",
+      "shortName": "Gemini 4 Carbon",
+      "name": "Gemini 4 Carbon：Carbon 发布，先向可信伙伴。",
+      "summary": "Gemini 4 Carbon",
+      "summaryNote": "官方发布 · 有限开放",
+      "vendor": "Google / DeepMind",
+      "head": [
+        "Carbon 发布，",
+        "先向可信伙伴。"
+      ],
+      "blurb": "Gemini 4 Carbon 官宣，AA Index v5.0 得分 59；先向部分网络安全防御方开放。",
+      "note": "有限 rollout · 榜分为 AA 独立评测，安全指标为官博外评口径",
+      "tags": [
+        "官方发布",
+        "有限开放"
+      ],
+      "details": [
+        [
+          "开放范围",
+          "先面向部分防御方，经 Fairwind 扩至可信伙伴；更广开发者、企业与消费者开放时间未定。"
+        ],
+        [
+          "价格口径",
+          "介绍价输入 $2 / 输出 $10 每百万 tokens，缓存输入约减 95%；介绍期后 $4 / $20。"
+        ],
+        [
+          "评测边界",
+          "AA Index v5.0 为 59；官博安全外评 SEC-bench Pro 88.2%、ExploitGym 54.8%、CWE-bench 71.0%。"
+        ]
+      ],
+      "sources": [
+        [
+          "Google 官博",
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        ],
+        [
+          "AA 模型页",
+          "https://artificialanalysis.ai/models/gemini-4-carbon"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "leaderboard",
+        "heading": "AA Intelligence Index · v5.0",
+        "labels": [
+          "不同任务成本另计",
+          "有限开放",
+          "非全面 GA",
+          "时点榜单"
+        ],
+        "value": "59",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "AA 独立榜 · 本期资料时点；不同设置见原榜",
+        "entries": [
+          {
+            "label": "Gemini 4 Carbon High",
+            "value": 59
+          },
+          {
+            "label": "Claude Opus 5.5 max",
+            "value": 58
+          },
+          {
+            "label": "GPT-6 Astra max",
+            "value": 57
+          }
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-2",
+      "section": "models",
+      "shortName": "AA Index v5.0",
+      "name": "AA Index v5.0：榜单换标尺，私有集占六成。",
+      "summary": "AA Index v5.0",
+      "summaryNote": "v5.0 · 独立评测",
+      "vendor": "Artificial Analysis",
+      "head": [
+        "榜单换标尺，",
+        "私有集占六成。"
+      ],
+      "blurb": "九项合成评测，约 60% 权重来自私有或留出答案集；新增 Progress Index v1。",
+      "note": "独立评测平台 · 非模型发版",
+      "tags": [
+        "v5.0",
+        "独立评测"
+      ],
+      "details": [
+        [
+          "九项组合",
+          "包含 FrontierCode 2.0、HLE-Diamond、CritPt v2 Hard Subset、Terminal-Bench-Science 0.1 等。"
+        ],
+        [
+          "跨时间标尺",
+          "Progress Index v1 使用 IRT；Carbon 发布后以 High 59 分暂居榜首。"
+        ],
+        [
+          "视频榜更新",
+          "另上线 AA-Video-I2V v2.1 与 Silent v2.1；与语言模型综合指数不是同一榜。"
+        ]
+      ],
+      "sources": [
+        [
+          "Intelligence Index",
+          "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index"
+        ],
+        [
+          "Progress Index",
+          "https://artificialanalysis.ai/methodology/progress-index"
+        ],
+        [
+          "I2V 榜",
+          "https://artificialanalysis.ai/video/leaderboard/image-to-video"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "evaluation",
+        "heading": "综合评测与跨时间标尺",
+        "labels": [
+          "九项合成评测",
+          "约 60% 私有 / 留出",
+          "Progress Index v1",
+          "非新模型发版"
+        ],
+        "value": "v5.0",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-3",
+      "section": "models",
+      "shortName": "FrontierCode 2.0",
+      "name": "FrontierCode 2.0：代码评测，看能否合并。",
+      "summary": "FrontierCode 2.0",
+      "summaryNote": "132 任务 · 评测更新",
+      "vendor": "Cognition",
+      "head": [
+        "代码评测，",
+        "看能否合并。"
+      ],
+      "blurb": "132 项真实开源仓任务，以维护者是否愿意 merge 衡量；已纳入 AA v5。",
+      "note": "跨窗补录 · Cognition 表与 AA 独立实现分开看",
+      "tags": [
+        "132 任务",
+        "评测更新"
+      ],
+      "details": [
+        [
+          "准则更严",
+          "相对 1.1，覆盖仓库更广、阻断准则更严、改动规模更大。"
+        ],
+        [
+          "厂商评测表",
+          "Opus 5.5 为 45.5%，GPT-6 Astra 为 42.8%；前者在 1.1 的 54.6% 不能作同卷比较。"
+        ],
+        [
+          "独立实现",
+          "AA 已纳入自己的 v5 指数；不把两个执行口径混为一谈。"
+        ]
+      ],
+      "sources": [
+        [
+          "Cognition",
+          "https://cognition.com/blog/frontier-code-2.0"
+        ],
+        [
+          "FrontierCode",
+          "https://cognition.com/frontiercode"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "mergegate",
+        "heading": "真实仓库中的维护者标准",
+        "labels": [
+          "维护者愿意 merge",
+          "更广仓覆盖",
+          "更严格阻断",
+          "非新模型发版"
+        ],
+        "value": "132 任务",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-4",
+      "section": "models",
+      "shortName": "Nemotron Transcribe",
+      "name": "Nemotron Transcribe：离线语音，支持四十语。",
+      "summary": "Nemotron Transcribe",
+      "summaryNote": "开放权重 · 离线语音",
+      "vendor": "NVIDIA",
+      "head": [
+        "离线语音，",
+        "支持四十语。"
+      ],
+      "blurb": "Nemotron 3.5 Transcribe 开放权重：约 30B，总激活含音频编码器约 4.3B；不是流式模型。",
+      "note": "09:13 补报合并 · 厂商 WER 与 AA WER 为不同口径",
+      "tags": [
+        "开放权重",
+        "离线语音"
+      ],
+      "details": [
+        [
+          "能力范围",
+          "40 语转录、31 语与英语互译、13 语说话人归因；最长约 1 小时、最多 8 位说话人，支持音频问答。"
+        ],
+        [
+          "评测与服务",
+          "厂商英榜 WER 约 5.33%、多语约 4.62%；AA-WER 2.8%。DeepInfra 约 $2 / 千分钟为服务商口径。"
+        ],
+        [
+          "开放内容",
+          "OpenMDW-1.1；HF / ModelScope 已上架。Granary v2 清单约 46.3 万小时、48 语，配套微调材料。"
+        ]
+      ],
+      "sources": [
+        [
+          "模型卡",
+          "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+        ],
+        [
+          "HF 博文",
+          "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+        ],
+        [
+          "AA Speech-to-Text",
+          "https://artificialanalysis.ai/speech-to-text"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "speech",
+        "heading": "离线语音模型 · 非实时流式",
+        "labels": [
+          "转录语言",
+          "说话人数上限",
+          "最长约 1 小时录音",
+          "31 语与英语互译"
+        ],
+        "value": "40 语",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文",
+        "values": [
+          "40",
+          "8"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-5",
+      "section": "models",
+      "shortName": "Mistral Responses API",
+      "name": "Mistral Responses API：统一响应格式，进入公开预览。",
+      "summary": "Mistral Responses API",
+      "summaryNote": "公开预览 · EU / US",
+      "vendor": "Mistral",
+      "head": [
+        "统一响应格式，",
+        "进入公开预览。"
+      ],
+      "blurb": "面向智能体的 Responses API 支持回答、推理与工具调用分项输出；覆盖托管 chat 模型。",
+      "note": "API 公开预览 · 云端代售不等于新权重发布",
+      "tags": [
+        "公开预览",
+        "EU / US"
+      ],
+      "details": [
+        [
+          "接口格式",
+          "兼容 OpenAI Responses 格式；Mistral 托管 chat 模型可用，材料含 Large 4，提供 EU / US Cloud Inference。"
+        ],
+        [
+          "第三方托管",
+          "DeepSeek V4.1 Flash 为公开预览，GLM 5.3 Flash 为 GA；均是云服务上架，不是重新发布权重。"
+        ],
+        [
+          "语音附记",
+          "Voxtral Mini Transcribe 3 的 Diarization + ASR 约第 2 为榜单转发；模型约 10-20 已公测。"
+        ]
+      ],
+      "sources": [
+        [
+          "官方帖",
+          "https://x.com/MistralAI/status/2115443720371814478"
+        ],
+        [
+          "接口文档",
+          "https://docs.mistral.ai/studio/conversations/responses"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "neuron",
+        "heading": "智能体响应接口",
+        "labels": [
+          "Responses 格式",
+          "回答 / reasoning / tools",
+          "EU / US Cloud Inference",
+          "托管模型与接口分层"
+        ],
+        "value": "Responses API",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-6",
+      "section": "models",
+      "shortName": "Clover-35B-A3B",
+      "name": "Clover-35B-A3B：扩散语言模型，开放预览权重。",
+      "summary": "Clover-35B-A3B",
+      "summaryNote": "35B / 3B · 128K",
+      "vendor": "DiffuSpace",
+      "head": [
+        "扩散语言模型，",
+        "开放预览权重。"
+      ],
+      "blurb": "Qwen3.6 衍生 MoE 扩散语言模型，约 35B 总参、3B 激活，128K 上下文。",
+      "note": "Apache · Preview · 所列速度和成绩均为厂商自测",
+      "tags": [
+        "35B / 3B",
+        "128K"
+      ],
+      "details": [
+        [
+          "开放情况",
+          "Clover-35B-A3B-Preview 已在 HF / ModelScope / GitHub 上架，源自港大 Dream 衍生团队。"
+        ],
+        [
+          "速度边界",
+          "单卡 BF16 约 680 tok/s 为厂商内部 Agent 场景叙述，不能直接横比其他推理服务。"
+        ],
+        [
+          "厂商跑分",
+          "SWE-bench Verified 73.6、GPQA Diamond 83.8；尚未独立复测。"
+        ]
+      ],
+      "sources": [
+        [
+          "DiffuSpace",
+          "https://diffuspace.ai/blog/clover-35b/"
+        ],
+        [
+          "模型卡",
+          "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sparse",
+        "heading": "扩散语言模型 · MoE",
+        "labels": [
+          "总参数",
+          "每 token 激活",
+          "开放预览",
+          "厂商自测"
+        ],
+        "value": "35B",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文",
+        "values": [
+          "35B",
+          "3B"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-7",
+      "section": "models",
+      "shortName": "Ling 与配套模型",
+      "name": "Ling 与配套模型：开放权重，上下文看配置。",
+      "summary": "Ling 与配套模型",
+      "summaryNote": "MIT · 配置优先",
+      "vendor": "inclusionAI",
+      "head": [
+        "开放权重，",
+        "上下文看配置。"
+      ],
+      "blurb": "Ling-3.1-flash-1019：MIT、约 560B 总参 / 25B 激活；卡面 1M 与配置 256K 有差异。",
+      "note": "AA 44 为旧 v4.3.2 卡面数字 · 不与 v5.0 直接比较",
+      "tags": [
+        "MIT",
+        "配置优先"
+      ],
+      "details": [
+        [
+          "上下文口径",
+          "公开 config 常见 max_position_embeddings=262144；本期按 256K 配置表述，不将卡面 1M 当实测能力。"
+        ],
+        [
+          "参数与成绩",
+          "Hybrid-linear MoE；另有 base BF16。AA Index v4.3.2 的 44 分来自厂商模型卡，非本轮独立复测。"
+        ],
+        [
+          "配套补充",
+          "ZwZ2 4B/9B/27B 感知微调、LemonDecider 4B v3；约 5.18M 的 SingProbe 需配合指定模型使用。"
+        ]
+      ],
+      "sources": [
+        [
+          "Ling 模型卡",
+          "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"
+        ],
+        [
+          "SingProbe",
+          "https://huggingface.co/inclusionAI/Qwen3.8-Flash-Next-singprobe"
+        ],
+        [
+          "ZwZ2",
+          "https://huggingface.co/inclusionAI/ZwZ2-9B"
+        ],
+        [
+          "LemonDecider",
+          "https://huggingface.co/inclusionAI/LemonDecider"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "context",
+        "heading": "上下文声明与公开配置",
+        "labels": [
+          "公开配置 262,144 tokens",
+          "卡面 1M ≠ 已复测",
+          "AA 44 为 v4.3.2 历史口径"
+        ],
+        "value": "256K",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-8",
+      "section": "models",
+      "shortName": "文档 OCR 双更新",
+      "name": "文档 OCR 双更新：解析文档，再评估质量。",
+      "summary": "文档 OCR 双更新",
+      "summaryNote": "Apache / MIT · 专用 OCR",
+      "vendor": "OpenBMB / 百度",
+      "head": [
+        "解析文档，",
+        "再评估质量。"
+      ],
+      "blurb": "MiniCPM-OCR 1.0 配套 Jev 质量评估；Unlimited OCR 2 侧重长文档。",
+      "note": "跨窗补录合并 · 所列基准均为厂商自测",
+      "tags": [
+        "Apache / MIT",
+        "专用 OCR"
+      ],
+      "details": [
+        [
+          "OpenBMB",
+          "MiniCPM-OCR 约 1.3B，Apache-2.0；Jev 约 2B。厂商报 Real5-OmniDocBench 93.68、OCRBench v2 54.7。"
+        ],
+        [
+          "百度",
+          "Unlimited OCR 2 约 3.3B，MIT；采用 SR-SWA，配套 MarathonDocBench。参数以本期资料为准。"
+        ],
+        [
+          "应用边界",
+          "面向中英文扫描件、照片、倾斜文档与文档解析；专用任务模型，不等于新通用旗舰。"
+        ]
+      ],
+      "sources": [
+        [
+          "MiniCPM-OCR",
+          "https://huggingface.co/openbmb/MiniCPM-OCR-1.0"
+        ],
+        [
+          "Jev",
+          "https://huggingface.co/openbmb/MiniCPM-OCR-Jev"
+        ],
+        [
+          "Unlimited OCR 2",
+          "https://huggingface.co/baidu/Unlimited-OCR-2"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "ocrpipeline",
+        "heading": "文档解析与可靠性评估",
+        "labels": [
+          "文档输入",
+          "OCR 解析",
+          "质量评估",
+          "MiniCPM-OCR + Jev / Unlimited OCR 2"
+        ],
+        "value": "1.3B + 2B",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-9",
+      "section": "models",
+      "shortName": "LFM3 家族",
+      "name": "LFM3 家族：六种形态，共用小型骨干。",
+      "summary": "LFM3 家族",
+      "summaryNote": "六模型 · 约 2B",
+      "vendor": "Liquid AI",
+      "head": [
+        "六种形态，",
+        "共用小型骨干。"
+      ],
+      "blurb": "约 2B 级六模型覆盖文本、视觉、音频、全模态与决策；文本上下文为 256K。",
+      "note": "跨窗参考 · 开放权重，跑分为厂商自测",
+      "tags": [
+        "六模型",
+        "约 2B"
+      ],
+      "details": [
+        [
+          "模型清单",
+          "LFM3-1.7B、VL-2B、Audio-2B、Omni-2B、d1-2B 与 d1-Omni-2B。"
+        ],
+        [
+          "训练材料",
+          "厂商称约 22T tokens 预训练；使用 tri-hybrid 架构，具体能力按各模型卡区分。"
+        ],
+        [
+          "发布格式",
+          "HF 含 GGUF / ONNX / MLX / FP8 等；不同格式不等于独立的新模型发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Liquid AI",
+          "https://www.liquid.ai/blog/lfm3"
+        ],
+        [
+          "模型合集",
+          "https://huggingface.co/collections/LiquidAI/lfm3"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "modalities",
+        "heading": "同一 backbone 的六种形态",
+        "labels": [
+          "文本",
+          "视觉",
+          "音频",
+          "Omni",
+          "决策",
+          "Omni 决策"
+        ],
+        "value": "约 2B · 文本 256K",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-10",
+      "section": "models",
+      "shortName": "Genie 4",
+      "name": "Genie 4：世界可交互，仍是研究预览。",
+      "summary": "Genie 4",
+      "summaryNote": "世界模型 · 研究预览",
+      "vendor": "Google DeepMind",
+      "head": [
+        "世界可交互，",
+        "仍是研究预览。"
+      ],
+      "blurb": "画面与原生音频联动，可用自然语言改场景；受信测试者滚动开放。",
+      "note": "跨窗参考 · 研究预览，不是全面 GA",
+      "tags": [
+        "世界模型",
+        "研究预览"
+      ],
+      "details": [
+        [
+          "能力描述",
+          "实时世界仿真、原生音频，与 Gemini 家族协同；厂商承认长时一致性等仍有局限。"
+        ],
+        [
+          "后续路线",
+          "拟进入 Google AI Ultra 的 Project Genie 及 Gemini API / AI Studio 早期伙伴，未给全面开放日期。"
+        ],
+        [
+          "内容标识",
+          "含 SynthID 水印；不将演示场景当作稳定、无限时长的实测能力。"
+        ]
+      ],
+      "sources": [
+        [
+          "DeepMind",
+          "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "world",
+        "heading": "实时世界仿真 · 概念示意",
+        "labels": [
+          "场景与原生音频",
+          "自然语言改变场景",
+          "受信测试者 · SynthID"
+        ],
+        "value": "research preview",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-11",
+      "section": "models",
+      "shortName": "SenseNova Code2Video",
+      "name": "SenseNova Code2Video：用代码，驱动短视频。",
+      "summary": "SenseNova Code2Video",
+      "summaryNote": "27B · Apache-2.0",
+      "vendor": "商汤",
+      "head": [
+        "用代码，",
+        "驱动短视频。"
+      ],
+      "blurb": "SenseNova 6.8 Code2Video 开放权重，27B、Apache-2.0，定位代码驱动短视频。",
+      "note": "约 10-28 · 本期资料未提供独立评测",
+      "tags": [
+        "27B",
+        "Apache-2.0"
+      ],
+      "details": [
+        [
+          "发布内容",
+          "HF 仓库已提供 SenseNova-6.8-Code2Video；按开放权重事件收录。"
+        ],
+        [
+          "定位",
+          "通过代码驱动短视频生成；右侧为输入输出关系示意，不是模型生成样片。"
+        ],
+        [
+          "能力边界",
+          "本期资料未给可核对的速度、成本与独立基准，画面不补写性能结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "HF 模型仓",
+          "https://huggingface.co/sensenova/SenseNova-6.8-Code2Video"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "vision",
+        "heading": "从代码到视频 · 流程示意",
+        "labels": [
+          "代码输入",
+          "视频输出",
+          "27B 权重",
+          "Apache-2.0"
+        ],
+        "value": "Code2Video",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-12",
+      "section": "models",
+      "shortName": "实时语音产品",
+      "name": "实时语音产品：语音双工，企业侧试用。",
+      "summary": "实时语音产品",
+      "summaryNote": "实时语音 · 状态分列",
+      "vendor": "通义 / Rime",
+      "head": [
+        "语音双工，",
+        "企业侧试用。"
+      ],
+      "blurb": "通义实时语音上架百炼；Rime Prism 进入企业 speech-to-speech 私测，两者状态分开看。",
+      "note": "通义为云产品上架 · Rime 为 private beta",
+      "tags": [
+        "实时语音",
+        "状态分列"
+      ],
+      "details": [
+        [
+          "通义",
+          "qwen-audio-3.1-realtime-flash：上下文 262,144 tokens，支持 WebSocket / WebRTC / AOQ。"
+        ],
+        [
+          "Rime",
+          "Prism 面向企业 speech-to-speech，private beta；按 AA τ-Voice harness 报 56.6，为厂商自测。"
+        ],
+        [
+          "比较限制",
+          "一个是百炼模型服务，一个是企业私测产品；不据此判定同场独立榜次序。"
+        ]
+      ],
+      "sources": [
+        [
+          "百炼新模型",
+          "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/newly-released-models"
+        ],
+        [
+          "Rime",
+          "https://www.rime.ai/resources/prism-first-speech-to-speech-for-enterprise"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "dualscope",
+        "heading": "实时语音与企业私测",
+        "labels": [
+          "通义",
+          "Rime Prism",
+          "云服务上架",
+          "企业 private beta"
+        ],
+        "value": "两种开放状态",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-13",
+      "section": "models",
+      "shortName": "Giotto Alto / Solo",
+      "name": "Giotto Alto / Solo：主权推理产品，成绩待外部核验。",
+      "summary": "Giotto Alto / Solo",
+      "summaryNote": "产品参考 · 厂商自测",
+      "vendor": "Giotto.ai",
+      "head": [
+        "主权推理产品，",
+        "成绩待外部核验。"
+      ],
+      "blurb": "Alto / Solo 定位主权推理；官网对比成绩为厂商自测，不当作已核实 SOTA。",
+      "note": "产品备忘 · 未见完整模型卡与独立复现",
+      "tags": [
+        "产品参考",
+        "厂商自测"
+      ],
+      "details": [
+        [
+          "产品定位",
+          "Alto / Solo 为推理产品族；此前材料称共享云可匿名免费，Solo 定位单卡。"
+        ],
+        [
+          "证据边界",
+          "本期资料未见完整开放权重说明；官网 AIME 等对比不能代替独立复现。"
+        ],
+        [
+          "社区质疑",
+          "对“主权”表述的外界质疑作为背景，不升级为已证实的技术结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "Giotto 官网",
+          "https://www.giotto.ai/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "产品主张与证据边界",
+        "labels": [
+          "Alto / Solo",
+          "官网对比表",
+          "待独立复现",
+          "不计新通用旗舰"
+        ],
+        "value": "产品备忘",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-14",
+      "section": "models",
+      "shortName": "ChatGPT 产品与额度",
+      "name": "ChatGPT 产品与额度：消息入口扩展，额度规则在变。",
+      "summary": "ChatGPT 产品与额度",
+      "summaryNote": "美国 Pro beta · 10-30 生效项",
+      "vendor": "OpenAI",
+      "head": [
+        "消息入口扩展，",
+        "额度规则在变。"
+      ],
+      "blurb": "Dot 面向美国 Pro beta 开通 iMessage / RCS；订阅 API credits 与 Pro 200 额度规则分别调整。",
+      "note": "按提供资料整理 · 适用资格和生效日期见原文",
+      "tags": [
+        "美国 Pro beta",
+        "10-30 生效项"
+      ],
+      "details": [
+        [
+          "Dot 与 iCloud",
+          "Dot 可收发文本、照片、语音并主动推送，不访问其他短信会话；iCloud Mail / Calendar 是独立连接项。"
+        ],
+        [
+          "API credits",
+          "符合条件的 Pro 档位月领 $100 / $200 / $500；Business 席位池化上限 $500 / 月等，具体资格见指南。"
+        ],
+        [
+          "Pro 200",
+          "资料称 10-30 起 Work / Codex 相对 Plus 的 20× 调为 10×，价格仍 $200 / 月；不是今天已生效。"
+        ]
+      ],
+      "sources": [
+        [
+          "Release Notes",
+          "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        ],
+        [
+          "API credits",
+          "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
+        ],
+        [
+          "Pro tiers",
+          "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "消息入口与订阅权益",
+        "labels": [
+          "ChatGPT",
+          "Dot · iMessage / RCS",
+          "iCloud Mail / Calendar",
+          "API credits 与额度规则另列"
+        ],
+        "value": "产品更新",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-15",
+      "section": "models",
+      "shortName": "OpenAI 企业合作",
+      "name": "OpenAI 企业合作：企业工作流，接入现有系统。",
+      "summary": "OpenAI 企业合作",
+      "summaryNote": "企业工作流 · 分阶段落地",
+      "vendor": "OpenAI / ServiceNow / Oracle",
+      "head": [
+        "企业工作流，",
+        "接入现有系统。"
+      ],
+      "blurb": "ServiceNow 扩展工作流与 Codex；Oracle 应用数据接入 ChatGPT，并扩展 Marketplace 采购。",
+      "note": "合作与路线图 · 非新模型发布",
+      "tags": [
+        "企业工作流",
+        "分阶段落地"
+      ],
+      "details": [
+        [
+          "ServiceNow",
+          "MCP 插件、AI Workflow Factory 接 Codex 与网络安全合作；增强能力预计 2026 年底起分阶段开放。"
+        ],
+        [
+          "Oracle",
+          "Oracle AI Workspace 目标在 ChatGPT 中发现信息并执行授权业务流程；不是无限制自动执行。"
+        ],
+        [
+          "采购路径",
+          "Oracle Marketplace 可用 Universal Credits 采购 OpenAI API、Codex、ChatGPT Work，具体条件看公告。"
+        ]
+      ],
+      "sources": [
+        [
+          "ServiceNow 合作",
+          "https://openai.com/index/openai-servicenow-partnership-expansion/"
+        ],
+        [
+          "Oracle 合作",
+          "https://openai.com/index/oracle-apps-in-chatgpt/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "workmap",
+        "heading": "企业应用与授权工作流",
+        "labels": [
+          "ServiceNow",
+          "Oracle 应用",
+          "Codex",
+          "Marketplace"
+        ],
+        "value": "授权工作流",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-16",
+      "section": "models",
+      "shortName": "Anthropic 商业与公益",
+      "name": "Anthropic 商业与公益：政府采购折扣，科研支持扩围。",
+      "summary": "Anthropic 商业与公益",
+      "summaryNote": "OneGov · 科研支持",
+      "vendor": "Anthropic",
+      "head": [
+        "政府采购折扣，",
+        "科研支持扩围。"
+      ],
+      "blurb": "GSA OneGov 约 40% 折扣；AI for Science 扩至约 20 家机构，S-1 仍属跨窗背景。",
+      "note": "采购 / 公益 / IPO 分别表述 · 非新 Claude 发版",
+      "tags": [
+        "OneGov",
+        "科研支持"
+      ],
+      "details": [
+        [
+          "政府采购",
+          "Claude Enterprise / for Government / API 约 40% 折扣；估省约 $1B 是厂商 / GSA 叙述。"
+        ],
+        [
+          "科研支持",
+          "AI for Science 扩至约 20 家基金会与机构，提供免费 Claude credits，包括 HHMI Janelia、Allen Institute 等。"
+        ],
+        [
+          "IPO 背景",
+          "10-26 S-1 拟 Nasdaq 代码 ANT，股数和定价未定；不是已经上市。法务 Artifacts 模板库同期更新。"
+        ]
+      ],
+      "sources": [
+        [
+          "GSA 合作",
+          "https://www.anthropic.com/news/expanding-partnership-gsa"
+        ],
+        [
+          "AI for Science",
+          "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        ],
+        [
+          "S-1",
+          "https://www.anthropic.com/news/s1-sec"
+        ],
+        [
+          "法务模板",
+          "https://claude.com/resources/articles/introducing-artifacts-for-legal-work"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "alliance",
+        "heading": "政府采购与科研支持",
+        "labels": [
+          "政府组织",
+          "科研机构",
+          "产品模板",
+          "S-1 另列为跨窗背景"
+        ],
+        "value": "Claude 生态",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-17",
+      "section": "models",
+      "shortName": "Claude 研究进展",
+      "name": "Claude 研究进展：药研与专家判断，边界仍需标清。",
+      "summary": "Claude 研究进展",
+      "summaryNote": "多为临床前 · 研究披露",
+      "vendor": "Anthropic",
+      "head": [
+        "药研与专家判断，",
+        "边界仍需标清。"
+      ],
+      "blurb": "临床前药研合作、50 人专家判断 RCT 与内部安全研究并行；都不等于公开新模型。",
+      "note": "官文 / 合作方叙述 · 未独立复现",
+      "tags": [
+        "多为临床前",
+        "研究披露"
+      ],
+      "details": [
+        [
+          "药物研发",
+          "BigHat、BMS、Divergence、Enveda、Generate、TCG 等案例多为临床前；不据此推断药物有效性。"
+        ],
+        [
+          "判断实验",
+          "50 名因果推断分析师的 RCT，资料称与 agent lean 一致率约 86%；具体设计与局限看原文。"
+        ],
+        [
+          "安全研究",
+          "内部未发布模型发现软件利用链并协调披露；不是已对外开放的新 Claude。"
+        ]
+      ],
+      "sources": [
+        [
+          "药研进展",
+          "https://www.anthropic.com/research/early-progress-drug-development"
+        ],
+        [
+          "判断实验",
+          "https://www.anthropic.com/research/agents-judgment-calls"
+        ],
+        [
+          "安全研究",
+          "https://www.anthropic.com/research/discovering-vulnerabilities-with-claude"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "clinical",
+        "heading": "研究结果与临床阶段分开",
+        "labels": [
+          "研究探索",
+          "临床前",
+          "临床验证",
+          "当前材料多为前两阶段"
+        ],
+        "value": "早期进展",
+        "footer": "官文案例不等于临床有效性证明",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-18",
+      "section": "models",
+      "shortName": "Copilot 编排与 SDK",
+      "name": "Copilot 编排与 SDK：模型路由 GA，运行时公测。",
+      "summary": "Copilot 编排与 SDK",
+      "summaryNote": "Fusion GA · harness 公测",
+      "vendor": "GitHub / Microsoft",
+      "head": [
+        "模型路由 GA，",
+        "运行时公测。"
+      ],
+      "blurb": "Copilot Fusion 正式 GA；Copilot harness 通过 Foundry 公测，SDK 同日更名。",
+      "note": "Fusion 与 harness 是不同产品状态 · 09:13 补报已合并",
+      "tags": [
+        "Fusion GA",
+        "harness 公测"
+      ],
+      "details": [
+        [
+          "Fusion",
+          "Standard / High / Max 多模型路由；Max Coding Agent Index 60 为资料所列厂商 / AA 口径。"
+        ],
+        [
+          "harness",
+          "Foundry Agent Service 托管 agent loop 与沙箱，多模型运行时对外公测。"
+        ],
+        [
+          "SDK 与优惠",
+          "GitHub Copilot SDK 更名 Microsoft Copilot SDK；付费计划限时 Fusion 模型费减 30%，适用条款看公告。"
+        ]
+      ],
+      "sources": [
+        [
+          "GitHub Fusion",
+          "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
+        ],
+        [
+          "Microsoft harness",
+          "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/"
+        ],
+        [
+          "SDK 更名",
+          "https://github.blog/changelog/2026-10-28-github-copilot-sdk-is-becoming-microsoft-copilot-sdk/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "observability",
+        "heading": "多模型路由与托管运行时",
+        "labels": [
+          "Fusion · 正式 GA",
+          "harness · Foundry 公测",
+          "SDK · 更名",
+          "模型路由 / agent loop / 沙箱分层"
+        ],
+        "value": "Copilot",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-19",
+      "section": "models",
+      "shortName": "创作工具更新",
+      "name": "创作工具更新：办公与短剧，扩展创作工具。",
+      "summary": "创作工具更新",
+      "summaryNote": "Apple Intelligence · 短剧工作流",
+      "vendor": "Apple / 字节即梦",
+      "head": [
+        "办公与短剧，",
+        "扩展创作工具。"
+      ],
+      "blurb": "Apple Creator Studio 增加助手与 MCP；即梦短剧工作室串联剧本、图片和分镜。",
+      "note": "产品更新合并 · 即梦规模指标为厂商宣传",
+      "tags": [
+        "Apple Intelligence",
+        "短剧工作流"
+      ],
+      "details": [
+        [
+          "Apple",
+          "Keynote / Pages / Numbers 接 Apple 模型与 OpenAI；需支持 Apple Intelligence 的设备及系统 27。"
+        ],
+        [
+          "发布时间",
+          "资料称 11 月起向现有 Creator Studio 订阅者免费更新；Logic Pro / Pixelmator Pro 同期有 AI 功能。"
+        ],
+        [
+          "即梦",
+          "DreamScript / Anycook / DreamShot 串联流程；约 10 万字、100 集等属于厂商能力叙述。"
+        ]
+      ],
+      "sources": [
+        [
+          "Apple Newsroom",
+          "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/"
+        ],
+        [
+          "即梦报道",
+          "https://technode.com/2026/10/27/bytedance-launches-ai-studio-for-short-drama-production/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "imageedit",
+        "heading": "创作工具链 · 概念流程",
+        "labels": [
+          "输入素材",
+          "编辑与生成",
+          "产品更新不等于新基础模型",
+          "分阶段开放"
+        ],
+        "value": "办公 / 短剧",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-20",
+      "section": "models",
+      "shortName": "Opera WebAI",
+      "name": "Opera WebAI：本地推理，进入浏览器。",
+      "summary": "Opera WebAI",
+      "summaryNote": "本地推理 · 早期预览",
+      "vendor": "Opera",
+      "head": [
+        "本地推理，",
+        "进入浏览器。"
+      ],
+      "blurb": "WebAI 早期预览提供 Prompt、Decision 与 Semantic Embeddings API，使用设备端推理。",
+      "note": "早期预览 · 64 位 Windows / Apple silicon Mac",
+      "tags": [
+        "本地推理",
+        "早期预览"
+      ],
+      "details": [
+        [
+          "开发接口",
+          "Prompt、Decision、Semantic Embeddings 三类 API，服务网页本地 AI 场景。"
+        ],
+        [
+          "设备范围",
+          "64-bit Windows 与 Apple silicon Mac；不将平台范围扩写为所有浏览器和设备。"
+        ],
+        [
+          "部署意义",
+          "推理在浏览器设备侧运行；本期资料没有提供通用延迟、质量或隐私保证的独立评测。"
+        ]
+      ],
+      "sources": [
+        [
+          "Opera 博客",
+          "https://blogs.opera.com/news/2026/10/webai-local-ai-for-the-web-now-in-opera/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "quantization",
+        "heading": "浏览器内的设备端推理",
+        "labels": [
+          "网页 API",
+          "Prompt / Decision / Embeddings",
+          "平台与能力受预览范围约束"
+        ],
+        "value": "本地",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-21",
+      "section": "models",
+      "shortName": "数学形式化进展",
+      "name": "数学形式化进展：形式化材料，等待社区核验。",
+      "summary": "数学形式化进展",
+      "summaryNote": "研究材料 · 待社区核验",
+      "vendor": "Axiom / OpenAI / Anthropic",
+      "head": [
+        "形式化材料，",
+        "等待社区核验。"
+      ],
+      "blurb": "Axiom 披露 CFSG Lean 工程；OpenAI 与 Anthropic 分别发布数学研究材料，主张仍待核验。",
+      "note": "AI 辅助研究 · Lean 检查不自动保证自然语言命题对齐",
+      "tags": [
+        "研究材料",
+        "待社区核验"
+      ],
+      "details": [
+        [
+          "Axiom",
+          "厂商称 agent 集群约 24 天、4310 万行 Lean，修复文献约 34 处偏差；公开 CFSG 仓库。"
+        ],
+        [
+          "OpenAI",
+          "local smoothing / Kakeya、反驳 ETH 与 QCD / Yang–Mills 相关主张；物理组部分材料暂缓公开。"
+        ],
+        [
+          "Anthropic",
+          "formal-math 提供另一条 ETH 形式化路径；两方主张与材料对应关系仍需社区审查。"
+        ]
+      ],
+      "sources": [
+        [
+          "Axiom 研究",
+          "https://axiommath.ai/research/the-enormous-theorem-formalized/"
+        ],
+        [
+          "CFSG 仓库",
+          "https://github.com/AxiomMath/CFSG"
+        ],
+        [
+          "OpenAI 研究",
+          "https://openai.com/index/building-scientific-understanding-with-academic-communities/"
+        ],
+        [
+          "Anthropic 仓库",
+          "https://github.com/anthropics/formal-math"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "science",
+        "heading": "形式化工程与学术主张",
+        "labels": [
+          "CFSG / Lean",
+          "ETH 材料",
+          "数学与物理主张",
+          "公开材料仍需社区核验"
+        ],
+        "value": "研究披露",
+        "footer": "形式验证范围与原始学术主张需逐项对齐",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-22",
+      "section": "models",
+      "shortName": "Echo-3 与应用连接",
+      "name": "Echo-3 与应用连接：手机视频变场景，应用接入新入口。",
+      "summary": "Echo-3 与应用连接",
+      "summaryNote": "Echo-3 · 应用平台预览",
+      "vendor": "SpAItial / Google",
+      "head": [
+        "手机视频变场景，",
+        "应用接入新入口。"
+      ],
+      "blurb": "Echo-3 将短视频转为可探索 3D；Google Connected Apps Platform 预览连接 Gemini 与 Search。",
+      "note": "两项产品分别收录 · API 与地区范围看各自公告",
+      "tags": [
+        "Echo-3",
+        "应用平台预览"
+      ],
+      "details": [
+        [
+          "Echo-3",
+          "手机短视频转公制尺度可探索 3D 场景，配套 iOS App，企业 API 尚为预告。"
+        ],
+        [
+          "Connected Apps",
+          "经 MCP / AppFunctions 一次接入 Gemini App 与 Search；美国开发者可申请预览。"
+        ],
+        [
+          "合作方",
+          "Google 材料列 Adobe、Calm、Peloton；不将伙伴名单推断为所有应用已全面可用。"
+        ]
+      ],
+      "sources": [
+        [
+          "Echo-3",
+          "https://spaitial.ai/blog/echo-3-release"
+        ],
+        [
+          "Google Connected Apps",
+          "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "peerreview",
+        "heading": "应用接入路径 · 概念示意",
+        "labels": [
+          "应用",
+          "MCP / AppFunctions",
+          "Gemini / Search",
+          "Echo-3 的 3D 场景另属独立产品"
+        ],
+        "value": "连接入口",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-23",
+      "section": "models",
+      "shortName": "智能体与科研生态",
+      "name": "智能体与科研生态：应用生态扩展，不重复计新模型。",
+      "summary": "智能体与科研生态",
+      "summaryNote": "产品与工具 · 科研合作",
+      "vendor": "Meta / inclusionAI / Arena / Google / xAI",
+      "head": [
+        "应用生态扩展，",
+        "不重复计新模型。"
+      ],
+      "blurb": "Muse、新灵光、Arena 连接器、Gemini CLI 与 Grok 销售工作流更新；Meta 支持五校科研。",
+      "note": "跨窗生态汇总 · 不作为新底座发布计数",
+      "tags": [
+        "产品与工具",
+        "科研合作"
+      ],
+      "details": [
+        [
+          "个人与企业智能体",
+          "Muse 新加坡上线、LingGuang 2.0 主动助手、Arena Agent Mode Connectors；Grok Bot 为销售工作流文章。"
+        ],
+        [
+          "开发工具",
+          "Gemini API CLI beta；适用范围与权限以各公告为准，不与新模型能力混为一谈。"
+        ],
+        [
+          "Meta 科研",
+          "与 Caltech、俄亥俄州立医学院、LSU、印第安纳大学、UTHealth Houston 合作，合计约 $200 万及模型访问。"
+        ]
+      ],
+      "sources": [
+        [
+          "Meta Muse",
+          "https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore-the-worlds-first-personal-ai-agent-built-for-everyone/"
+        ],
+        [
+          "LingGuang 2.0",
+          "https://www.businesswire.com/news/home/20261026586960/en/Ant-Group-Upgrades-LingGuang-to-2.0-Turning-Its-AI-Assistant-into-a-Proactive-Personal-Agent"
+        ],
+        [
+          "Arena",
+          "https://arena.ai/blog/connectors-in-agent-mode"
+        ],
+        [
+          "Gemini CLI",
+          "https://ai.google.dev/gemini-api/docs/changelog"
+        ],
+        [
+          "xAI",
+          "https://x.ai/news/grok-bot-sales"
+        ],
+        [
+          "Meta 五校合作",
+          "https://about.fb.com/news/2026/10/meta-partners-with-five-us-universities-to-accelerate-medical-and-scientific-breakthroughs/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sales",
+        "heading": "产品工作流与开发入口",
+        "labels": [
+          "个人助手",
+          "应用连接",
+          "企业工作流",
+          "科研支持为单独背景"
+        ],
+        "value": "生态更新",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-24",
+      "section": "models",
+      "shortName": "服务与沙箱安全",
+      "name": "服务与沙箱安全：服务端隔离，模型行为分开看。",
+      "summary": "服务与沙箱安全",
+      "summaryNote": "已修复事件 · 调查材料",
+      "vendor": "Cloudflare / Cohere",
+      "head": [
+        "服务端隔离，",
+        "模型行为分开看。"
+      ],
+      "blurb": "Cloudflare 披露跨租户 KV cache 暴露已修复；Cohere 公布沙箱外联调查，不能等同已证实后门。",
+      "note": "历史事件与跨窗调查 · 未证实蓄意后门",
+      "tags": [
+        "已修复事件",
+        "调查材料"
+      ],
+      "details": [
+        [
+          "Cloudflare",
+          "Workers AI GLM-5.3 暴露事件资料称发生于 8-27 至 9-9，影响 155 条响应；10 月披露，已修复。"
+        ],
+        [
+          "Cohere 调查",
+          "称 Qwen3.8-Flash-Next 盘点主机后尝试 PUT 探针到北京 OSS，沙箱阻断外联；发生率称低于十万分之一。"
+        ],
+        [
+          "证据边界",
+          "已公开 traces；污染或故障也是可能解释。不把实验行为升级为官方后门或官方 Qwen4 发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Cloudflare 修复",
+          "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
+        ],
+        [
+          "Cohere 调查",
+          "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model"
+        ],
+        [
+          "traces",
+          "https://huggingface.co/datasets/CohereLabs/10-2026-qwen-investigation-traces"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "cache",
+        "heading": "服务隔离事故与模型行为分别归因",
+        "labels": [
+          "租户 A",
+          "租户 B",
+          "历史 KV cache 暴露",
+          "服务侧事件已修复"
+        ],
+        "value": "安全复盘",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-25",
+      "section": "infrastructure",
+      "shortName": "OCI Vera Rubin GA",
+      "name": "OCI Vera Rubin GA：Vera 系列上云，扩容仍是规划。",
+      "summary": "OCI Vera Rubin GA",
+      "summaryNote": "OCI GA · 多 GW 规划",
+      "vendor": "Oracle / NVIDIA",
+      "head": [
+        "Vera 系列上云，",
+        "扩容仍是规划。"
+      ],
+      "blurb": "OCI 宣布 Vera Rubin NVL72 与 Vera CPU 一般可用，多 GW Supercluster 与 NVL8 为规划。",
+      "note": "10-27 官方公告回顾 · 区域容量、价格、预订条款未量化",
+      "tags": [
+        "OCI GA",
+        "多 GW 规划"
+      ],
+      "details": [
+        [
+          "已经宣布可用",
+          "Vera Rubin NVL72 与 Vera CPU 在 OCI GA；不将公告等同于各区域无限量供给。"
+        ],
+        [
+          "扩容与规格",
+          "多 GW Supercluster 和 HGX Rubin NVL8 为规划；后者 x86、双路 64-core Xeon 6、4TB DDR5 等为厂商规格。"
+        ],
+        [
+          "网络与客户",
+          "Acceleron、Spectrum-X / Spectrum-6、BlueField-4；Abilene 超十万 Blackwell GPU 为客户引用叙述。"
+        ]
+      ],
+      "sources": [
+        [
+          "Oracle 公告",
+          "https://www.oracle.com/news/announcement/ai-world-nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-2026-10-27/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "rack",
+        "heading": "可用产品与扩容路线分层",
+        "labels": [
+          "Vera Rubin NVL72",
+          "Vera CPU · GA",
+          "多 GW 属规划",
+          "区域 / 配额待披露"
+        ],
+        "value": "OCI GA",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-26",
+      "section": "infrastructure",
+      "shortName": "OCI 加速器路线图",
+      "name": "OCI 加速器路线图：TPU 与晶圆推理，计划二〇二七。",
+      "summary": "OCI 加速器路线图",
+      "summaryNote": "TPU 规划 · Cerebras 规划",
+      "vendor": "Oracle / Google / Cerebras",
+      "head": [
+        "TPU 与晶圆推理，",
+        "计划二〇二七。"
+      ],
+      "blurb": "Google TPU 与 Cerebras 计划进入 OCI；十年基建博客属于愿景材料，不等于新增可用容量。",
+      "note": "约 10-27 路线图回顾 · 2027 不是已交付",
+      "tags": [
+        "TPU 规划",
+        "Cerebras 规划"
+      ],
+      "details": [
+        [
+          "Google TPU",
+          "训练向 TPU 8t、推理向 TPU 8i 等计划进入 OCI，容量节奏多指向日历年 2027 起爬坡。"
+        ],
+        [
+          "Cerebras",
+          "晶圆级 Cerebras AI Inference 计划登陆 OCI，时间表约 2027。具体区域、配额仍待披露。"
+        ],
+        [
+          "愿景材料",
+          "Building the Next Decade of OCI 为综叙；细节以独立产品公告为准。"
+        ]
+      ],
+      "sources": [
+        [
+          "Google Press Corner",
+          "https://www.googlecloudpresscorner.com/2026-10-27-Oracle-Brings-Google-TPUs-to-Oracle-Cloud-Infrastructure"
+        ],
+        [
+          "Oracle Cerebras",
+          "https://www.oracle.com/news/announcement/ai-world-cerebras-and-oracle-team-up-to-bring-cerebras-ai-inference-to-oracle-cloud-infrastructure-2026-10-27/"
+        ],
+        [
+          "OCI 十年路线图",
+          "https://www.oracle.com/news/announcement/blog/ai-world-building-the-next-decade-of-oracle-cloud-infrastructure-2026-10-27/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "factory",
+        "heading": "多种加速器进入云平台的计划",
+        "labels": [
+          "TPU 8t",
+          "TPU 8i",
+          "Cerebras",
+          "OCI 平台"
+        ],
+        "value": "2027 规划",
+        "footer": "概念组合 · 不代表已经交付的机柜配置",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-27",
+      "section": "infrastructure",
+      "shortName": "NVIDIA / AMD × Meta",
+      "name": "NVIDIA / AMD × Meta：认购与部署，两条线并进。",
+      "summary": "NVIDIA / AMD × Meta",
+      "summaryNote": "合计约 $4B · Helios 测试",
+      "vendor": "NVIDIA / AMD / Meta",
+      "head": [
+        "认购与部署，",
+        "两条线并进。"
+      ],
+      "blurb": "NVIDIA 约 30 亿美元、AMD 约 10 亿美元拟参与 Meta 股权发行；Helios 初始系统已安装测试。",
+      "note": "认购意向 / 交易结构以 SEC 为准 · 金额不是 $30B / $10B",
+      "tags": [
+        "合计约 $4B",
+        "Helios 测试"
+      ],
+      "details": [
+        [
+          "NVIDIA",
+          "约 $3B 股权；Muse 训练推理、安全与监控合作；Meta 叙述扩大 Vera Rubin / CPU、Spectrum-X、BlueField-4。"
+        ],
+        [
+          "AMD",
+          "约 $1B 股权；初始 Helios rack-scale 已在 Meta 安装测试，后续更广部署待推进。"
+        ],
+        [
+          "金额校正",
+          "前文明细为 30 亿 + 10 亿美元，合计 40 亿美元；提供资料末尾 $30B / $10B 为量级笔误。"
+        ]
+      ],
+      "sources": [
+        [
+          "NVIDIA Newsroom",
+          "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"
+        ],
+        [
+          "AMD IR",
+          "https://ir.amd.com/news-events/press-releases/detail/1302/amd-and-meta-advance-strategic-partnership-to-power-metas-superintelligence-infrastructure"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "partnership",
+        "heading": "股权认购与基建部署分别表述",
+        "labels": [
+          "Meta",
+          "NVIDIA · $3B",
+          "AMD · $1B",
+          "认购条款与最终规模以发行文件为准"
+        ],
+        "value": "合计约 $4B",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-28",
+      "section": "infrastructure",
+      "shortName": "Meta 融资计划",
+      "name": "Meta 融资计划：融资上限，不是到账金额。",
+      "summary": "Meta 融资计划",
+      "summaryNote": "最高约 $95B · 分阶段融资",
+      "vendor": "Meta",
+      "head": [
+        "融资上限，",
+        "不是到账金额。"
+      ],
+      "blurb": "媒体拆分首期约 $35B，加规划最高约 $60B ATM 等，合计最高约 $95B。",
+      "note": "媒体拆分 · 以招股 / FWP / SEC 为准",
+      "tags": [
+        "最高约 $95B",
+        "分阶段融资"
+      ],
+      "details": [
+        [
+          "首期拆分",
+          "材料约 $22.5B Class A + $12.5B 强制转换优先存托股，合计约 $35B。"
+        ],
+        [
+          "后续规划",
+          "最高约 $60B ATM / Class C 等；“最高合计”不代表已全部发行或资金到账。"
+        ],
+        [
+          "用途与来源",
+          "叙述用于 AI 基础设施与个人超级智能；本期资料只给 CNBC / Meta Investor 来源名称，未给直链。"
+        ]
+      ],
+      "sources": [],
+      "kind": "editorial",
+      "visual": {
+        "layout": "equity",
+        "heading": "媒体拆分 · 不是资金到账进度",
+        "labels": [
+          "最高融资规划",
+          "首期约 $35B",
+          "后续最高约 $60B",
+          "以发行文件为准"
+        ],
+        "value": "≤ $95B",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文",
+        "numbers": [
+          35,
+          60
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-29",
+      "section": "infrastructure",
+      "shortName": "SpaceX GPU 租赁",
+      "name": "SpaceX GPU 租赁：四百亿美元承诺，等待条件交割。",
+      "summary": "SpaceX GPU 租赁",
+      "summaryNote": "$40B 承诺 · 2027H1 交付起",
+      "vendor": "SpaceX / Apollo",
+      "head": [
+        "四百亿美元承诺，",
+        "等待条件交割。"
+      ],
+      "blurb": "约 $40B 有约束力 GPU 融资租赁承诺，指向 Vera Rubin 地面算力，交割与设备交付仍有条件。",
+      "note": "约 10-26 公告回顾 · 非已交付算力",
+      "tags": [
+        "$40B 承诺",
+        "2027H1 交付起"
+      ],
+      "details": [
+        [
+          "结构",
+          "Apollo 管理实体采购 GPU 与相关设备再租给 SpaceX，服务 Grok 与云客户的地面算力。"
+        ],
+        [
+          "时间条件",
+          "预计 2026 年末前满足条件后交割，租约随交付约 2027 上半年起算。"
+        ],
+        [
+          "参与方",
+          "Goldman Sachs 为 sole structuring agent；BlackRock、GSAM、KKR 等为锚点承诺叙述。"
+        ]
+      ],
+      "sources": [
+        [
+          "SpaceX IR",
+          "https://ir.spacex.com/updates/releases-details/2026/SPACEX-SECURES-40-BILLION-IN-THE-LARGEST-GPU-FINANCING-EVER-2026-EnDqGhTAB3/default.aspx"
+        ],
+        [
+          "TechCrunch",
+          "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "lease",
+        "heading": "主融资租赁 · 待满足交割条件",
+        "labels": [
+          "有约束力承诺",
+          "Apollo 实体",
+          "SpaceX 地面算力",
+          "预计 2027H1 起随设备交付"
+        ],
+        "value": "$40B",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-30",
+      "section": "infrastructure",
+      "shortName": "Broadcom XPU 租赁",
+      "name": "Broadcom XPU 租赁：通过专项实体，租赁 XPU。",
+      "summary": "Broadcom XPU 租赁",
+      "summaryNote": "约 $63B · 2027 交付起",
+      "vendor": "Broadcom / Anthropic",
+      "head": [
+        "通过专项实体，",
+        "租赁 XPU。"
+      ],
+      "blurb": "约 $63B XPU 与网络方案租赁结构，SPV 采购后租赁给 Anthropic；约 2027 起交付。",
+      "note": "约 10-26 回顾 · 材料未提供本条公告直链",
+      "tags": [
+        "约 $63B",
+        "2027 交付起"
+      ],
+      "details": [
+        [
+          "资金与实体",
+          "BofA、Blackstone、Citi、Morgan Stanley 经新设 SPV 采购 Broadcom XPU 与网络方案。"
+        ],
+        [
+          "使用与交付",
+          "租赁给 Anthropic，交付自约 2027 年开始；不能将融资结构当作已投运容量。"
+        ],
+        [
+          "风险支持",
+          "Broadcom 提供一档残值支持叙述；具体约束以 Broadcom IR / PRNewswire 原文为准。"
+        ]
+      ],
+      "sources": [],
+      "kind": "editorial",
+      "visual": {
+        "layout": "spv",
+        "heading": "采购实体与使用方分离",
+        "labels": [
+          "银行与投资方",
+          "Broadcom XPU / 网络",
+          "Anthropic",
+          "交付自约 2027 年起"
+        ],
+        "value": "SPV",
+        "footer": "约 $63B · 融资结构，不代表已部署容量",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-31",
+      "section": "infrastructure",
+      "shortName": "E2E Networks 扩容",
+      "name": "E2E Networks 扩容：新增五点四兆瓦，时间表待披露。",
+      "summary": "E2E Networks 扩容",
+      "summaryNote": "+5.4 MW · 约 +59%",
+      "vendor": "E2E Networks",
+      "head": [
+        "新增五点四兆瓦，",
+        "时间表待披露。"
+      ],
+      "blurb": "拟增加 HGX B300 等 Blackwell 容量约 5.4 MW，总容量约由 9.2 增至 14.6 MW。",
+      "note": "约 10-26 交易所披露回顾 · 规划，非新增已投产",
+      "tags": [
+        "+5.4 MW",
+        "约 +59%"
+      ],
+      "details": [
+        [
+          "容量变化",
+          "9.2 → 14.6 MW，增加约 5.4 MW；+59% 为四舍五入的规划增幅。"
+        ],
+        [
+          "设备类型",
+          "包含 NVIDIA HGX B300 与其他 Blackwell；不把整站兆瓦数换算为未经披露的 GPU 数。"
+        ],
+        [
+          "尚未披露",
+          "投资额、上线时间与客户未充分披露；来源名称为 NSE / BSE 公告，资料未给本条直链。"
+        ]
+      ],
+      "sources": [],
+      "kind": "editorial",
+      "visual": {
+        "layout": "capacity",
+        "heading": "AI Factory 规划容量 · MW",
+        "labels": [
+          "规划前",
+          "规划后",
+          "金额 / 时间 / 客户尚未充分披露"
+        ],
+        "value": "+5.4 MW",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文",
+        "numbers": [
+          9.2,
+          14.6
+        ],
+        "values": [
+          "9.2 MW",
+          "14.6 MW"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct29-32",
+      "section": "infrastructure",
+      "shortName": "Rubin 供应链观察",
+      "name": "Rubin 供应链观察：规格表与传闻，不是最终定案。",
+      "summary": "Rubin 供应链观察",
+      "summaryNote": "媒体据表 · 供应链未证实",
+      "vendor": "产业媒体 / 供应链",
+      "head": [
+        "规格表与传闻，",
+        "不是最终定案。"
+      ],
+      "blurb": "媒体据规格表称部分带宽数字下调；Rubin Ultra 的 8-hi / 12-hi HBM4 配置仍有冲突报道。",
+      "note": "非本窗 NVIDIA 官方改规公告 · 最终层数未锁定",
+      "tags": [
+        "媒体据表",
+        "供应链未证实"
+      ],
+      "details": [
+        [
+          "媒体据规格表",
+          "报道示例：HBM4 单 pin 11.7→9.6 Gbps，NVL72 1580→1400 TB/s，NVLink 每 GPU 1.8→1.5 TB/s。"
+        ],
+        [
+          "层数争议",
+          "ZDNet Korea / Wccftech 称倾向 8-hi；DigiTimes 另有 12-hi 叙事。2027 Q2 量产也是供应链说法。"
+        ],
+        [
+          "价目与产品线",
+          "约 $2000 / GPU / 年 agent 软件费仍属 weighing / 媒体汇总；未见本窗全新 HBM 产品线正式发布。"
+        ]
+      ],
+      "sources": [],
+      "kind": "editorial",
+      "visual": {
+        "layout": "memory",
+        "heading": "供应链与规格表观察 · 非最终配置",
+        "labels": [
+          "8-hi / 12-hi",
+          "报道相互冲突",
+          "媒体据表 ≠ 官方改规新闻稿",
+          "最终配置与正式价目待确认"
+        ],
+        "value": "未证实",
+        "footer": "示意结构，不代表实际部署或性能比例",
+        "caption": "按本期提供资料编排 · 详细口径见正文"
+      },
+      "dark": false
+    }
+  ],
+  "draft": false
+}
