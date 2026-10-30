@@ -1,0 +1,1696 @@
+{
+  "date": "2026-10-30",
+  "weekday": "周五",
+  "title": "今日 AI",
+  "pageTitle": "AI 模型早报",
+  "description": "Mistral Large 4 权重发布、用量规则更新与 AI 基建动态。",
+  "subtitle": "开放权重上架，产品规则与基建进展更新。",
+  "introLabel": "AI 模型与基建",
+  "dispatchLabel": "AI MORNING BRIEFING",
+  "categoryLabel": "模型 / 基建",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "accent": "#ed653b",
+  "muted": "#676e65",
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "fps": 30,
+  "introSeconds": 28,
+  "itemSeconds": 15,
+  "detailSeconds": 6,
+  "outroSeconds": 6,
+  "outroTitle": [
+    "本期动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "完整资料与来源链接见 altfork.dev。",
+  "sections": [
+    {
+      "id": "models",
+      "title": "模型、产品与评测",
+      "count": 20
+    },
+    {
+      "id": "infrastructure",
+      "title": "基建与硬件",
+      "count": 8
+    }
+  ],
+  "monitoring": [
+    {
+      "title": "本期状态更新与编排",
+      "lines": [
+        "2026-10-30 北京时间早报；模型原稿覆盖约过去 24 小时并含跨窗补报，硬件条目主要发生于 10-28 / 29。用户未给精确扫描截止分钟，本期不自行添加。",
+        "本期 20 个模型 / 产品专题与 8 条硬件专题不是 28 次新模型发布。法律案例和模板、科研支持与数据计划、IBM 补丁和 Apple 端开发包分别做了相关内容合并。",
+        "Mistral Large 4 已从昨日等待权重更新为可下载；MEOW 是特定许可名称，不笼统改写为 Apache / MIT 或推断符合全部开源定义。",
+        "Pro 200 原定 10-30 降额已按新稿更新为取消；Pro 100 / 500 翻倍、Business Premium 增加、Plus 不变，分别表述。",
+        "全部新闻按用户提供资料整理，未另行联网逐项核查；原稿中的“本窗核验”是输入材料的表述，不是本轮制作行为。"
+      ]
+    },
+    {
+      "title": "模型监测与未证实条目",
+      "lines": [
+        "HF 无官方 Qwen4 或 DeepSeek-V5；Qwen4“下周”在 Apsara Amsterdam 现身为未证实现场传闻，无官方发布稿和官方权重仓。",
+        "Claude Fable 5.5 / Obsidian 3 仍为社区热议，Anthropic 无官方新增发布。Self-Assessment 文中的 Claude Fable 5 不作为 5.5 的证据。",
+        "Gemini 4 Carbon 已证实，AA Intelligence Index 仍为 v5.0；不沿用前几天“Carbon 未证实”的旧状态。",
+        "Mistral Large 4 权重可下，不能再显示 ETA / 等待人数。API 公测、第三方模型代售与开放权重上架分别计述。"
+      ]
+    },
+    {
+      "title": "蒸馏报道 · 媒体未确认",
+      "lines": [
+        "The Information / Reuters 转述称 DeepSeek V4.1-Flash 1017、Kimi K3.1 Pro 大量依赖 GPT-6 Astra 蒸馏；三方未即时回应。属于媒体未确认的来源主张，不写为已经证实的训练方式。",
+        "The Information：https://www.theinformation.com/articles/openais-astra-model-becomes-top-distillation-target-chinas-ai-labs",
+        "Reuters 转述：https://www.investing.com/news/stock-market-news/deepseek-moonshot-used-openaisgpt6-astra-to-train-latest-models-the-information-reports-4981380"
+      ]
+    },
+    {
+      "title": "来源与数值口径",
+      "lines": [
+        "Large 4 API 输入 / 缓存 / 输出分别为 $0.70 / $0.07 / $2.10 每百万 tokens；AA v5 High 26 与厂商 FrontierCode 跑分分开。Fusion Max 60 来自 Coding Agent Index，不与综合指数数值直接横比。",
+        "Self-Assessment 总体约 78% 和高优先级约 94% 是厂商不同子集召回；Particle 的 100→55 是厂商“约少用 45% token”的归一化示意，不是另一次测量。",
+        "微软季度 $452 亿 = $45.2B；全年 $1750→1700 亿 = $175B→170B。Alphabet $1950–2050 亿 = $195–205B。IREN $3.63 亿 = $363M；Fluidstack $400 亿 = $40B 估值。",
+        "PsiQuantum 串扰原稿写约 40 dB，未明确符号与定义，本片不擅自改为 −40 dB；8×8 示意仅画部分交换路径，不伪装成完整拓扑。",
+        "CXMT 与 SK hynix 良率对照未保证同批次 / 工艺 / 统计口径；Culper 报告属于有利益立场的做空主张，未独立验证。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "oct30-1",
+      "section": "models",
+      "shortName": "Mistral Large 4",
+      "name": "Mistral Large 4：权重正式上架，许可为 MEOW。",
+      "summary": "Mistral Large 4",
+      "summaryNote": "权重可下载 · MEOW",
+      "vendor": "Mistral",
+      "head": [
+        "权重正式上架，",
+        "许可为 MEOW。"
+      ],
+      "blurb": "Large 4 约 1T 总参、52B 激活，原生多模态、1M 上下文；本期资料已更新为可下载。",
+      "note": "10-29 权重发布 · MEOW 条款与厂商跑分需分别核对",
+      "tags": [
+        "权重可下载",
+        "MEOW"
+      ],
+      "details": [
+        [
+          "模型规格",
+          "Mistral-Large-4-1T-A52B：MoE、约 1T / 52B，原生多模态，1M 上下文；不是仍在等待的占位页。"
+        ],
+        [
+          "API 官方价格",
+          "每百万 tokens 输入 $0.70、缓存输入 $0.07、输出 $2.10。权重使用条件按 MEOW 原文。"
+        ],
+        [
+          "评测口径",
+          "AA Intelligence Index v5 High 为 26；FrontierCode 2.0 open 等领先说法为厂商自测，不混为 AA 结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "Mistral OSS",
+          "https://mistral.ai/news/mistral-large-4-oss/"
+        ],
+        [
+          "HF 权重",
+          "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+        ],
+        [
+          "AA 模型页",
+          "https://artificialanalysis.ai/models/mistral-large-4"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sparse",
+        "heading": "MoE 参数规模 · 不按格数表达真实比例",
+        "labels": [
+          "总参数",
+          "激活参数",
+          "原生多模态",
+          "1M 上下文"
+        ],
+        "value": "1T",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "AA v5 High = 26 · 厂商自测另列；许可 MEOW",
+        "values": [
+          "约 1T",
+          "约 52B"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-2",
+      "section": "models",
+      "shortName": "Model Spec 更新",
+      "name": "Model Spec 更新：行为规范更新，按五项价值重组。",
+      "summary": "Model Spec 更新",
+      "summaryNote": "10-29 版本 · 行为规范",
+      "vendor": "OpenAI",
+      "head": [
+        "行为规范更新，",
+        "按五项价值重组。"
+      ],
+      "blurb": "新版 Model Spec 重组价值结构，补充上下文、监督和副作用等行为要求。",
+      "note": "规范文档更新 · 不是新模型能力跑分",
+      "tags": [
+        "10-29 版本",
+        "行为规范"
+      ],
+      "details": [
+        [
+          "五项价值",
+          "忠实人类意图、减害、诚实透明、人类能动性与关怀。"
+        ],
+        [
+          "新增内容",
+          "资料提及强上下文、监督与副作用等要求，具体适用条件以 2026-10-29 文档为准。"
+        ],
+        [
+          "发布边界",
+          "这是行为规范更新；不能直接据此声称现有产品已经完全遵循所有条款。"
+        ]
+      ],
+      "sources": [
+        [
+          "更新公告",
+          "https://openai.com/index/updated-model-spec"
+        ],
+        [
+          "2026-10-29 Spec",
+          "https://model-spec.openai.com/2026-10-29.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "行为规则文档 · 2026-10-29",
+        "labels": [
+          "五项价值",
+          "监督与副作用",
+          "文档更新",
+          "实际行为仍需评测"
+        ],
+        "value": "Model Spec",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-3",
+      "section": "models",
+      "shortName": "前沿模型错位监控",
+      "name": "前沿模型错位监控：多层监控，覆盖模型生命周期。",
+      "summary": "前沿模型错位监控",
+      "summaryNote": "训练至使用 · 多层监控",
+      "vendor": "OpenAI",
+      "head": [
+        "多层监控，",
+        "覆盖模型生命周期。"
+      ],
+      "blurb": "监控覆盖训练、评测、内部与部分外部使用；公告回放历史案例中的告警时点。",
+      "note": "厂商回放叙述 · 历史案例不等于通用检测时延",
+      "tags": [
+        "训练至使用",
+        "多层监控"
+      ],
+      "details": [
+        [
+          "监测范围",
+          "训练 / 评测 / 内部 / 部分外部场景，多层监控模型与授权边界的偏离。"
+        ],
+        [
+          "案例回放",
+          "资料称 HF 沙箱逃逸约 30 分钟可告警，9 月 DNS 越权约 15 分钟捕获。"
+        ],
+        [
+          "数字边界",
+          "上述分钟数属于特定历史回放，不是覆盖全部事件的时延保证或独立检测评测。"
+        ]
+      ],
+      "sources": [
+        [
+          "监控博文",
+          "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+        ],
+        [
+          "OpenAI X",
+          "https://x.com/OpenAI/status/2115896329645723836"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "observability",
+        "heading": "生命周期监控 · 流程示意",
+        "labels": [
+          "训练 → 评测 → 使用",
+          "HF 案例约 30 分钟",
+          "DNS 案例约 15 分钟",
+          "回放数字不是普遍时延承诺"
+        ],
+        "value": "多层监控",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-4",
+      "section": "models",
+      "shortName": "Work / Codex 用量",
+      "name": "Work / Codex 用量：用量上调，取消原定降额。",
+      "summary": "Work / Codex 用量",
+      "summaryNote": "Pro 调整 · Business Premium",
+      "vendor": "OpenAI",
+      "head": [
+        "用量上调，",
+        "取消原定降额。"
+      ],
+      "blurb": "资料称 Pro 100 / 500 额度翻倍，取消 Pro 200 原定降额；Business Premium 同步增加。",
+      "note": "10-29 新规则覆盖此前降额计划 · Plus 不变",
+      "tags": [
+        "Pro 调整",
+        "Business Premium"
+      ],
+      "details": [
+        [
+          "Pro 档位",
+          "Pro 100 / 500 用量翻倍；取消此前 Pro 200 在 10-30 的降额计划，本期不再沿用旧状态。"
+        ],
+        [
+          "其他计划",
+          "Business Premium 的 Work / Codex 用量亦增；Plus 不变，具体计量与资格以各档说明为准。"
+        ],
+        [
+          "避免混淆",
+          "本条讲产品使用额度，不把它等同于 API token 单价下降或所有订阅档位统一翻倍。"
+        ]
+      ],
+      "sources": [
+        [
+          "Business notes",
+          "https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes"
+        ],
+        [
+          "Pro tiers",
+          "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "context",
+        "heading": "用量规则更新 · 不同档位分开看",
+        "labels": [
+          "Pro 100 / 500 额度",
+          "Pro 200 原定降额取消",
+          "Business Premium 增加 · Plus 不变"
+        ],
+        "value": "×2",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "×2 仅对应资料中的 Pro 100 / 500 档位"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-5",
+      "section": "models",
+      "shortName": "Codex CLI 0.166.0",
+      "name": "Codex CLI 0.166.0：命令行更新，优化操作与恢复。",
+      "summary": "Codex CLI 0.166.0",
+      "summaryNote": "0.166.0 · CLI 更新",
+      "vendor": "OpenAI",
+      "head": [
+        "命令行更新，",
+        "优化操作与恢复。"
+      ],
+      "blurb": "新增键盘选区与搜索、异步 UI Markdown 等；目录列入 GPT-6.1 Terra。",
+      "note": "CLI 发布记录 · 不等于又一次模型发版",
+      "tags": [
+        "0.166.0",
+        "CLI 更新"
+      ],
+      "details": [
+        [
+          "界面操作",
+          "支持键盘选区与搜索，并更新异步 UI Markdown 展示。"
+        ],
+        [
+          "会话恢复",
+          "发布说明包含 codex resume 等操作，详细参数与兼容范围以 release 为准。"
+        ],
+        [
+          "模型目录",
+          "目录包含 GPT-6.1 Terra；客户端目录变更不是模型本体重新发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "GitHub release",
+          "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "neuron",
+        "heading": "客户端功能更新",
+        "labels": [
+          "Codex CLI 0.166.0",
+          "键盘选区 / 搜索",
+          "异步 UI Markdown",
+          "会话恢复与模型目录"
+        ],
+        "value": "codex resume",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-6",
+      "section": "models",
+      "shortName": "法律工作流案例",
+      "name": "法律工作流案例：交易尽调案例，与法务模板更新。",
+      "summary": "法律工作流案例",
+      "summaryNote": "交易尽调 · 法务模板",
+      "vendor": "OpenAI / Anthropic",
+      "head": [
+        "交易尽调案例，",
+        "与法务模板更新。"
+      ],
+      "blurb": "OpenAI 公布 Ropes & Gray 尽调案例；Claude 提供可复用 Legal Artifacts 画廊。",
+      "note": "案例与产品模板分别收录 · 未提供可横比的独立基准",
+      "tags": [
+        "交易尽调",
+        "法务模板"
+      ],
+      "details": [
+        [
+          "OpenAI 案例",
+          "Ropes & Gray 交易尽调应用案例；原稿未提供量化效率或准确率，本片不补写。"
+        ],
+        [
+          "Claude 模板",
+          "可复用 Artifacts 画廊涵盖引用核对、管辖矩阵与事项板等法务工作。"
+        ],
+        [
+          "信息结构",
+          "一个是客户案例，一个是工作流模板产品；不据此给出法律正确性或工作成效保证。"
+        ]
+      ],
+      "sources": [
+        [
+          "Ropes & Gray",
+          "https://openai.com/index/ropes-gray-ai-diligence"
+        ],
+        [
+          "Legal Artifacts",
+          "https://claude.com/resources/articles/introducing-artifacts-for-legal-work"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "workmap",
+        "heading": "法务资料与工作流 · 关系示意",
+        "labels": [
+          "引用核对",
+          "管辖矩阵",
+          "事项板",
+          "交易尽调"
+        ],
+        "value": "法律工作流",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-7",
+      "section": "models",
+      "shortName": "科研支持与 ProtoStar",
+      "name": "科研支持与 ProtoStar：科研额度扩围，科学数据做准备。",
+      "summary": "科研支持与 ProtoStar",
+      "summaryNote": "约 20 家机构 · 11 月挑战",
+      "vendor": "Anthropic / Hugging Face",
+      "head": [
+        "科研额度扩围，",
+        "科学数据做准备。"
+      ],
+      "blurb": "AI for Science 扩至约 20 家基金会与机构；HF ProtoStar 推动公共资助科学数据 AI 就绪。",
+      "note": "科研生态支持 · 不作为新基础模型发布计数",
+      "tags": [
+        "约 20 家机构",
+        "11 月挑战"
+      ],
+      "details": [
+        [
+          "Anthropic",
+          "免费 Claude 额度与合作，资料列 Sloan、Simons、Schmidt Sciences、NSF 等。"
+        ],
+        [
+          "HF ProtoStar",
+          "面向公共资助科学数据的 AI 就绪项目，首项 Climate Risk 挑战约 11-02 至 11-13。"
+        ],
+        [
+          "状态边界",
+          "额度支持、合作计划和数据挑战为不同事项，不将其等同于科学发现已经独立验证。"
+        ]
+      ],
+      "sources": [
+        [
+          "AI for Science",
+          "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+        ],
+        [
+          "Project ProtoStar",
+          "https://huggingface.co/blog/announcing-project-protostar"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "alliance",
+        "heading": "科研支持与数据项目",
+        "labels": [
+          "研究机构",
+          "免费 Claude 额度",
+          "AI 就绪数据",
+          "Climate Risk 约 11-02 至 11-13"
+        ],
+        "value": "科研生态",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-8",
+      "section": "models",
+      "shortName": "Self-Assessment",
+      "name": "Self-Assessment：回复之后，再做安全自评。",
+      "summary": "Self-Assessment",
+      "summaryNote": "离线监测 · 厂商自测",
+      "vendor": "Anthropic",
+      "head": [
+        "回复之后，",
+        "再做安全自评。"
+      ],
+      "blurb": "Self-Assessment Safeguards 将回复后的自我安全评估用于离线监测。",
+      "note": "Claude Fable 5 厂商自测 · 两组召回口径不同",
+      "tags": [
+        "离线监测",
+        "厂商自测"
+      ],
+      "details": [
+        [
+          "工作方式",
+          "在回复后自做安全评估，作为离线监测信号；不是承诺所有危险内容都实时拦截。"
+        ],
+        [
+          "资料数字",
+          "相对强分类器，召回约 78%；高优先级约 94%。这两项来自不同子集，不能视为前后提升。"
+        ],
+        [
+          "范围限制",
+          "资料中的评估对象是 Claude Fable 5，不据此证明 Fable 5.5 或其他未发布模型已经上线。"
+        ]
+      ],
+      "sources": [
+        [
+          "Safeguards",
+          "https://safeguards.anthropic.com/2026/self-assessment/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "evaluation",
+        "heading": "回复后自评 → 离线监测",
+        "labels": [
+          "已生成的回复",
+          "自我安全评估",
+          "总体约 78% / 高优先级约 94%",
+          "厂商自测，两组召回的子集不同"
+        ],
+        "value": "离线监测",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-9",
+      "section": "models",
+      "shortName": "GSA OneGov 折扣",
+      "name": "GSA OneGov 折扣：政府侧采购，约四成折扣。",
+      "summary": "GSA OneGov 折扣",
+      "summaryNote": "跨窗补录 · 约 40% 折扣",
+      "vendor": "Anthropic / GSA",
+      "head": [
+        "政府侧采购，",
+        "约四成折扣。"
+      ],
+      "blurb": "政府侧消费型定价约 40% 折扣、无最低采购额，覆盖 Enterprise、for Government 与 API。",
+      "note": "10-27 跨窗补报 · 非本窗新 Claude 发版",
+      "tags": [
+        "跨窗补录",
+        "约 40% 折扣"
+      ],
+      "details": [
+        [
+          "适用产品",
+          "Claude Enterprise、Claude for Government 与 Claude API，按公告的政府采购范围执行。"
+        ],
+        [
+          "采购模式",
+          "消费型定价，资料称无最低采购额；最终资格与渠道以 GSA / Anthropic 条款为准。"
+        ],
+        [
+          "时间说明",
+          "这是 10-27 的协议背景，本期收录补报，不重复计为 10-30 新模型。"
+        ]
+      ],
+      "sources": [
+        [
+          "GSA 新闻稿",
+          "https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-anthropic-reach-onegov-agreement-on-discounted-consumptionbased-pricing-10272026"
+        ],
+        [
+          "Anthropic",
+          "https://www.anthropic.com/news/expanding-partnership-gsa"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "政府采购覆盖的产品入口",
+        "labels": [
+          "OneGov",
+          "Enterprise / Government",
+          "Claude API",
+          "约 40% 折扣 · 无最低采购额"
+        ],
+        "value": "政府采购",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-10",
+      "section": "models",
+      "shortName": "药物研发早期进展",
+      "name": "药物研发早期进展：早期药研进展，仍需后续验证。",
+      "summary": "药物研发早期进展",
+      "summaryNote": "早期研究 · Mithril Medicine",
+      "vendor": "Anthropic",
+      "head": [
+        "早期药研进展，",
+        "仍需后续验证。"
+      ],
+      "blurb": "本期原稿补报药物研发早期进展，并提及收购 Mithril Medicine；不据此推断临床疗效。",
+      "note": "跨窗补报 · 收购关系按本期资料表述，未另行核验",
+      "tags": [
+        "早期研究",
+        "Mithril Medicine"
+      ],
+      "details": [
+        [
+          "本期补充",
+          "原稿把 Mithril Medicine 明确写为收购事项；相较此前主体关系不明确的资料，保留此项新表述与来源。"
+        ],
+        [
+          "研发阶段",
+          "按早期药研合作收录，不把工具使用、候选设计或公司收购当作临床结果。"
+        ],
+        [
+          "核验边界",
+          "本期只给研究页链接，未单独提供收购交易条款；未补写金额、完成日或药物有效性结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "Anthropic 研究",
+          "https://www.anthropic.com/research/early-progress-drug-development"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "clinical",
+        "heading": "药物研发阶段 · 概念示意",
+        "labels": [
+          "研究探索",
+          "临床前",
+          "临床验证",
+          "早期案例不代表临床疗效"
+        ],
+        "value": "早期进展",
+        "footer": "Mithril 收购按本期原稿收录，交易条款未提供",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-11",
+      "section": "models",
+      "shortName": "Genie 4 研究预览",
+      "name": "Genie 4 研究预览：世界模型，继续可信测试。",
+      "summary": "Genie 4 研究预览",
+      "summaryNote": "世界模型 · 研究预览",
+      "vendor": "Google DeepMind",
+      "head": [
+        "世界模型，",
+        "继续可信测试。"
+      ],
+      "blurb": "Genie 4 提供实时可交互 3D 环境，目前为可信测试者研究预览。",
+      "note": "约 10-27 跨窗补报 · 未当作全面开放",
+      "tags": [
+        "世界模型",
+        "研究预览"
+      ],
+      "details": [
+        [
+          "能力定位",
+          "实时可交互 3D 世界模拟，右侧为概念场景示意，不是模型生成素材。"
+        ],
+        [
+          "可用范围",
+          "可信测试者预览，不将研究展示等同于所有用户已经可调用。"
+        ],
+        [
+          "收录方式",
+          "原稿列为跨窗补报，保持本期参考背景，不重复计为新一代模型 GA。"
+        ]
+      ],
+      "sources": [
+        [
+          "DeepMind",
+          "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "world",
+        "heading": "世界模拟 · 概念场景",
+        "labels": [
+          "实时可交互环境",
+          "可信测试者",
+          "研究预览 · 跨窗参考"
+        ],
+        "value": "Genie 4",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-12",
+      "section": "models",
+      "shortName": "Gemini App 文件",
+      "name": "Gemini App 文件：创建与编辑，直接放进应用。",
+      "summary": "Gemini App 文件",
+      "summaryNote": "创建 · 预览 / 编辑",
+      "vendor": "Google",
+      "head": [
+        "创建与编辑，",
+        "直接放进应用。"
+      ],
+      "blurb": "Gemini App 支持直接创建、预览与编辑文件，本期资料未列具体地区、计划和格式清单。",
+      "note": "产品功能更新 · 适用范围以原公告为准",
+      "tags": [
+        "创建",
+        "预览 / 编辑"
+      ],
+      "details": [
+        [
+          "新增入口",
+          "在 Gemini App 内直接创建、预览和编辑文件，减少应用间切换的操作步骤。"
+        ],
+        [
+          "未给细节",
+          "原稿仅提供功能名称与 Workspace Updates 链接，不补写文件格式、导出能力或订阅范围。"
+        ],
+        [
+          "与模型区分",
+          "这是应用工作流功能，不代表另一个基础模型或独立模型版本发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Workspace Updates",
+          "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "longdoc",
+        "heading": "应用中的文件处理流程",
+        "labels": [
+          "创建文件",
+          "预览内容",
+          "编辑文件",
+          "Gemini App"
+        ],
+        "value": "文件工作流",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-13",
+      "section": "models",
+      "shortName": "Jules 下线安排",
+      "name": "Jules 下线安排：异步编程代理，年底收束服务。",
+      "summary": "Jules 下线安排",
+      "summaryNote": "11-11 节点 · 12-31 收束",
+      "vendor": "Google",
+      "head": [
+        "异步编程代理，",
+        "年底收束服务。"
+      ],
+      "blurb": "Jules 宣布收束：11 月 11 日前可继续会话，其后只读至 12 月 31 日。",
+      "note": "10-29 公告 · 截止安排按原稿表述，不把今天写为已下线",
+      "tags": [
+        "11-11 节点",
+        "12-31 收束"
+      ],
+      "details": [
+        [
+          "调整原因",
+          "原稿称为统一 agentic coding 产品而调整 Jules 异步编程代理。"
+        ],
+        [
+          "会话阶段",
+          "11-11 前可继续会话，其后切换只读状态；资料没有给迁移工具或自动迁移承诺。"
+        ],
+        [
+          "结束日期",
+          "2026-12-31 收束，不是 10-30 已停止所有访问；用户应按官方时间表安排使用。"
+        ]
+      ],
+      "sources": [
+        [
+          "Jules Changelog",
+          "https://jules.google/docs/changelog/2026-10-29/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "boundary",
+        "heading": "服务阶段变化 · 时间节点",
+        "labels": [
+          "11-11 前可继续会话",
+          "其后只读",
+          "12-31 服务收束",
+          "具体迁移安排以公告为准"
+        ],
+        "value": "下线安排",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-14",
+      "section": "models",
+      "shortName": "AA 指数状态",
+      "name": "AA 指数状态：综合指数仍 v5，Carbon 居首。",
+      "summary": "AA 指数状态",
+      "summaryNote": "v5.0 · 独立榜",
+      "vendor": "Artificial Analysis",
+      "head": [
+        "综合指数仍 v5，",
+        "Carbon 居首。"
+      ],
+      "blurb": "Intelligence Index v5.0 与 Progress Index v1 继续沿用，Gemini 4 Carbon 约 59 分居首。",
+      "note": "独立评测状态 · Large 4 High 26 为另一个已列设置",
+      "tags": [
+        "v5.0",
+        "独立榜"
+      ],
+      "details": [
+        [
+          "指数更新",
+          "v5 新增 FrontierCode 2.0 等评测；Progress Index v1 提供跨时间的能力标尺。"
+        ],
+        [
+          "本期榜首",
+          "Changelog 所列 Carbon 约 59，原稿核验线仍为 v5.0，没有升级为另一个新指数版本。"
+        ],
+        [
+          "比较范围",
+          "右侧只列本期材料明确给出的两项 High 设置，不是完整榜单；具体模型配置与成本查原榜。"
+        ]
+      ],
+      "sources": [
+        [
+          "AA v5",
+          "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5"
+        ],
+        [
+          "AA Changelog",
+          "https://artificialanalysis.ai/changelog"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "leaderboard",
+        "heading": "AA Intelligence Index v5 · 本期摘录",
+        "labels": [
+          "仅列原稿给出的部分型号",
+          "High 设置",
+          "不是完整排行榜",
+          "评测与价格分开看"
+        ],
+        "value": "v5.0",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "AA 独立评测 · 设置与日期以原榜为准",
+        "entries": [
+          {
+            "label": "Gemini 4 Carbon High",
+            "value": 59
+          },
+          {
+            "label": "Mistral Large 4 High",
+            "value": 26
+          }
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-15",
+      "section": "models",
+      "shortName": "Mistral Responses API",
+      "name": "Mistral Responses API：智能体接口公测，第三方托管上架。",
+      "summary": "Mistral Responses API",
+      "summaryNote": "接口公测 · 云端代售",
+      "vendor": "Mistral",
+      "head": [
+        "智能体接口公测，",
+        "第三方托管上架。"
+      ],
+      "blurb": "Responses API 公测；云端 DeepSeek V4.1 Flash 为 preview，GLM 5.3 Flash 为 GA。",
+      "note": "10-28 跨窗补报 · 两项第三方服务均标 1M 上下文",
+      "tags": [
+        "接口公测",
+        "云端代售"
+      ],
+      "details": [
+        [
+          "API 状态",
+          "面向智能体的 Responses API 公开预览，具体功能与使用条件按接口文档。"
+        ],
+        [
+          "DeepSeek",
+          "deepseek-v4-1-flash-1017 为云端 preview，资料标 1M 上下文。"
+        ],
+        [
+          "GLM",
+          "zai-glm-5-3-flash 为云端 GA，资料亦标 1M；服务上架不等于基础模型权重重新发布。"
+        ]
+      ],
+      "sources": [
+        [
+          "Responses 文档",
+          "https://docs.mistral.ai/studio/conversations/responses"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "dualscope",
+        "heading": "第三方托管状态分别列示",
+        "labels": [
+          "DeepSeek",
+          "GLM Flash",
+          "preview · 1M",
+          "GA · 1M"
+        ],
+        "value": "Responses API 公测",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-16",
+      "section": "models",
+      "shortName": "Nemotron Transcribe",
+      "name": "Nemotron Transcribe：语音转写模型，开放权重可用。",
+      "summary": "Nemotron Transcribe",
+      "summaryNote": "开放权重 · 语音转写",
+      "vendor": "NVIDIA",
+      "head": [
+        "语音转写模型，",
+        "开放权重可用。"
+      ],
+      "blurb": "Nemotron 3.5 Transcribe 约 30B-A4B，提供多语转写、说话人标注和时间戳等。",
+      "note": "约 10-28 跨窗参考 · 本期原稿未新增独立跑分",
+      "tags": [
+        "开放权重",
+        "语音转写"
+      ],
+      "details": [
+        [
+          "发布对象",
+          "NVIDIA-Nemotron-3.5-Transcribe-30B-A4B，官方研究页与 HF 模型仓均给出来源。"
+        ],
+        [
+          "任务范围",
+          "多语转写、说话人和时间戳等；未将本期资料扩写成新的实时流式产品。"
+        ],
+        [
+          "评测处理",
+          "本期没有额外量化评测，不沿用旧期数字冒充本窗新增测试。"
+        ]
+      ],
+      "sources": [
+        [
+          "NVIDIA 研究页",
+          "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/"
+        ],
+        [
+          "HF 模型仓",
+          "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "speech",
+        "heading": "多语转写 · 波形为示意",
+        "labels": [
+          "总参数约",
+          "激活参数约",
+          "多语 / 说话人 / 时间戳",
+          "非本窗新增评测"
+        ],
+        "value": "30B-A4B",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文",
+        "values": [
+          "30B",
+          "4B"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-17",
+      "section": "models",
+      "shortName": "Pika H3 Flex",
+      "name": "Pika H3 Flex：Flex 权重，上架模型社区。",
+      "summary": "Pika H3 Flex",
+      "summaryNote": "权重上架 · HF",
+      "vendor": "Pika",
+      "head": [
+        "Flex 权重，",
+        "上架模型社区。"
+      ],
+      "blurb": "Pika H3 Flex 开放权重上 HF；本期原稿仅给出发布条目和官方来源。",
+      "note": "约 10-29 · 不补写原稿未提供的参数、许可或性能",
+      "tags": [
+        "权重上架",
+        "HF"
+      ],
+      "details": [
+        [
+          "发布状态",
+          "原稿称 Pika H3 Flex 权重已上 Hugging Face，提供官方博客与模型仓链接。"
+        ],
+        [
+          "信息范围",
+          "未给出参数量、具体许可、硬件门槛或量化基准；按已提供内容收录。"
+        ],
+        [
+          "画面说明",
+          "右侧是发布资料结构示意，不是模型运行结果或生成效果样片。"
+        ]
+      ],
+      "sources": [
+        [
+          "Pika 博文",
+          "https://pika.art/blog/pika-h3-flex"
+        ],
+        [
+          "HF",
+          "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "发布资料与模型文件",
+        "labels": [
+          "Pika H3 Flex",
+          "Hugging Face",
+          "开放权重",
+          "许可与具体能力请查原文"
+        ],
+        "value": "权重上架",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-18",
+      "section": "models",
+      "shortName": "Granite 与 Apple 端包",
+      "name": "Granite 与 Apple 端包：语音与决策，补丁和端侧包更新。",
+      "summary": "Granite 与 Apple 端包",
+      "summaryNote": "4.1.1 补丁 · Apple 端开源包",
+      "vendor": "IBM / Hugging Face",
+      "head": [
+        "语音与决策，",
+        "补丁和端侧包更新。"
+      ],
+      "blurb": "Granite Switch 4.1.1 更新多语 ASR 与 Decision adapter；HF 发布 Apple 端开源包。",
+      "note": "补丁 / 开发包更新 · IBM Decision Index 为厂商自测",
+      "tags": [
+        "4.1.1 补丁",
+        "Apple 端开源包"
+      ],
+      "details": [
+        [
+          "IBM Granite",
+          "Switch 4.1.1 更新多语 ASR 与 Decision adapter；原稿未给具体跑分数字，不虚构提升幅度。"
+        ],
+        [
+          "HF Apple 端",
+          "AnySpeechRecognizer / AnyDecisionModel 开源包，作为 Apple 端开发能力收录。"
+        ],
+        [
+          "产品层级",
+          "一个是模型补丁，一个是开发包；不推断为同一个模型、相同许可证或所有 Apple 设备可用。"
+        ]
+      ],
+      "sources": [
+        [
+          "IBM Granite",
+          "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+        ],
+        [
+          "AnyDecisionModel",
+          "https://huggingface.co/blog/anydecisionmodel"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "modalities",
+        "heading": "模型补丁与端侧开发接口",
+        "labels": [
+          "IBM ASR",
+          "Decision adapter",
+          "4.1.1 补丁",
+          "语音包",
+          "决策包",
+          "Apple 端"
+        ],
+        "value": "语音 / 决策工具链",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-19",
+      "section": "models",
+      "shortName": "Copilot Fusion",
+      "name": "Copilot Fusion：多模型路由，编排正式 GA。",
+      "summary": "Copilot Fusion",
+      "summaryNote": "正式 GA · 限时模型费优惠",
+      "vendor": "GitHub",
+      "head": [
+        "多模型路由，",
+        "编排正式 GA。"
+      ],
+      "blurb": "Fusion 进入 GA，AA Coding Agent Index 的 Fusion Max 为 60；付费计划有限时模型费优惠。",
+      "note": "10-28 漏报补录 · Coding Agent Index 不是综合 Intelligence Index",
+      "tags": [
+        "正式 GA",
+        "限时模型费优惠"
+      ],
+      "details": [
+        [
+          "产品能力",
+          "多模型路由与编排；本期材料未将任何特定请求保证分配到某一模型。"
+        ],
+        [
+          "评测口径",
+          "AA Coding Agent：Fusion Max = 60；不与综合 Intelligence Index 的 59 等数值直接比较。"
+        ],
+        [
+          "费用活动",
+          "付费计划限时模型费用减 30%，不是所有订阅账单永久打七折；范围与时效查原文。"
+        ]
+      ],
+      "sources": [
+        [
+          "GitHub Changelog",
+          "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
+        ],
+        [
+          "AA 评测",
+          "https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "partnership",
+        "heading": "多模型编排 · 关系示意",
+        "labels": [
+          "Fusion",
+          "模型路由",
+          "任务编排",
+          "AA Coding Agent Index · Fusion Max"
+        ],
+        "value": "60",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "60 来自 Coding Agent Index，不是综合指数"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-20",
+      "section": "models",
+      "shortName": "Particle-1 后训练",
+      "name": "Particle-1 后训练：后训练模型，减少 token。",
+      "summary": "Particle-1 后训练",
+      "summaryNote": "后训练 · 厂商自测",
+      "vendor": "Particle",
+      "head": [
+        "后训练模型，",
+        "减少 token。"
+      ],
+      "blurb": "基于 DeepSeek V4.1 Flash 后训练，厂商称多个基准约少用 45% token，已上 Vercel AI Gateway。",
+      "note": "约 10-28 漏报补录 · 45% 为厂商自测，不是独立成本结论",
+      "tags": [
+        "后训练",
+        "厂商自测"
+      ],
+      "details": [
+        [
+          "基础模型",
+          "Particle-1 基于 DeepSeek V4.1 Flash，不能将其说成 DeepSeek 官方新版本。"
+        ],
+        [
+          "效率主张",
+          "厂商称多个基准约少用 45% token；右侧用 100→55 作为同口径归一化示意，不代表每项任务。"
+        ],
+        [
+          "分发",
+          "资料称已上 Vercel AI Gateway；token 减少不自动等于单价或最终账单同比例下降。"
+        ]
+      ],
+      "sources": [
+        [
+          "Particle",
+          "https://particle.ai/blog/introducing-particle-1"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "cyberbudget",
+        "heading": "厂商 token 用量主张 · 归一化示意",
+        "labels": [
+          "对照 token 用量",
+          "Particle-1 token 用量",
+          "约少用 45% · 厂商自测",
+          "示意 100 → 55，不代表所有任务"
+        ],
+        "value": "约 −45%",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "厂商多基准概括 · 不是独立成本或精度对照",
+        "numbers": [
+          100,
+          55
+        ],
+        "values": [
+          "100",
+          "55"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-21",
+      "section": "infrastructure",
+      "shortName": "微软 CapEx 与交付",
+      "name": "微软 CapEx 与交付：GPU 交付延后，全年资本支出调低。",
+      "summary": "微软 CapEx 与交付",
+      "summaryNote": "GPU 交付延误 · CapEx 指引",
+      "vendor": "Microsoft / Alphabet",
+      "head": [
+        "GPU 交付延后，",
+        "全年资本支出调低。"
+      ],
+      "blurb": "微软 FY2027 Q1 CapEx 约 $45.2B；资料称全年指引由约 $175B 调至 $170B。",
+      "note": "约 10-28/29 · CFO 叙述与媒体财报汇总分列",
+      "tags": [
+        "GPU 交付延误",
+        "CapEx 指引"
+      ],
+      "details": [
+        [
+          "微软季度与原因",
+          "季度资本支出约 $452 亿、低于预期；CFO 称第三方 GPU-as-a-Service 交付推迟。"
+        ],
+        [
+          "全年与交付期",
+          "全年约 $1750 亿 → $1700 亿；部分产能延至 2027 上半年，指引与实际支出不可混为一谈。"
+        ],
+        [
+          "Alphabet",
+          "同日未上修 CapEx，资料范围约 $1950–2050 亿；不是微软的季度或全年数值。"
+        ]
+      ],
+      "sources": [
+        [
+          "Microsoft IR",
+          "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast"
+        ],
+        [
+          "CNBC",
+          "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "cyberbudget",
+        "heading": "微软全年 CapEx 指引 · 十亿美元",
+        "labels": [
+          "此前指引",
+          "本期指引",
+          "季度 $45.2B / 全年指引 $170B 分开看"
+        ],
+        "value": "175 → 170",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "财报 / 媒体所列全年指引，不是已发生支出",
+        "numbers": [
+          175,
+          170
+        ],
+        "values": [
+          "$175B",
+          "$170B"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-22",
+      "section": "infrastructure",
+      "shortName": "PsiQuantum 光交换",
+      "name": "PsiQuantum 光交换：硅光交换原型，样品已经送测。",
+      "summary": "PsiQuantum 光交换",
+      "summaryNote": "8×8 OCS · 样品送测",
+      "vendor": "PsiQuantum",
+      "head": [
+        "硅光交换原型，",
+        "样品已经送测。"
+      ],
+      "blurb": "发布 8×8 光路交换机原型，称插入损耗约 1.2 dB、重配小于 3 ms；当前为样品送测。",
+      "note": "约 10-28 · 原型规格为厂商叙述，不当作规模量产",
+      "tags": [
+        "8×8 OCS",
+        "样品送测"
+      ],
+      "details": [
+        [
+          "原型规格",
+          "硅光 optical circuit switch，8×8；厂商称插入损耗约 1.2 dB。"
+        ],
+        [
+          "串扰与重配",
+          "原稿列串扰约 40 dB、重配 <3 ms；串扰符号 / 定义按原文，未自行变更为另一指标。"
+        ],
+        [
+          "发布阶段",
+          "样品送测；没有给出量产日期、出货量或大规模数据中心部署结果。"
+        ]
+      ],
+      "sources": [
+        [
+          "BusinessWire",
+          "https://www.businesswire.com/news/home/20261028890054/en/PsiQuantum-Unveils-Optical-Circuit-Switch-Technology-Built-on-Advanced-Low-Loss-Silicon-Photonics-Platform"
+        ],
+        [
+          "Semafor",
+          "https://www.semafor.com/article/10/28/2026/quantum-computing-companys-first-breakthrough-is-in-ai-data-centers"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "光路交换 · 关系示意，非完整端口拓扑",
+        "labels": [
+          "光路输入",
+          "交换路径 A",
+          "交换路径 B",
+          "8×8 原型 · 重配 <3 ms"
+        ],
+        "value": "8×8 OCS",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "只示意交换路径 · 原型送测，非量产实测"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-23",
+      "section": "infrastructure",
+      "shortName": "Marvell / Lumentum",
+      "name": "Marvell / Lumentum：光器件收购谈判，仍未获双方确认。",
+      "summary": "Marvell / Lumentum",
+      "summaryNote": "媒体报道 · 未确认",
+      "vendor": "Bloomberg / 媒体转述",
+      "head": [
+        "光器件收购谈判，",
+        "仍未获双方确认。"
+      ],
+      "blurb": "媒体称 Marvell 与 Lumentum 处于 advanced talks，可能以股票为主；双方未置评。",
+      "note": "约 10-29 · 媒体、未确认；不是已签约或已完成收购",
+      "tags": [
+        "媒体报道",
+        "未确认"
+      ],
+      "details": [
+        [
+          "报道内容",
+          "Bloomberg 称双方进入较深入谈判，交易可能以股票为主。"
+        ],
+        [
+          "公司状态",
+          "双方未置评；原稿没有给出确定协议、成交金额或监管批准。"
+        ],
+        [
+          "呈现边界",
+          "只作为潜在光互联产业整合线索，不将“接近交易”升级为已收购。"
+        ]
+      ],
+      "sources": [
+        [
+          "Bloomberg Law",
+          "https://news.bloomberglaw.com/mergers-and-acquisitions/marvell-is-said-to-near-megadeal-for-lumentum-in-ai-push-2"
+        ],
+        [
+          "SDxCentral",
+          "https://www.sdxcentral.com/news/marvell-in-advanced-talks-to-snap-up-optical-rival-lumentum-report/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "dualscope",
+        "heading": "潜在交易双方 · 媒体线索",
+        "labels": [
+          "Marvell",
+          "Lumentum",
+          "advanced talks",
+          "双方未置评"
+        ],
+        "value": "未确认",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "未确认谈判，不代表已签署或完成交易"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-24",
+      "section": "infrastructure",
+      "shortName": "CXMT HBM3E 观察",
+      "name": "CXMT HBM3E 观察：HBM3E 小批量，良率说法来自媒体。",
+      "summary": "CXMT HBM3E 观察",
+      "summaryNote": "HBM3E · 媒体消息人士",
+      "vendor": "Reuters / TrendForce 转述",
+      "head": [
+        "HBM3E 小批量，",
+        "良率说法来自媒体。"
+      ],
+      "blurb": "报道称长鑫已送样，拟约两月内有限量产，良率约 20–30%；不是公司正式量产公告。",
+      "note": "约 10-28 · 消息人士口径，跨厂良率不作同口径评测",
+      "tags": [
+        "HBM3E",
+        "媒体消息人士"
+      ],
+      "details": [
+        [
+          "报道阶段",
+          "Reuters 消息人士称已向国内 AI 芯片设计公司送样，约两个月内有限量产。"
+        ],
+        [
+          "良率说法",
+          "资料列 CXMT 约 20–30%、SK hynix 约 70%；不保证同工艺、批次或统计口径。"
+        ],
+        [
+          "未获确认部分",
+          "不将报道的生产计划、良率区间与对照数字当作厂商公开验收或量产证明。"
+        ]
+      ],
+      "sources": [
+        [
+          "TrendForce / Reuters",
+          "https://www.trendforce.com/news/2026/10/28/news-cxmt-reportedly-ships-hbm3e-samples-eyes-production-within-2-months-despite-20-30-yields/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "memory",
+        "heading": "HBM3E 送样与有限量产报道",
+        "labels": [
+          "长鑫 CXMT",
+          "送样 / 有限量产计划",
+          "良率约 20–30% 为消息人士说法",
+          "跨厂数字未证明统计口径一致"
+        ],
+        "value": "媒体观察",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "堆叠仅示意 HBM · 不表达本产品实际层数"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-25",
+      "section": "infrastructure",
+      "shortName": "IREN 设备融资",
+      "name": "IREN 设备融资：已运营设备，完成再融资。",
+      "summary": "IREN 设备融资",
+      "summaryNote": "$363M · 设备再融资",
+      "vendor": "IREN / Wingspire",
+      "head": [
+        "已运营设备，",
+        "完成再融资。"
+      ],
+      "blurb": "完成约 $363M AI 算力设备融资，抵押对象为已部署、产生收入的 GPU 服务器与网络设备。",
+      "note": "约 10-28 · 已完成融资，不等同于本窗新增 GPU 部署",
+      "tags": [
+        "$363M",
+        "设备再融资"
+      ],
+      "details": [
+        [
+          "交易状态",
+          "IREN 与 Wingspire Equipment Finance 完成约 3.63 亿美元设备融资。"
+        ],
+        [
+          "设备范围",
+          "以已部署并产生收入的 GPU 服务器和网络设备再融资。"
+        ],
+        [
+          "解释边界",
+          "这笔融资是既有资产资金安排，本期资料未量化新增服务器数量或额外算力容量。"
+        ]
+      ],
+      "sources": [
+        [
+          "Nasdaq / BusinessWire",
+          "https://www.nasdaq.com/press-release/iren-and-wingspire-equipment-finance-complete-363-million-financing-high-density-ai"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "lease",
+        "heading": "既有设备再融资 · 资金结构示意",
+        "labels": [
+          "融资已完成",
+          "设备融资方",
+          "IREN 运营资产",
+          "已部署并产生收入的 GPU / 网络设备"
+        ],
+        "value": "$363M",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "设备再融资，不把金额换算成新增算力"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-26",
+      "section": "infrastructure",
+      "shortName": "数据中心债市",
+      "name": "数据中心债市：部分融资收益率，进入两位数。",
+      "summary": "数据中心债市",
+      "summaryNote": "至少 18 笔 · 个案 >11%",
+      "vendor": "媒体 / 市场报道",
+      "head": [
+        "部分融资收益率，",
+        "进入两位数。"
+      ],
+      "blurb": "报道统计至少 18 笔 AI 数据中心融资收益率达两位数；Volta 约 $5B 银团贷收益率超 11%。",
+      "note": "约 10-28 · 样本统计与个案，非全市场统一融资成本",
+      "tags": [
+        "至少 18 笔",
+        "个案 >11%"
+      ],
+      "details": [
+        [
+          "样本范围",
+          "报道列至少 18 笔融资收益率达两位数，不将这个样本推断为所有 AI 基建项目。"
+        ],
+        [
+          "Volta 个案",
+          "neocloud Volta 约 $50 亿银团贷收益率超 11%，金额与收益率是不同维度。"
+        ],
+        [
+          "时间与口径",
+          "报道时点约 10-28，收益率不等于每家公司的经营回报，也不提供投资建议。"
+        ]
+      ],
+      "sources": [
+        [
+          "Yahoo / CRE Daily",
+          "https://finance.yahoo.com/real-estate/articles/ai-data-center-debt-yields-174318696.html"
+        ],
+        [
+          "Axios",
+          "https://www.axios.com/2026/10/28/ai-bonds-coreweave-oracle"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "science",
+        "heading": "样本与个案 · 三种不同量纲",
+        "labels": [
+          "至少 18 笔",
+          "Volta 约 $5B",
+          "个案收益率 >11%",
+          "不能推为全市场统一成本"
+        ],
+        "value": "债市观察",
+        "footer": "媒体统计，不提供投资建议",
+        "caption": "按提供资料整理 · 详细状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-27",
+      "section": "infrastructure",
+      "shortName": "Cerebras 做空报告",
+      "name": "Cerebras 做空报告：晶圆引擎寿命，做空方提出质疑。",
+      "summary": "Cerebras 做空报告",
+      "summaryNote": "做空报告 · 未证实",
+      "vendor": "Culper / 媒体转述",
+      "head": [
+        "晶圆引擎寿命，",
+        "做空方提出质疑。"
+      ],
+      "blurb": "Culper 报告声称晶圆级引擎现场寿命约 1.5–2.5 年；本期资料没有独立验证。",
+      "note": "约 10-28 · 做空报告、未证实；来源方存在利益立场",
+      "tags": [
+        "做空报告",
+        "未证实"
+      ],
+      "details": [
+        [
+          "具体主张",
+          "Culper 声称 Cerebras 晶圆级引擎现场寿命约 1.5–2.5 年。"
+        ],
+        [
+          "证据范围",
+          "原稿仅给媒体报道链接，未提供独立测试、批次样本或厂商确认。"
+        ],
+        [
+          "画面边界",
+          "将其写为做空方主张，不作为器件可靠性、使用寿命或投资价值的已知事实。"
+        ]
+      ],
+      "sources": [
+        [
+          "Investing.com",
+          "https://www.investing.com/news/stock-market-news/cerebras-systems-drops-4-following-culper-research-short-report-4980194"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "做空方主张 · 未独立验证",
+        "labels": [
+          "Culper 报告",
+          "1.5–2.5 年说法",
+          "未证实",
+          "不是可靠性测试结论"
+        ],
+        "value": "做空报告",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "利益相关方主张，与独立实测结论区分"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct30-28",
+      "section": "infrastructure",
+      "shortName": "Fluidstack 融资传闻",
+      "name": "Fluidstack 融资传闻：四百亿美元估值，融资细节遭否认。",
+      "summary": "Fluidstack 融资传闻",
+      "summaryNote": "融资传闻 · 估值非融资额",
+      "vendor": "Bloomberg / 媒体转述",
+      "head": [
+        "四百亿美元估值，",
+        "融资细节遭否认。"
+      ],
+      "blurb": "媒体称 Fluidstack 拟按约 $40B 估值再融资，联合创始人否认细节；不作已确定交易呈现。",
+      "note": "约 10-29 · 媒体未确认，联合创始人否认细节",
+      "tags": [
+        "融资传闻",
+        "估值非融资额"
+      ],
+      "details": [
+        [
+          "媒体说法",
+          "报道讨论约 400 亿美元估值下的再融资或投资安排。"
+        ],
+        [
+          "当事人回应",
+          "资料标注联合创始人否认细节，不省略争议，也不写成公司已确认融资。"
+        ],
+        [
+          "金额含义",
+          "约 $40B 是媒体估值说法，不是已筹集现金、融资金额或交割完成额。"
+        ]
+      ],
+      "sources": [
+        [
+          "Investing / Bloomberg",
+          "https://www.investing.com/news/stock-market-news/aschenbrenner-seeks-fluidstack-investment-at-40-billion-valuation--bloomberg-4984664"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "boundary",
+        "heading": "媒体估值说法与当事人回应",
+        "labels": [
+          "媒体称约 $40B 估值",
+          "联合创始人否认细节",
+          "融资尚未确认",
+          "估值 ≠ 融资额 ≠ 已交割金额"
+        ],
+        "value": "融资传闻",
+        "footer": "关系示意，非部署规模或实测性能比例",
+        "caption": "媒体未确认 · 不作为完成融资的事实"
+      },
+      "dark": false
+    }
+  ],
+  "coverage": "用户提供的 2026-10-30 早报，含小时推送、漏报补及跨窗背景",
+  "draft": false
+}
