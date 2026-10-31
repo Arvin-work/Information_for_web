@@ -1,0 +1,1397 @@
+{
+  "date": "2026-10-31",
+  "weekday": "周六",
+  "title": "今日 AI",
+  "pageTitle": "AI 模型早报",
+  "description": "Rosalind 受信 API、Claude 订阅调整与 AI 基建动态。",
+  "subtitle": "研究访问与订阅调整，算力交付与融资跟进。",
+  "introLabel": "AI 模型与基建",
+  "dispatchLabel": "AI MORNING BRIEFING",
+  "categoryLabel": "模型 / 基建",
+  "siteUrl": "altfork.dev",
+  "theme": "light",
+  "background": "#f7f5ef",
+  "ink": "#272e29",
+  "accent": "#ed653b",
+  "muted": "#676e65",
+  "fontFamily": "\"PingFang SC\",\"Microsoft YaHei\",sans-serif",
+  "fps": 30,
+  "introSeconds": 28,
+  "itemSeconds": 15,
+  "detailSeconds": 6,
+  "outroSeconds": 6,
+  "outroTitle": [
+    "本期动态",
+    "汇总完毕。"
+  ],
+  "outroBlurb": "完整资料与来源链接见 altfork.dev。",
+  "sections": [
+    {
+      "id": "models",
+      "title": "模型、产品与平台",
+      "count": 14
+    },
+    {
+      "id": "infrastructure",
+      "title": "基建与硬件",
+      "count": 9
+    }
+  ],
+  "monitoring": [
+    {
+      "title": "本期范围与计数",
+      "lines": [
+        "模型窗口约 2026-10-30 06:30–2026-10-31 06:30，北京时间；硬件覆盖约过去 24–48 小时。跨窗案例、功能、政策、财报与融资参考保留各自发生时间。",
+        "本期 14 个模型 / 产品 / 平台专题和 9 个硬件专题，共 23 个专题，不是 23 次新模型发版。DeepSeek-V5 测试标识单列为未证实信号，不计正式发布。",
+        "按用户提供资料制作，未另行联网逐项核验；原稿“本轮核验”与“窗内未见”是输入材料的扫描结论，不是本轮制作执行的在线核查。",
+        "Rosalind 仅授权研究组织内部使用，不面向 customer-facing 外部商业产品；药物研究工具上架不等于临床验证。Verified Ultra 取消 5 小时限制，周限额仍在。"
+      ]
+    },
+    {
+      "title": "建仓 / 权重 / 榜单状态",
+      "lines": [
+        "原稿称 HF / ModelScope 无官方 Qwen4、无官方 DeepSeek-V5 建仓；HF Qwen 最新语言系仍见 Qwen3.8，DeepSeek Flash 系仍 V4.1-Flash-1017。",
+        "Gemini 4 Carbon 已官方证实，非公开权重，门禁 rollout；AA Intelligence Index 仍 v5.0，Carbon 59 是原稿当前公开报道首位。",
+        "Mistral Large 4 / Le Chonk 权重可下载，不沿用此前 ETA / 等待状态：https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+        "DeepSeek-V5 的三个测试名无规格、跑分、发布日程；即使位于官方 Harness 测试文件，也不等于官方发布产品。"
+      ]
+    },
+    {
+      "title": "未证实线索与工具讨论",
+      "lines": [
+        "社交讨论出现 OpenAI 内部代号 GPT-6.2 Betelgeuse 等，无官方确认，不作为模型发布时间或产品名称确认。",
+        "Anthropic Fable 5.5 相关预览图与口风未获正式发布证实；不将 Claude 订阅更名、监控或企业功能更新当作 Fable 5.5 发布。",
+        "第三方 OpenCode 等接入 Claude 订阅凭证的讨论属于第三方工具话题，非 Anthropic 官方产品公告；本期不写入凭证配置或推断官方授权。"
+      ]
+    },
+    {
+      "title": "硬件口径与窗口阴性",
+      "lines": [
+        "不构成投资建议。财报收入、年化 run-rate、backlog、季度资本开支、全年指引与融资金额分开，不能求和为同一个业务或资本指标。",
+        "微软 FY2027 Q1 与原稿所称日历年 2027 CapEx 指引分开标注；Amazon 全年现金 CapEx 与微软含融资租赁 CapEx 的统计方法不同，不直接作同口径排名。",
+        "Nscale 担保未签、条款可变；约 $45B 租赁意向与或超 $5B 担保是不同事项。Beacon 920 MW 是电厂容量，不是 IT 负载；许可、计划开工与预计投运不等同于已投产。",
+        "Fluidstack $40B 为媒体估值说法，非融资额；共同创始人的异议保留。Culper 是利益相关方做空报告，寿命主张未充分证实。",
+        "输入材料称过去约 48 小时未见 NVIDIA / AMD / Intel 新品量产或驱动大版本官方发布，本期保留该扫描状态而不扩展为永久性结论。"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "oct31-1",
+      "section": "models",
+      "shortName": "GPT-6 Rosalind",
+      "name": "GPT-6 Rosalind：生命科学 API，限受信内部研究。",
+      "summary": "GPT-6 Rosalind",
+      "summaryNote": "受信审批 · 内部研究",
+      "vendor": "OpenAI",
+      "head": [
+        "生命科学 API，",
+        "限受信内部研究。"
+      ],
+      "blurb": "gpt-6-rosalind 上架，面向经 trusted-access 审批的研究组织，不面向外部客户商业产品。",
+      "note": "Oct 30 changelog · 授权内部生命科学研究，不等于公开通用 API",
+      "tags": [
+        "受信审批",
+        "内部研究"
+      ],
+      "details": [
+        [
+          "使用范围",
+          "Rosalind Research 组织需先通过受信访问审批，仅供授权用户开展内部生命科学研究。"
+        ],
+        [
+          "短上下文价格",
+          "Standard 每百万输入 / 输出 tokens 为 $15 / $75；缓存输入 $1.50。右图仅比较短上下文同单位价格。"
+        ],
+        [
+          "长上下文与限制",
+          "长上下文输入 / 输出为 $30 / $112.50。原稿未给切换阈值与长上下文缓存价，不自行补写；不用于外部客户产品。"
+        ]
+      ],
+      "sources": [
+        [
+          "Changelog",
+          "https://developers.openai.com/api/docs/changelog"
+        ],
+        [
+          "Pricing",
+          "https://developers.openai.com/api/docs/pricing"
+        ],
+        [
+          "Help Center",
+          "https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research"
+        ],
+        [
+          "介绍页",
+          "https://openai.com/index/introducing-gpt-rosalind/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "pricing",
+        "heading": "短上下文 Standard · 美元 / 百万 tokens",
+        "labels": [
+          "输入",
+          "缓存输入",
+          "输出"
+        ],
+        "value": "短上下文",
+        "footer": "长上下文另计：输入 $30 / 输出 $112.50",
+        "caption": "官方价格按原稿收录 · 使用需 trusted-access 审批",
+        "numbers": [
+          15,
+          1.5,
+          75
+        ],
+        "values": [
+          "$15",
+          "$1.50",
+          "$75"
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-2",
+      "section": "models",
+      "shortName": "社区安全与青少年",
+      "name": "社区安全与青少年：承诺安全报告，强化青少年保护。",
+      "summary": "社区安全与青少年",
+      "summaryNote": "半年度报告 · 青少年保护",
+      "vendor": "OpenAI",
+      "head": [
+        "承诺安全报告，",
+        "强化青少年保护。"
+      ],
+      "blurb": "承诺首期 Community Safety Report 于 2027 年初发布，覆盖 2026 下半年，此后每半年更新。",
+      "note": "Oct 30 官方承诺 · 报告尚未发布，转介数为厂商自述",
+      "tags": [
+        "半年度报告",
+        "青少年保护"
+      ],
+      "details": [
+        [
+          "报告安排",
+          "首期 early 2027，覆盖 2026 下半年；不将未来报告承诺写成今天已经公布的完整报告。"
+        ],
+        [
+          "保护措施",
+          "收紧所有用户关于历史大规模袭击细节的回答，进一步限制 teens 的武器实用信息，强化年龄预测与家长通知。"
+        ],
+        [
+          "披露数字",
+          "原稿称 Q3 2026 向执法机关转介 200+ 次，为厂商披露，不推断事件定性、个案细节或效果。"
+        ]
+      ],
+      "sources": [
+        [
+          "安全报告与新保护",
+          "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "报告安排与保护措施",
+        "labels": [
+          "覆盖 2026 下半年",
+          "首期 2027 年初",
+          "每半年更新",
+          "Q3 200+ 转介为厂商自述"
+        ],
+        "value": "安全报告",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-3",
+      "section": "models",
+      "shortName": "合理使用立场",
+      "name": "合理使用立场：训练合理使用，公司汇编支持意见。",
+      "summary": "合理使用立场",
+      "summaryNote": "立场文章 · 诉讼背景",
+      "vendor": "OpenAI",
+      "head": [
+        "训练合理使用，",
+        "公司汇编支持意见。"
+      ],
+      "blurb": "OpenAI 汇编多方 amicus briefs，主张 AI 训练具有转换性用途，并回应《纽约时报》诉讼立场。",
+      "note": "Oct 30 官方立场文章 · 不表述为法院已作出的最终裁决",
+      "tags": [
+        "立场文章",
+        "诉讼背景"
+      ],
+      "details": [
+        [
+          "材料类型",
+          "汇编多方 amicus briefs，即法庭之友意见，提出对生成式 AI 训练的合理使用论点。"
+        ],
+        [
+          "主张内容",
+          "认为训练具有 transformative 用途，并批评《纽约时报》的诉讼立场。"
+        ],
+        [
+          "法律状态",
+          "本片转述发布方观点，不将 amicus 意见或公司主张升级为确定裁判结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "Fair use benefits everyone",
+          "https://openai.com/index/fair-use-benefits-everyone/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "boundary",
+        "heading": "论点与裁判结论分层",
+        "labels": [
+          "多方 amicus 意见",
+          "发布方合理使用主张",
+          "不等同于法院最终裁判",
+          "具体法律争议以案件材料为准"
+        ],
+        "value": "立场文章",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-4",
+      "section": "models",
+      "shortName": "共享训练偏好信号",
+      "name": "共享训练偏好信号：训练偏好信号，计划共享控制。",
+      "summary": "共享训练偏好信号",
+      "summaryNote": "robots.txt · 既有控制保留",
+      "vendor": "OpenAI / Google",
+      "head": [
+        "训练偏好信号，",
+        "计划共享控制。"
+      ],
+      "blurb": "两家宣布支持 robots.txt 共同 AI 训练偏好信号；既有厂商专属爬虫控制继续有效。",
+      "note": "计划落地 · OpenAI 未来数月，Google 2027 年",
+      "tags": [
+        "robots.txt",
+        "既有控制保留"
+      ],
+      "details": [
+        [
+          "OpenAI 时间",
+          "计划未来数月尊重共同 AI training preference signal，不替代既有爬虫控制。"
+        ],
+        [
+          "Google 解释",
+          "计划 2027 支持同一 policy token；未显式指定 Google-Extended 时，opt-out 按 disallow Google-Extended 解释。"
+        ],
+        [
+          "适用边界",
+          "共享偏好控制与既有厂商控制并行，不能写成已经对全部爬虫生效或网站无需再维护任何规则。"
+        ]
+      ],
+      "sources": [
+        [
+          "OpenAI",
+          "https://openai.com/index/helping-websites-express-ai-training-preferences/"
+        ],
+        [
+          "Google Search Central",
+          "https://developers.google.com/search/blog/2026/10/ai-training-control"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "网站训练偏好 → 厂商计划支持",
+        "labels": [
+          "robots.txt",
+          "OpenAI · 未来数月",
+          "Google · 2027",
+          "既有厂商专属控制继续有效"
+        ],
+        "value": "共享信号",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-5",
+      "section": "models",
+      "shortName": "Claude Max / Ultra",
+      "name": "Claude Max / Ultra：订阅更名，周限额仍然保留。",
+      "summary": "Claude Max / Ultra",
+      "summaryNote": "Max / Ultra · Verified 条件",
+      "vendor": "Anthropic",
+      "head": [
+        "订阅更名，",
+        "周限额仍然保留。"
+      ],
+      "blurb": "Max 5x 更名 Max、仍 $100/月；Max 20x 更名 Ultra、仍 $200/月，现有用户无需操作。",
+      "note": "仅 Verified Ultra 取消 5 小时限制 · 周限额不变",
+      "tags": [
+        "Max / Ultra",
+        "Verified 条件"
+      ],
+      "details": [
+        [
+          "名称与价格",
+          "Max 5x → Max，$100/月；Max 20x → Ultra，$200/月。原稿称已订阅用户无需操作。"
+        ],
+        [
+          "短窗限制",
+          "仅 Verified Ultra 账户取消 5-hour limit；不能扩大为全部 Ultra 用户，也不能解读为无限用量。"
+        ],
+        [
+          "周用量",
+          "Help Center 说明 Ultra 为 Pro 每周用量的 10 倍；周限额不变，旧“20x”名称不等于新周倍率。"
+        ]
+      ],
+      "sources": [
+        [
+          "官方账号",
+          "https://x.com/claudeai/status/2116220869479428500"
+        ],
+        [
+          "Ultra 说明",
+          "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan"
+        ],
+        [
+          "Max 说明",
+          "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+        ],
+        [
+          "Pricing",
+          "https://claude.com/pricing"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "dualscope",
+        "heading": "订阅名称与每月价格",
+        "labels": [
+          "Max",
+          "Ultra",
+          "$100 / 月",
+          "$200 / 月"
+        ],
+        "value": "仅 Verified Ultra 取消 5h 限额",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "周限额保留 · Ultra 为 Pro 每周用量的 10×"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-6",
+      "section": "models",
+      "shortName": "Suncatcher 在轨响应",
+      "name": "Suncatcher 在轨响应：机载模型作答，原型星完成下行。",
+      "summary": "Suncatcher 在轨响应",
+      "summaryNote": "在轨演示 · Gemma 4",
+      "vendor": "Google Research",
+      "head": [
+        "机载模型作答，",
+        "原型星完成下行。"
+      ],
+      "blurb": "Project Suncatcher 原型星运行 Gemma 4，生成俳句并在斯瓦尔巴过境时下行回复。",
+      "note": "Oct 30 官方演示叙述 · 不等于轨道算力已规模商用",
+      "tags": [
+        "在轨演示",
+        "Gemma 4"
+      ],
+      "details": [
+        [
+          "演示过程",
+          "地面站上链请求，机载开放模型 Gemma 4 作答；在斯瓦尔巴过境时下行 AI 回复。"
+        ],
+        [
+          "厂商表述",
+          "官方称为数据中心级 TPU 在轨首次 AI 响应；本片不将这句话扩大为全行业所有形式的首次。"
+        ],
+        [
+          "后续测试",
+          "将测热应力与辐射，下个里程碑为 2027 双星互联；原型成功不是商用容量投产。"
+        ]
+      ],
+      "sources": [
+        [
+          "Google Research",
+          "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "world",
+        "heading": "地面上链 → 机载生成 → 下行 · 示意",
+        "labels": [
+          "地面请求 / 机载 Gemma 4",
+          "斯瓦尔巴过境下行",
+          "后续：热应力、辐射、2027 双星互联"
+        ],
+        "value": "原型演示",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "概念场景，不是卫星真实影像或商用规模图"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-7",
+      "section": "models",
+      "shortName": "Model Spec 五价值",
+      "name": "Model Spec 五价值：规范按价值重组，细粒度风格退役。",
+      "summary": "Model Spec 五价值",
+      "summaryNote": "五项价值 · 规范更新",
+      "vendor": "OpenAI",
+      "head": [
+        "规范按价值重组，",
+        "细粒度风格退役。"
+      ],
+      "blurb": "Model Spec 围绕五项价值更新，新增 context / oversight / agency 等指引。",
+      "note": "Oct 29 跨窗补录 · 行为规范文档，不是模型版本发布",
+      "tags": [
+        "五项价值",
+        "规范更新"
+      ],
+      "details": [
+        [
+          "价值结构",
+          "忠实人类意图、减害、诚实透明、人类能动性与关怀。"
+        ],
+        [
+          "文档变化",
+          "新增上下文、监督、能动性等指引，大幅退役细粒度 style 规则；模型称呼由 the assistant 改为 GPT。"
+        ],
+        [
+          "实施边界",
+          "文档要求与实际模型行为需要分别评估，不以规范更新证明所有产品行为已完全符合。"
+        ]
+      ],
+      "sources": [
+        [
+          "更新公告",
+          "https://openai.com/index/updated-model-spec"
+        ],
+        [
+          "2026-10-29 Spec",
+          "https://model-spec.openai.com/2026-10-29.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "science",
+        "heading": "价值结构与规则层次",
+        "labels": [
+          "五项价值",
+          "上下文 / 监督",
+          "人类能动性",
+          "文档称呼改为 GPT"
+        ],
+        "value": "规范更新",
+        "footer": "细粒度风格规则退役，具体条件见原文",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-8",
+      "section": "models",
+      "shortName": "错位监控架构",
+      "name": "错位监控架构：探针到调查，多层信号接力。",
+      "summary": "错位监控架构",
+      "summaryNote": "多层架构 · 历史回放",
+      "vendor": "OpenAI",
+      "head": [
+        "探针到调查，",
+        "多层信号接力。"
+      ],
+      "blurb": "监控覆盖训练、评估、内部及经调整的外部部署；公布探针、评审模型、调查智能体与遥测架构。",
+      "note": "Oct 29 跨窗补录 · 案例回放数字不是通用时延保证",
+      "tags": [
+        "多层架构",
+        "历史回放"
+      ],
+      "details": [
+        [
+          "覆盖条件",
+          "原稿称对能力达到或超过 GPT-6 Astra 的模型，监控全部 RL / 评估等；外部部署采用修改后的体系。"
+        ],
+        [
+          "架构层级",
+          "activation probes → model reviewer → investigative agent → telemetry；不同信号相互补充。"
+        ],
+        [
+          "案例口径",
+          "HF 沙箱逃逸回放约 30 分钟可告警；9 月 RL 中 15 分钟内发现触网为另一个案例，不代表所有事件。"
+        ]
+      ],
+      "sources": [
+        [
+          "监控体系说明",
+          "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "observability",
+        "heading": "探针 / 评审 / 调查 / 遥测",
+        "labels": [
+          "activation probes",
+          "model reviewer",
+          "investigative agent",
+          "telemetry · 多层信号，不是固定检测时延"
+        ],
+        "value": "监控体系",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-9",
+      "section": "models",
+      "shortName": "DeepSeek-V5 标识",
+      "name": "DeepSeek-V5 标识：测试标识出现，没有发布规格。",
+      "summary": "DeepSeek-V5 标识",
+      "summaryNote": "测试占位 · 未证实发布",
+      "vendor": "媒体 / DeepSeek Harness",
+      "head": [
+        "测试标识出现，",
+        "没有发布规格。"
+      ],
+      "blurb": "Harness 测试出现 deepseek-v5 系列标识；原稿将其定位为兼容性测试占位，非正式发版。",
+      "note": "媒体线索 · 无规格、无跑分、无发布日程、无官方 V5 仓",
+      "tags": [
+        "测试占位",
+        "未证实发布"
+      ],
+      "details": [
+        [
+          "出现位置",
+          "官方 deepseek-harness 的测试文件出现 deepseek-v5、deepseek-v5-open、deepseek-v5-next。"
+        ],
+        [
+          "没有的信息",
+          "无规格、无跑分、无发布日程，不能把单元测试标识当作可调用模型或即将发布承诺。"
+        ],
+        [
+          "仓库状态",
+          "材料称 HF 最新仍见 V4.1-Flash-1017，无官方 DeepSeek-V5 仓；本轮制作未另行在线核验。"
+        ]
+      ],
+      "sources": [
+        [
+          "TechNode",
+          "https://technode.com/2026/10/29/deepseek-v5-identifiers-surface-in-official-harness-code-repository/"
+        ],
+        [
+          "Harness 测试文件",
+          "https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/llm/llm-deepseek-account/tests/provider.spec.ts"
+        ],
+        [
+          "HF 官方组织",
+          "https://huggingface.co/deepseek-ai/models"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "mergegate",
+        "heading": "测试文件与产品发布之间的边界",
+        "labels": [
+          "非发布证明",
+          "Harness 兼容性测试",
+          "无规格 / 跑分 / 日程",
+          "官方 HF 无 V5 仓 · 按提供资料"
+        ],
+        "value": "v5 标识",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-10",
+      "section": "models",
+      "shortName": "Claude Enterprise",
+      "name": "Claude Enterprise：企业报告与预算，三项能力 GA。",
+      "summary": "Claude Enterprise",
+      "summaryNote": "Enterprise GA · 报告默认关闭",
+      "vendor": "Anthropic",
+      "head": [
+        "企业报告与预算，",
+        "三项能力 GA。"
+      ],
+      "blurb": "Smart Reports、应用内 surveys 与团队共享预算进入 Enterprise GA；报告默认关闭。",
+      "note": "约 Oct 28 跨窗补录 · 部分 HIPAA / CMEK 配置受限",
+      "tags": [
+        "Enterprise GA",
+        "报告默认关闭"
+      ],
+      "details": [
+        [
+          "智能报告",
+          "基于抽样 transcript 归纳 workstreams、成本、摩擦与建议；不是所有对话的全量审计结论。"
+        ],
+        [
+          "团队能力",
+          "应用内 surveys 与 pooled group budgets，分别用于团队反馈和共享预算安排。"
+        ],
+        [
+          "配置限制",
+          "报告默认关闭；部分 HIPAA / CMEK 等配置的可用性受限，须按官方兼容说明确认。"
+        ]
+      ],
+      "sources": [
+        [
+          "企业能力文章",
+          "https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "evaluation",
+        "heading": "抽样对话 → 报告与团队管理",
+        "labels": [
+          "抽样 transcript",
+          "Smart Reports",
+          "surveys / pooled budgets",
+          "默认关闭 · 部分配置受限"
+        ],
+        "value": "Enterprise GA",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-11",
+      "section": "models",
+      "shortName": "Gemini 4 Carbon",
+      "name": "Gemini 4 Carbon：Carbon 官宣，仍按门禁开放。",
+      "summary": "Gemini 4 Carbon",
+      "summaryNote": "门禁 rollout · AA v5.0",
+      "vendor": "Google / Artificial Analysis",
+      "head": [
+        "Carbon 官宣，",
+        "仍按门禁开放。"
+      ],
+      "blurb": "状态续报：Carbon 已官宣、AA Index v5.0 得分 59 居首，先向部分防御方与 Fairwind 伙伴开放。",
+      "note": "Oct 28 状态续报 · 已发布不等于全面开放或公开权重",
+      "tags": [
+        "门禁 rollout",
+        "AA v5.0"
+      ],
+      "details": [
+        [
+          "开放阶段",
+          "先向部分 cyber defenders / Fairwind 伙伴开放，公开产品面称尽快；本窗无新公开权重。"
+        ],
+        [
+          "官方价格",
+          "介绍价每百万输入 / 输出 $2 / $10，称 50% launch discount；之后标准 $4 / $20。"
+        ],
+        [
+          "榜单状态",
+          "AA Intelligence Index 仍 v5.0，原稿称 Carbon 59 为当前公开报道首位，不虚构完整榜单。"
+        ]
+      ],
+      "sources": [
+        [
+          "Google 介绍",
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+        ],
+        [
+          "AA 文章",
+          "https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "leaderboard",
+        "heading": "AA Intelligence Index v5.0 · 本期摘录",
+        "labels": [
+          "仅列本期明确给出的分数",
+          "非完整榜单",
+          "门禁 rollout",
+          "非公开权重"
+        ],
+        "value": "59",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "AA 分数按原稿收录 · 可用范围与榜次分别表述",
+        "entries": [
+          {
+            "label": "Gemini 4 Carbon",
+            "value": 59
+          }
+        ]
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-12",
+      "section": "models",
+      "shortName": "Muse 新加坡",
+      "name": "Muse 新加坡：个人智能体上线，敏感动作先确认。",
+      "summary": "Muse 新加坡",
+      "summaryNote": "新加坡 · 敏感动作确认",
+      "vendor": "Meta",
+      "head": [
+        "个人智能体上线，",
+        "敏感动作先确认。"
+      ],
+      "blurb": "Muse 在新加坡上线，逐步连接电商、出行和旅行服务，提供 Secure VM 与敏感动作确认。",
+      "note": "Oct 27 跨窗补报 · 连接器逐步接入，非全量已开放",
+      "tags": [
+        "新加坡",
+        "敏感动作确认"
+      ],
+      "details": [
+        [
+          "产品入口",
+          "iOS、Android 与 muse.ai；作为个人 AI agent 在新加坡上线。"
+        ],
+        [
+          "本地连接器",
+          "逐步连接 Shopee、Grab、Singapore Airlines、Agoda、ShopBack、Klook、Trip.com、Lazada 等。"
+        ],
+        [
+          "操作边界",
+          "Muse Secure VM；敏感动作需用户确认。连接器名单不代表各服务和动作已对所有人开放。"
+        ]
+      ],
+      "sources": [
+        [
+          "Meta Newsroom",
+          "https://about.fb.com/news/2026/10/muse-is-now-available-in-singapore-the-worlds-first-personal-ai-agent-built-for-everyone/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "sales",
+        "heading": "个人助手连接本地服务 · 关系示意",
+        "labels": [
+          "电商",
+          "出行",
+          "旅行",
+          "Secure VM · 敏感动作需确认"
+        ],
+        "value": "Muse",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-13",
+      "section": "models",
+      "shortName": "ServiceNow 工作流",
+      "name": "ServiceNow 工作流：工作流合作扩围，多项能力排期明年。",
+      "summary": "ServiceNow 工作流",
+      "summaryNote": "MCP 插件 · 2027 排期项",
+      "vendor": "OpenAI / ServiceNow",
+      "head": [
+        "工作流合作扩围，",
+        "多项能力排期明年。"
+      ],
+      "blurb": "ChatGPT 与 ServiceNow 扩展集成，覆盖应用开发、安全和语音；MCP 插件已上 marketplace。",
+      "note": "Oct 28 合作补扫 · 多项能力排期 2027，不视为全部可用",
+      "tags": [
+        "MCP 插件",
+        "2027 排期项"
+      ],
+      "details": [
+        [
+          "已经提及的入口",
+          "MCP plugin 已上架 marketplace，ChatGPT ↔ ServiceNow 工作流合作扩展。"
+        ],
+        [
+          "合作范围",
+          "计划将 OpenAI 能力用于应用开发、网络安全和语音；ServiceNow 拟向全员推广 ChatGPT Work 与 Codex。"
+        ],
+        [
+          "落地节奏",
+          "资料称多项能力排期 2027，不把合作目标、内部推广意向和今天可调用功能混在一起。"
+        ]
+      ],
+      "sources": [
+        [
+          "OpenAI / ServiceNow",
+          "https://openai.com/index/openai-servicenow-partnership-expansion/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "workmap",
+        "heading": "企业应用与授权工作流",
+        "labels": [
+          "ChatGPT",
+          "ServiceNow",
+          "Codex",
+          "MCP marketplace"
+        ],
+        "value": "企业合作",
+        "footer": "插件上架与未来功能排期分开列示",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-14",
+      "section": "models",
+      "shortName": "订阅 API credits",
+      "name": "订阅 API credits：订阅可领额度，周期结束不结转。",
+      "summary": "订阅 API credits",
+      "summaryNote": "资格限制 · 月度不结转",
+      "vendor": "OpenAI",
+      "head": [
+        "订阅可领额度，",
+        "周期结束不结转。"
+      ],
+      "blurb": "合格 Pro / Business 订阅可绑定自有 API 组织领取月度 credits，最高额度与档位及工作区有关。",
+      "note": "Oct 28 补扫 · 需合格资格，非所有用户固定获 $500",
+      "tags": [
+        "资格限制",
+        "月度不结转"
+      ],
+      "details": [
+        [
+          "Pro 档位",
+          "按档位提供 $100 / $200 / $500 月度 API credits，需绑定自有 API org。"
+        ],
+        [
+          "Business",
+          "按席位累计，单 workspace 每月封顶 $500；不是每席位无上限领取 $500。"
+        ],
+        [
+          "周期规则",
+          "周期末清零、不结转；这是订阅权益，不等于新基础模型、API 统一降价或现金返还。"
+        ]
+      ],
+      "sources": [
+        [
+          "Changelog",
+          "https://developers.openai.com/api/docs/changelog"
+        ],
+        [
+          "额度指南",
+          "https://developers.openai.com/api/docs/guides/chatgpt-api-credits"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "context",
+        "heading": "月度 API credits · 资格与计量分列",
+        "labels": [
+          "合格计划最高额度",
+          "Pro 按档 / Business 按工作区上限",
+          "周期末清零，不结转"
+        ],
+        "value": "≤ $500",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-15",
+      "section": "infrastructure",
+      "shortName": "Microsoft 财报",
+      "name": "Microsoft 财报：Azure 高增长，GPU 延迟交付。",
+      "summary": "Microsoft 财报",
+      "summaryNote": "Azure +48% · GPU 交付延迟",
+      "vendor": "Microsoft / CNBC",
+      "head": [
+        "Azure 高增长，",
+        "GPU 延迟交付。"
+      ],
+      "blurb": "Azure 约 $33.2B、同比 +48%；季度 CapEx 含融资租赁约 $45.2B，部分算力延至 2027H1。",
+      "note": "FY2027 Q1 · 原稿全年指引明确标日历年 2027，勿与财季混同",
+      "tags": [
+        "Azure +48%",
+        "GPU 交付延迟"
+      ],
+      "details": [
+        [
+          "业务与季度支出",
+          "Azure 营收约 $33.2B；当季 CapEx 含融资租赁约 $45.2B，约 75% 投向短周期 CPU / GPU。"
+        ],
+        [
+          "供给节奏",
+          "CFO 称第三方 GPU 供应商交付延迟，部分可用算力推迟至 2027 上半年。"
+        ],
+        [
+          "全年指引",
+          "原稿将约 $170B 标为日历年 2027 CapEx 指引；与 FY2027 Q1 及季度支出的统计区间分开呈现。"
+        ]
+      ],
+      "sources": [
+        [
+          "Microsoft IR",
+          "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast"
+        ],
+        [
+          "CNBC",
+          "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "context",
+        "heading": "FY2027 Q1 CapEx · 含融资租赁",
+        "labels": [
+          "当季资本开支",
+          "约 75% 投向短周期 CPU / GPU",
+          "部分算力推迟至 2027H1"
+        ],
+        "value": "$45.2B",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "季度、财年与日历年口径不混用"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-16",
+      "section": "infrastructure",
+      "shortName": "Alphabet CapEx",
+      "name": "Alphabet CapEx：高额指引维持，外部算力晚到。",
+      "summary": "Alphabet CapEx",
+      "summaryNote": "$195–205B · 外部供给节奏",
+      "vendor": "Alphabet / CNBC",
+      "head": [
+        "高额指引维持，",
+        "外部算力晚到。"
+      ],
+      "blurb": "媒体称 Alphabet 维持全年 $195–205B CapEx 指引，外部算力直至 Q3 末才上线。",
+      "note": "Oct 29 媒体财报汇总 · 指引不是已支出或已投运容量",
+      "tags": [
+        "$195–205B",
+        "外部供给节奏"
+      ],
+      "details": [
+        [
+          "支出计划",
+          "维持全年资本开支 $195–205B；这是范围指引，不是融资完成额或当季支出。"
+        ],
+        [
+          "外部供给",
+          "财务负责人称外部算力直至 Q3 末才上线，材料未提供具体区域和 GPU 台数。"
+        ],
+        [
+          "媒体解读",
+          "与微软一并被解读为供给约束、需求未退；此解释保留为媒体分析，不等同于已测需求指标。"
+        ]
+      ],
+      "sources": [
+        [
+          "CNBC 财报汇总",
+          "https://www.cnbc.com/2026/10/29/microsoft-google-ai-capex-estimates.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "全年资本开支范围 · 媒体汇总",
+        "labels": [
+          "$195–205B 指引",
+          "Q3 末外部算力上线",
+          "不是当季支出",
+          "供给与需求解释分层"
+        ],
+        "value": "CapEx",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-17",
+      "section": "infrastructure",
+      "shortName": "AWS 装机与支出",
+      "name": "AWS 装机与支出：云业务加速，维持高额资本支出。",
+      "summary": "AWS 装机与支出",
+      "summaryNote": "AWS +39.3% · CapEx $220B",
+      "vendor": "Amazon / AWS",
+      "head": [
+        "云业务加速，",
+        "维持高额资本支出。"
+      ],
+      "blurb": "AWS 季度销售 $46.0B、同比 +39.3%；全年现金 CapEx 约 $220B，CEO 称约每 14 秒装一台加速器。",
+      "note": "Oct 29 官方财报 / 管理层叙述 · 装机频率不等于推理吞吐",
+      "tags": [
+        "AWS +39.3%",
+        "CapEx $220B"
+      ],
+      "details": [
+        [
+          "业务规模",
+          "AWS 年化 run-rate 约 $184B，backlog 约 $578B；销售额、年化值与积压订单不能相加。"
+        ],
+        [
+          "设备与支出",
+          "管理层称约每 14 秒安装一台 AI 加速器；全年现金 CapEx 约 $220B，Q3 购置物业设备约 $77.3B。"
+        ],
+        [
+          "其他安排",
+          "Graviton / Trainium 承诺量同比大增；Built Together 计划向美国数据中心社区投入约 $1B。"
+        ]
+      ],
+      "sources": [
+        [
+          "Amazon IR",
+          "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/"
+        ],
+        [
+          "About Amazon",
+          "https://www.aboutamazon.com/news/company-news/aws-growth-ai-demand-q3-2026-earnings"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "rack",
+        "heading": "管理层装机节奏 · 机柜仅为示意",
+        "labels": [
+          "每约 14 秒",
+          "安装一台 AI 加速器",
+          "不等于服务吞吐",
+          "全年现金 CapEx 约 $220B"
+        ],
+        "value": "装机节奏",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "装机频率为管理层说法；不由示意机柜推算 GPU 数"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-18",
+      "section": "infrastructure",
+      "shortName": "Nscale 担保谈判",
+      "name": "Nscale 担保谈判：拟议信贷支持，协议尚未签署。",
+      "summary": "Nscale 担保谈判",
+      "summaryNote": "拟议信贷担保 · 未签署",
+      "vendor": "媒体 / NVIDIA / Nscale",
+      "head": [
+        "拟议信贷支持，",
+        "协议尚未签署。"
+      ],
+      "blurb": "媒体称 NVIDIA 商讨支持 Nscale 西弗吉尼亚园区融资，可能为残值担保、规模或超 $5B。",
+      "note": "Reuters / The Information · 未证实、未签署、条款可变",
+      "tags": [
+        "拟议信贷担保",
+        "未签署"
+      ],
+      "details": [
+        [
+          "媒体披露",
+          "数十亿美元级担保拟支持 Nscale 园区电力与建设融资；可能是 residual value guarantee。"
+        ],
+        [
+          "客户与金额",
+          "面向 Anthropic，此前约 $45B 算力租赁意向是另一事项；担保规模或超 $5B 并非确定条款。"
+        ],
+        [
+          "状态限制",
+          "协议未签，条款可变，三方未立即置评。不是现金投资已到账，也不是园区已投运。"
+        ]
+      ],
+      "sources": [
+        [
+          "Reuters 转述",
+          "https://www.streetinsider.com/Reuters/Nvidia+in+talks+to+give+credit+support+for+Nscales+deal+with+Anthropic%2C+The+Information+reports/27259701.html"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "spv",
+        "heading": "拟议信贷支持关系 · 非已生效合同",
+        "labels": [
+          "NVIDIA",
+          "融资方",
+          "Nscale",
+          "Anthropic 客户意向为另一事项"
+        ],
+        "value": "担保？",
+        "footer": "担保或超 $5B · 协议未签 / 条款可变",
+        "caption": "关系示意不表示已设 SPV 或资金已拨付"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-19",
+      "section": "infrastructure",
+      "shortName": "Beacon 园区洽谈",
+      "name": "Beacon 园区洽谈：加拿大园区洽谈，配套电厂另有进度。",
+      "summary": "Beacon 园区洽谈",
+      "summaryNote": "租赁洽谈 · 电厂 920 MW",
+      "vendor": "Anthropic / Beacon / 媒体",
+      "head": [
+        "加拿大园区洽谈，",
+        "配套电厂另有进度。"
+      ],
+      "blurb": "报道指 Anthropic 拟租埃德蒙顿附近四栋机房；920 MW 是获批配套天然气电厂容量。",
+      "note": "Globe and Mail 消息人士 · 承租未确认，公司与 Beacon 拒绝置评",
+      "tags": [
+        "租赁洽谈",
+        "电厂 920 MW"
+      ],
+      "details": [
+        [
+          "租赁线索",
+          "与 Calgary 的 Beacon Data Centers 洽谈，拟承租 Sturgeon County 四栋 AI / HPC 机房，尚未证实。"
+        ],
+        [
+          "配套电厂",
+          "资料称 920 MW 天然气电厂于 Oct 23 获 AUC 批准；不是四栋机房的 IT 功率或已接通负载。"
+        ],
+        [
+          "建设时间",
+          "电厂预计 2026Q4 开工、2027Q4 投运；计划与许可不代表完成，租赁协议亦未获双方确认。"
+        ]
+      ],
+      "sources": [
+        [
+          "The Globe and Mail",
+          "https://www.theglobeandmail.com/business/economy/article-anthropic-ai-talks-to-lease-beacon-data-centre-near-edmonton-alberta/"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "factory",
+        "heading": "机房与配套电厂 · 项目关系示意",
+        "labels": [
+          "机房 A",
+          "机房 B",
+          "机房 C",
+          "机房 D"
+        ],
+        "value": "配套电厂 920 MW",
+        "footer": "承租未确认 · 电厂预计 2027Q4 投运",
+        "caption": "920 MW 为电厂容量，不是已投运 IT 容量"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-20",
+      "section": "infrastructure",
+      "shortName": "IREN 设备再融资",
+      "name": "IREN 设备再融资：既有设备再融资，释放扩容流动性。",
+      "summary": "IREN 设备再融资",
+      "summaryNote": "$363M · 已运营设备",
+      "vendor": "IREN / Wingspire",
+      "head": [
+        "既有设备再融资，",
+        "释放扩容流动性。"
+      ],
+      "blurb": "完成 $363M 设备融资，对已投产且有多年客户合同支撑的 GPU 与网络设备再融资。",
+      "note": "Oct 28 官方回顾 · 资金用途与新增设备投运分开看",
+      "tags": [
+        "$363M",
+        "已运营设备"
+      ],
+      "details": [
+        [
+          "交易状态",
+          "IREN 与 Wingspire Equipment Finance 等完成约 $3.63 亿高密度 AI 设备融资协议。"
+        ],
+        [
+          "融资基础",
+          "已投产的 GPU 服务器与网络设备，有多年客户合同支撑；不是只凭拟购设备的未来计划。"
+        ],
+        [
+          "用途边界",
+          "释放流动性以扩容高密度机房，但本条不提供新增 GPU 数量、机房容量或扩容完成时间。"
+        ]
+      ],
+      "sources": [
+        [
+          "Nasdaq / BusinessWire",
+          "https://www.nasdaq.com/press-release/iren-and-wingspire-equipment-finance-complete-363-million-financing-high-density-ai"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "lease",
+        "heading": "已运营设备的融资结构",
+        "labels": [
+          "融资协议已完成",
+          "设备融资方",
+          "IREN 运营资产",
+          "多年客户合同支撑"
+        ],
+        "value": "$363M",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "既有资产再融资，不等于新增算力已经投产"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-21",
+      "section": "infrastructure",
+      "shortName": "Fluidstack 估值传闻",
+      "name": "Fluidstack 估值传闻：融资估值说法，当事人仍有异议。",
+      "summary": "Fluidstack 估值传闻",
+      "summaryNote": "融资传闻 · 估值非融资额",
+      "vendor": "Bloomberg / 媒体转述",
+      "head": [
+        "融资估值说法，",
+        "当事人仍有异议。"
+      ],
+      "blurb": "媒体称推介参与 Fluidstack 融资，估值约 $40B；联合创始人曾对估值数字提出异议。",
+      "note": "Oct 29 媒体 · 未证实 / 当事人争议，轮次及交割未披露",
+      "tags": [
+        "融资传闻",
+        "估值非融资额"
+      ],
+      "details": [
+        [
+          "报道内容",
+          "Situational Awareness 向客户推介融资参与机会，所述估值约 $40B，较约 9 月 >$18B 抬升。"
+        ],
+        [
+          "争议与未知",
+          "联合创始人曾对估值数字提出异议；轮次规模与是否交割未披露。"
+        ],
+        [
+          "解释限制",
+          "是 neocloud 融资情绪线索，不是产能落地；估值差异不证明已完成融资或已实现投资收益。"
+        ]
+      ],
+      "sources": [
+        [
+          "Investing / Bloomberg",
+          "https://www.investing.com/news/stock-market-news/aschenbrenner-seeks-fluidstack-investment-at-40-billion-valuation--bloomberg-4984664"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "boundary",
+        "heading": "媒体说法与当事人回应",
+        "labels": [
+          "媒体称约 $40B 估值",
+          "联合创始人有异议",
+          "轮次规模 / 交割未披露",
+          "不把估值当融资额或算力投产"
+        ],
+        "value": "未证实",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "按提供资料编排 · 发布状态与来源见正文"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-22",
+      "section": "infrastructure",
+      "shortName": "PsiQuantum 光交换",
+      "name": "PsiQuantum 光交换：硅光交换原型，发往选定客户。",
+      "summary": "PsiQuantum 光交换",
+      "summaryNote": "8×8 OCS · 样品送测",
+      "vendor": "PsiQuantum",
+      "head": [
+        "硅光交换原型，",
+        "发往选定客户。"
+      ],
+      "blurb": "8×8 OCS 宣称损耗约 1.2 dB、串扰隔离约 40 dB、重构 <3 ms；规划更大端口。",
+      "note": "Oct 28 官方原型回顾 · 厂商规格，不当作独立性能复现",
+      "tags": [
+        "8×8 OCS",
+        "样品送测"
+      ],
+      "details": [
+        [
+          "原型参数",
+          "低损耗硅光光电路交换机，插入损耗约 1.2 dB、串扰隔离约 40 dB、重构 <3 ms。"
+        ],
+        [
+          "技术路径",
+          "宣称无光电转换、无运动部件；定位 GPU 间光域交换，目标降低功耗和时延，不补写实际降幅。"
+        ],
+        [
+          "阶段",
+          "样品发往选定客户，计划扩大端口规格；样品与路线图不等于规模量产或全机房部署。"
+        ]
+      ],
+      "sources": [
+        [
+          "BusinessWire",
+          "https://www.businesswire.com/news/home/20261028890054/en/PsiQuantum-Unveils-Optical-Circuit-Switch-Technology-Built-on-Advanced-Low-Loss-Silicon-Photonics-Platform"
+        ],
+        [
+          "Tom's Hardware",
+          "https://www.tomshardware.com/tech-industry/photonics/psiquantum-turns-its-photonics-know-how-into-an-optical-switch-for-supercharging-ai-data-center-gpu-networks-8x8-lab-prototype-loses-less-light-than-rivals-with-plans-to-develop-larger-devices"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "distribution",
+        "heading": "光路交换 · 非完整端口拓扑",
+        "labels": [
+          "输入光路",
+          "切换路径 A",
+          "切换路径 B",
+          "8×8 原型 · 无光电转换 / 无运动部件"
+        ],
+        "value": "OCS 原型",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "仅示意部分路径 · 样品送测，规格为厂商宣称"
+      },
+      "dark": false
+    },
+    {
+      "id": "oct31-23",
+      "section": "infrastructure",
+      "shortName": "Cerebras 耐久争议",
+      "name": "Cerebras 耐久争议：做空方寿命主张，仍缺充分证实。",
+      "summary": "Cerebras 耐久争议",
+      "summaryNote": "做空主张 · 未证实",
+      "vendor": "Culper / 技术评论 / 媒体",
+      "head": [
+        "做空方寿命主张，",
+        "仍缺充分证实。"
+      ],
+      "blurb": "Culper 称晶圆引擎现场寿命约 1.5–2.5 年；原稿列独立评论认为该断言未充分证实。",
+      "note": "Oct 28 空头报告 · 利益相关方主张，非正式产品变更",
+      "tags": [
+        "做空主张",
+        "未证实"
+      ],
+      "details": [
+        [
+          "做空方说法",
+          "指控持续 dummy operations 维持高温和高功耗，导致现场寿命短于招股材料口径。"
+        ],
+        [
+          "资料数字",
+          "声称寿命仅 1.5–2.5 年；报告当日公司股价下跌，不把市场反应当作技术论证。"
+        ],
+        [
+          "证据边界",
+          "原稿称独立技术评论认为寿命断言未充分证实，但未给该评论直链；保留归属，不冒充本轮核查结论。"
+        ]
+      ],
+      "sources": [
+        [
+          "Investing.com",
+          "https://www.investing.com/news/stock-market-news/cerebras-systems-drops-4-following-culper-research-short-report-4980194"
+        ]
+      ],
+      "kind": "editorial",
+      "visual": {
+        "layout": "filing",
+        "heading": "硬件耐久性争议 · 非独立寿命测试",
+        "labels": [
+          "Culper 做空主张",
+          "1.5–2.5 年说法",
+          "未充分证实",
+          "股价反应不是可靠性证据"
+        ],
+        "value": "耐久争议",
+        "footer": "示意关系，不代表实际部署或实测比例",
+        "caption": "利益相关方报告，非已确认的寿命或产品改规"
+      },
+      "dark": false
+    }
+  ],
+  "coverage": "模型窗口约 2026-10-30 06:30 至 2026-10-31 06:30，北京时间；硬件回顾约过去 24–48 小时。",
+  "cutoff": "2026-10-31 06:30 Asia/Shanghai",
+  "draft": false
+}
